@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace FinalAmanda.Forms
 {
-    public partial class HomeForm : Form
+    public partial class UserProfileAllForm : Form
     {
-        public HomeForm()
+        public UserProfileAllForm()
         {
             InitializeComponent();
         }
-        
     }
 }

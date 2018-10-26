@@ -17,6 +17,5 @@ namespace FinalAmanda.Forms
             InitializeComponent();
         }
 
-       
     }
 }

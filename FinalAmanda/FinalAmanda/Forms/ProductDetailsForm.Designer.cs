@@ -28,41 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbxDelete = new System.Windows.Forms.PictureBox();
-            this.pbxSave = new System.Windows.Forms.PictureBox();
             this.cbxActive = new System.Windows.Forms.CheckBox();
             this.lblActive = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.pbxBack = new System.Windows.Forms.PictureBox();
             this.tbxPrice = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
+            this.pbxDelete = new System.Windows.Forms.PictureBox();
+            this.pbxSave = new System.Windows.Forms.PictureBox();
+            this.pbxBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbxDelete
-            // 
-            this.pbxDelete.Image = global::FinalAmanda.Properties.Resources.Delete;
-            this.pbxDelete.Location = new System.Drawing.Point(518, 355);
-            this.pbxDelete.Name = "pbxDelete";
-            this.pbxDelete.Size = new System.Drawing.Size(72, 69);
-            this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxDelete.TabIndex = 32;
-            this.pbxDelete.TabStop = false;
-            // 
-            // pbxSave
-            // 
-            this.pbxSave.Image = global::FinalAmanda.Properties.Resources.Save;
-            this.pbxSave.Location = new System.Drawing.Point(437, 355);
-            this.pbxSave.Name = "pbxSave";
-            this.pbxSave.Size = new System.Drawing.Size(72, 69);
-            this.pbxSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxSave.TabIndex = 31;
-            this.pbxSave.TabStop = false;
             // 
             // cbxActive
             // 
@@ -102,16 +82,6 @@
             this.lblName.TabIndex = 27;
             this.lblName.Text = "Nome";
             // 
-            // pbxBack
-            // 
-            this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
-            this.pbxBack.Location = new System.Drawing.Point(2, 377);
-            this.pbxBack.Name = "pbxBack";
-            this.pbxBack.Size = new System.Drawing.Size(53, 48);
-            this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxBack.TabIndex = 26;
-            this.pbxBack.TabStop = false;
-            // 
             // tbxPrice
             // 
             this.tbxPrice.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,6 +118,39 @@
             this.lblCategory.Size = new System.Drawing.Size(76, 20);
             this.lblCategory.TabIndex = 40;
             this.lblCategory.Text = "Categoria";
+            // 
+            // pbxDelete
+            // 
+            this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxDelete.Image = global::FinalAmanda.Properties.Resources.Delete;
+            this.pbxDelete.Location = new System.Drawing.Point(518, 355);
+            this.pbxDelete.Name = "pbxDelete";
+            this.pbxDelete.Size = new System.Drawing.Size(72, 69);
+            this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxDelete.TabIndex = 32;
+            this.pbxDelete.TabStop = false;
+            // 
+            // pbxSave
+            // 
+            this.pbxSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxSave.Image = global::FinalAmanda.Properties.Resources.Save;
+            this.pbxSave.Location = new System.Drawing.Point(437, 355);
+            this.pbxSave.Name = "pbxSave";
+            this.pbxSave.Size = new System.Drawing.Size(72, 69);
+            this.pbxSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxSave.TabIndex = 31;
+            this.pbxSave.TabStop = false;
+            // 
+            // pbxBack
+            // 
+            this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
+            this.pbxBack.Location = new System.Drawing.Point(2, 377);
+            this.pbxBack.Name = "pbxBack";
+            this.pbxBack.Size = new System.Drawing.Size(53, 48);
+            this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxBack.TabIndex = 26;
+            this.pbxBack.TabStop = false;
             // 
             // ProductDetailsForm
             // 

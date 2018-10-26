@@ -34,18 +34,18 @@
             this.lblUserProfile = new System.Windows.Forms.Label();
             this.lblLog = new System.Windows.Forms.Label();
             this.lblHomeMessage = new System.Windows.Forms.Label();
-            this.pbxProduct = new System.Windows.Forms.PictureBox();
-            this.pbxCategory = new System.Windows.Forms.PictureBox();
+            this.pbxBack = new System.Windows.Forms.PictureBox();
+            this.pbxUser = new System.Windows.Forms.PictureBox();
             this.pbxLog = new System.Windows.Forms.PictureBox();
             this.pbxUserProfile = new System.Windows.Forms.PictureBox();
-            this.pbxUser = new System.Windows.Forms.PictureBox();
-            this.pbxBack = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCategory)).BeginInit();
+            this.pbxCategory = new System.Windows.Forms.PictureBox();
+            this.pbxProduct = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserProfile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProduct
@@ -109,28 +109,31 @@
             this.lblHomeMessage.TabIndex = 12;
             this.lblHomeMessage.Text = "Bem vindo \"   \"!";
             // 
-            // pbxProduct
+            // pbxBack
             // 
-            this.pbxProduct.Image = global::FinalAmanda.Properties.Resources.Product;
-            this.pbxProduct.Location = new System.Drawing.Point(83, 56);
-            this.pbxProduct.Name = "pbxProduct";
-            this.pbxProduct.Size = new System.Drawing.Size(147, 109);
-            this.pbxProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxProduct.TabIndex = 13;
-            this.pbxProduct.TabStop = false;
+            this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
+            this.pbxBack.Location = new System.Drawing.Point(2, 377);
+            this.pbxBack.Name = "pbxBack";
+            this.pbxBack.Size = new System.Drawing.Size(53, 48);
+            this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxBack.TabIndex = 18;
+            this.pbxBack.TabStop = false;
             // 
-            // pbxCategory
+            // pbxUser
             // 
-            this.pbxCategory.Image = global::FinalAmanda.Properties.Resources.Category;
-            this.pbxCategory.Location = new System.Drawing.Point(381, 56);
-            this.pbxCategory.Name = "pbxCategory";
-            this.pbxCategory.Size = new System.Drawing.Size(147, 109);
-            this.pbxCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxCategory.TabIndex = 14;
-            this.pbxCategory.TabStop = false;
+            this.pbxUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxUser.Image = global::FinalAmanda.Properties.Resources.User;
+            this.pbxUser.Location = new System.Drawing.Point(232, 163);
+            this.pbxUser.Name = "pbxUser";
+            this.pbxUser.Size = new System.Drawing.Size(147, 109);
+            this.pbxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxUser.TabIndex = 17;
+            this.pbxUser.TabStop = false;
             // 
             // pbxLog
             // 
+            this.pbxLog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxLog.Image = global::FinalAmanda.Properties.Resources.Log;
             this.pbxLog.Location = new System.Drawing.Point(381, 269);
             this.pbxLog.Name = "pbxLog";
@@ -142,6 +145,7 @@
             // pbxUserProfile
             // 
             this.pbxUserProfile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbxUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxUserProfile.Image = global::FinalAmanda.Properties.Resources.User_Grupe;
             this.pbxUserProfile.Location = new System.Drawing.Point(83, 269);
             this.pbxUserProfile.Name = "pbxUserProfile";
@@ -150,25 +154,27 @@
             this.pbxUserProfile.TabIndex = 15;
             this.pbxUserProfile.TabStop = false;
             // 
-            // pbxUser
+            // pbxCategory
             // 
-            this.pbxUser.Image = global::FinalAmanda.Properties.Resources.User;
-            this.pbxUser.Location = new System.Drawing.Point(232, 163);
-            this.pbxUser.Name = "pbxUser";
-            this.pbxUser.Size = new System.Drawing.Size(147, 109);
-            this.pbxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxUser.TabIndex = 17;
-            this.pbxUser.TabStop = false;
+            this.pbxCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxCategory.Image = global::FinalAmanda.Properties.Resources.Category;
+            this.pbxCategory.Location = new System.Drawing.Point(381, 56);
+            this.pbxCategory.Name = "pbxCategory";
+            this.pbxCategory.Size = new System.Drawing.Size(147, 109);
+            this.pbxCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxCategory.TabIndex = 14;
+            this.pbxCategory.TabStop = false;
             // 
-            // pbxBack
+            // pbxProduct
             // 
-            this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
-            this.pbxBack.Location = new System.Drawing.Point(2, 377);
-            this.pbxBack.Name = "pbxBack";
-            this.pbxBack.Size = new System.Drawing.Size(53, 48);
-            this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxBack.TabIndex = 18;
-            this.pbxBack.TabStop = false;
+            this.pbxProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxProduct.Image = global::FinalAmanda.Properties.Resources.Product;
+            this.pbxProduct.Location = new System.Drawing.Point(83, 56);
+            this.pbxProduct.Name = "pbxProduct";
+            this.pbxProduct.Size = new System.Drawing.Size(147, 109);
+            this.pbxProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxProduct.TabIndex = 13;
+            this.pbxProduct.TabStop = false;
             // 
             // HomeForm
             // 
@@ -190,12 +196,12 @@
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserProfile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

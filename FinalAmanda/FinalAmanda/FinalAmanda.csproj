@@ -183,14 +183,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Icons\19fc15ebd19fa6c131f791ba48007d7e_icon.png" />
-    <Content Include="Icons\256-512.png" />
-    <Content Include="Icons\add-circle-green-512.png" />
-    <Content Include="Icons\Document-icon.png" />
-    <Content Include="Icons\product-icon.png" />
-    <Content Include="Icons\search-flat.png" />
+    <Content Include="Icons\Add button.png" />
+    <Content Include="Icons\Back Button.png" />
+    <Content Include="Icons\Category button.png" />
+    <Content Include="Icons\Clean button.png" />
+    <Content Include="Icons\Delete button.png" />
+    <Content Include="Icons\Edit button.png" />
+    <Content Include="Icons\Log button.png" />
+    <Content Include="Icons\Product button.png" />
+    <Content Include="Icons\Save button.png" />
+    <Content Include="Icons\Search button.png" />
+    <Content Include="Icons\User button.png" />
+    <Content Include="Icons\User Grupe button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -169,6 +169,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -184,18 +185,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Icons\Add button.png" />
-    <Content Include="Icons\Back Button.png" />
-    <Content Include="Icons\Category button.png" />
-    <Content Include="Icons\Clean button.png" />
-    <Content Include="Icons\Delete button.png" />
-    <Content Include="Icons\Edit button.png" />
-    <Content Include="Icons\Log button.png" />
-    <Content Include="Icons\Product button.png" />
-    <Content Include="Icons\Save button.png" />
-    <Content Include="Icons\Search button.png" />
-    <Content Include="Icons\User button.png" />
-    <Content Include="Icons\User Grupe button.png" />
+    <Content Include="Icons\Add.png" />
+    <Content Include="Icons\Back.png" />
+    <Content Include="Icons\Category.png" />
+    <Content Include="Icons\Clean.png" />
+    <Content Include="Icons\Delete.png" />
+    <Content Include="Icons\Edit.png" />
+    <Content Include="Icons\Log.png" />
+    <Content Include="Icons\Product.png" />
+    <Content Include="Icons\Save.png" />
+    <Content Include="Icons\Search.png" />
+    <Content Include="Icons\User.png" />
+    <Content Include="Icons\User Grupe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

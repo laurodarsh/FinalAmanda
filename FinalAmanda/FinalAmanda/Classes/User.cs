@@ -92,5 +92,18 @@ namespace FinalAmanda.Classes
                 active = value;
             }
         }
+
+        public User(string name,string password, string email, UserProfile userprofile,bool active)
+        {
+            this.Name = name;
+            this.Password = password;
+            this.Email = email;
+            this.Userprofile = userprofile;
+            this.Active = active;
+        }
+        public User()
+        {
+
+        }
     }
 }

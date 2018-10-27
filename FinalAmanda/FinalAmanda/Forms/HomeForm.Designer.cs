@@ -40,21 +40,21 @@
             this.pbxUserProfile = new System.Windows.Forms.PictureBox();
             this.pbxCategory = new System.Windows.Forms.PictureBox();
             this.pbxProduct = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pbxUserUser = new System.Windows.Forms.PictureBox();
+            this.pbxCategoryUser = new System.Windows.Forms.PictureBox();
+            this.pbxProductUser = new System.Windows.Forms.PictureBox();
+            this.lblUserUser = new System.Windows.Forms.Label();
+            this.lblCategoryUser = new System.Windows.Forms.Label();
+            this.lblProductUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUserUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCategoryUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProductUser)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProduct
@@ -117,7 +117,7 @@
             this.lblHomeMessage.AutoSize = true;
             this.lblHomeMessage.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHomeMessage.ForeColor = System.Drawing.Color.Black;
-            this.lblHomeMessage.Location = new System.Drawing.Point(242, 25);
+            this.lblHomeMessage.Location = new System.Drawing.Point(247, 25);
             this.lblHomeMessage.Name = "lblHomeMessage";
             this.lblHomeMessage.Size = new System.Drawing.Size(116, 19);
             this.lblHomeMessage.TabIndex = 12;
@@ -133,6 +133,7 @@
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxBack.TabIndex = 18;
             this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
             // pbxUser
             // 
@@ -144,6 +145,7 @@
             this.pbxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxUser.TabIndex = 17;
             this.pbxUser.TabStop = false;
+            this.pbxUser.Click += new System.EventHandler(this.pbxUser_Click);
             // 
             // pbxLog
             // 
@@ -155,6 +157,7 @@
             this.pbxLog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLog.TabIndex = 16;
             this.pbxLog.TabStop = false;
+            this.pbxLog.Click += new System.EventHandler(this.pbxLog_Click);
             // 
             // pbxUserProfile
             // 
@@ -167,6 +170,7 @@
             this.pbxUserProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxUserProfile.TabIndex = 15;
             this.pbxUserProfile.TabStop = false;
+            this.pbxUserProfile.Click += new System.EventHandler(this.pbxUserProfile_Click);
             // 
             // pbxCategory
             // 
@@ -178,6 +182,7 @@
             this.pbxCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxCategory.TabIndex = 14;
             this.pbxCategory.TabStop = false;
+            this.pbxCategory.Click += new System.EventHandler(this.pbxCategory_Click);
             // 
             // pbxProduct
             // 
@@ -189,78 +194,82 @@
             this.pbxProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxProduct.TabIndex = 13;
             this.pbxProduct.TabStop = false;
+            this.pbxProduct.Click += new System.EventHandler(this.pbxProduct_Click);
             // 
-            // pictureBox1
+            // pbxUserUser
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::FinalAmanda.Properties.Resources.User;
-            this.pictureBox1.Location = new System.Drawing.Point(210, 234);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            this.pbxUserUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxUserUser.Image = global::FinalAmanda.Properties.Resources.User;
+            this.pbxUserUser.Location = new System.Drawing.Point(210, 234);
+            this.pbxUserUser.Name = "pbxUserUser";
+            this.pbxUserUser.Size = new System.Drawing.Size(178, 132);
+            this.pbxUserUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxUserUser.TabIndex = 24;
+            this.pbxUserUser.TabStop = false;
+            this.pbxUserUser.Visible = false;
+            this.pbxUserUser.Click += new System.EventHandler(this.pbxUserUser_Click);
             // 
-            // pictureBox2
+            // pbxCategoryUser
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::FinalAmanda.Properties.Resources.Category;
-            this.pictureBox2.Location = new System.Drawing.Point(360, 68);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(178, 132);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
+            this.pbxCategoryUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxCategoryUser.Image = global::FinalAmanda.Properties.Resources.Category;
+            this.pbxCategoryUser.Location = new System.Drawing.Point(360, 68);
+            this.pbxCategoryUser.Name = "pbxCategoryUser";
+            this.pbxCategoryUser.Size = new System.Drawing.Size(178, 132);
+            this.pbxCategoryUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxCategoryUser.TabIndex = 23;
+            this.pbxCategoryUser.TabStop = false;
+            this.pbxCategoryUser.Visible = false;
+            this.pbxCategoryUser.Click += new System.EventHandler(this.pbxCategoryUser_Click);
             // 
-            // pictureBox3
+            // pbxProductUser
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::FinalAmanda.Properties.Resources.Product;
-            this.pictureBox3.Location = new System.Drawing.Point(66, 68);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(178, 132);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 22;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
+            this.pbxProductUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxProductUser.Image = global::FinalAmanda.Properties.Resources.Product;
+            this.pbxProductUser.Location = new System.Drawing.Point(66, 68);
+            this.pbxProductUser.Name = "pbxProductUser";
+            this.pbxProductUser.Size = new System.Drawing.Size(178, 132);
+            this.pbxProductUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxProductUser.TabIndex = 22;
+            this.pbxProductUser.TabStop = false;
+            this.pbxProductUser.Visible = false;
+            this.pbxProductUser.Click += new System.EventHandler(this.pbxProductUser_Click);
             // 
-            // label1
+            // lblUserUser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(265, 367);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 17);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "USUÁRIO";
-            this.label1.Visible = false;
+            this.lblUserUser.AutoSize = true;
+            this.lblUserUser.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lblUserUser.Location = new System.Drawing.Point(265, 367);
+            this.lblUserUser.Name = "lblUserUser";
+            this.lblUserUser.Size = new System.Drawing.Size(70, 17);
+            this.lblUserUser.TabIndex = 21;
+            this.lblUserUser.Text = "USUÁRIO";
+            this.lblUserUser.Visible = false;
             // 
-            // label2
+            // lblCategoryUser
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(406, 201);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 17);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "CATEGORIA";
-            this.label2.Visible = false;
+            this.lblCategoryUser.AutoSize = true;
+            this.lblCategoryUser.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoryUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.lblCategoryUser.Location = new System.Drawing.Point(406, 201);
+            this.lblCategoryUser.Name = "lblCategoryUser";
+            this.lblCategoryUser.Size = new System.Drawing.Size(90, 17);
+            this.lblCategoryUser.TabIndex = 20;
+            this.lblCategoryUser.Text = "CATEGORIA";
+            this.lblCategoryUser.Visible = false;
             // 
-            // label3
+            // lblProductUser
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Location = new System.Drawing.Point(114, 201);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 17);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "PRODUTO";
-            this.label3.Visible = false;
+            this.lblProductUser.AutoSize = true;
+            this.lblProductUser.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductUser.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblProductUser.Location = new System.Drawing.Point(114, 201);
+            this.lblProductUser.Name = "lblProductUser";
+            this.lblProductUser.Size = new System.Drawing.Size(78, 17);
+            this.lblProductUser.TabIndex = 19;
+            this.lblProductUser.Text = "PRODUTO";
+            this.lblProductUser.Visible = false;
             // 
             // HomeForm
             // 
@@ -268,12 +277,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(594, 429);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pbxUserUser);
+            this.Controls.Add(this.pbxCategoryUser);
+            this.Controls.Add(this.pbxProductUser);
+            this.Controls.Add(this.lblUserUser);
+            this.Controls.Add(this.lblCategoryUser);
+            this.Controls.Add(this.lblProductUser);
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.pbxUser);
             this.Controls.Add(this.pbxLog);
@@ -288,16 +297,16 @@
             this.Controls.Add(this.lblProduct);
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HomeForm";
+            this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUserUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCategoryUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProductUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,11 +325,11 @@
         private System.Windows.Forms.PictureBox pbxUserProfile;
         private System.Windows.Forms.PictureBox pbxUser;
         private System.Windows.Forms.PictureBox pbxBack;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbxUserUser;
+        private System.Windows.Forms.PictureBox pbxCategoryUser;
+        private System.Windows.Forms.PictureBox pbxProductUser;
+        private System.Windows.Forms.Label lblUserUser;
+        private System.Windows.Forms.Label lblCategoryUser;
+        private System.Windows.Forms.Label lblProductUser;
     }
 }

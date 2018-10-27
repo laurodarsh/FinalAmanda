@@ -16,5 +16,16 @@ namespace FinalAmanda.Forms
         {
             InitializeComponent();
         }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            HomeForm home = new HomeForm();
+            home.Show();
+        }
+
+        private void pbxClean_Click(object sender, EventArgs e)
+        {
+            tbxSearch.Text = "";
+        }
     }
 }

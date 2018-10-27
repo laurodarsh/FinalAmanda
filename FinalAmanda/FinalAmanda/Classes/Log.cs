@@ -64,5 +64,16 @@ namespace FinalAmanda.Classes
                 type = value;
             }
         }
+
+        public Log(string description,DateTime date, string type)
+        {
+            this.Description = description;
+            this.Date = date;
+            this.Type = type;
+        }
+        public Log()
+        {
+
+        }
     }
 }

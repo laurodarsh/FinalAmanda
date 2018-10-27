@@ -16,5 +16,11 @@ namespace FinalAmanda.Forms
         {
             InitializeComponent();
         }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            UserAllForm useAll = new UserAllForm();
+            useAll.Show();
+        }
     }
 }

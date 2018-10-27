@@ -23,14 +23,25 @@ namespace FinalAmanda.Forms
         private void pbxLogin_Click(object sender, EventArgs e)
         {
             GetData();
-
+            HomeForm home = new HomeForm();
+            home.Show();
+            ClenData();
         }
+
         void GetData()
         {
             user = tbxUser.Text;
             password = tbxPassword.Text;
         }
 
+        void ClenData()
+        {
+            tbxUser.Text = "";
+            tbxPassword.Text = "";
+            tbxEmail.Text = "";
+        }
+
+        //Forgot Password things
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
             //Invisible Login things

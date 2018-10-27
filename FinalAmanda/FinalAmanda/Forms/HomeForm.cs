@@ -16,6 +16,62 @@ namespace FinalAmanda.Forms
         {
             InitializeComponent();
         }
-       
+
+        //Access only, employee
+        private void pbxProductUser_Click(object sender, EventArgs e)
+        {
+            ProductAllForm product = new ProductAllForm();
+            product.Show();
+        }
+
+        private void pbxCategoryUser_Click(object sender, EventArgs e)
+        {
+            CategoryAllForm category = new CategoryAllForm();
+            category.Show();
+        }
+
+        private void pbxUserUser_Click(object sender, EventArgs e)
+        {
+            UserAllForm user = new UserAllForm();
+            user.Show();
+        }
+        //End access only, employee
+
+        //Admin access
+        private void pbxProduct_Click(object sender, EventArgs e)
+        {
+            ProductAllForm product = new ProductAllForm();
+            product.Show();
+        }
+        
+        private void pbxCategory_Click(object sender, EventArgs e)
+        {
+            CategoryAllForm category = new CategoryAllForm();
+            category.Show();
+        }
+        
+        private void pbxUser_Click(object sender, EventArgs e)
+        {
+            UserAllForm user = new UserAllForm();
+            user.Show();
+        }
+
+        private void pbxUserProfile_Click(object sender, EventArgs e)
+        {
+            UserProfileAllForm profile = new UserProfileAllForm();
+            profile.Show();
+        }
+
+        private void pbxLog_Click(object sender, EventArgs e)
+        {
+            LogForm log = new LogForm();
+            log.Show();
+        }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.Show();
+        }
     }
 }

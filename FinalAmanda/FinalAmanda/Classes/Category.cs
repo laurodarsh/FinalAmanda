@@ -50,5 +50,15 @@ namespace FinalAmanda.Classes
                 active = value;
             }
         }
+
+        public Category (string name,bool active)
+        {
+            this.Name = name;
+            this.Active = active;
+        }
+        public Category()
+        {
+
+        }
     }
 }

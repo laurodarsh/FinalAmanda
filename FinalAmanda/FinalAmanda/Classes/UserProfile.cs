@@ -50,5 +50,15 @@ namespace FinalAmanda.Classes
                 active = value;
             }
         }
+
+        public UserProfile(string name, bool active)
+        {
+            this.Name = name;
+            this.Active = active;
+        }
+        public UserProfile()
+        {
+
+        }
     }
 }

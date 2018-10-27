@@ -51,8 +51,8 @@
             // cbxActive
             // 
             this.cbxActive.AutoSize = true;
-            this.cbxActive.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxActive.Location = new System.Drawing.Point(260, 276);
+            this.cbxActive.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxActive.Location = new System.Drawing.Point(281, 279);
             this.cbxActive.Name = "cbxActive";
             this.cbxActive.Size = new System.Drawing.Size(15, 14);
             this.cbxActive.TabIndex = 32;
@@ -61,101 +61,101 @@
             // lblActive
             // 
             this.lblActive.AutoSize = true;
-            this.lblActive.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.Location = new System.Drawing.Point(201, 273);
+            this.lblActive.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActive.Location = new System.Drawing.Point(222, 273);
             this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(46, 20);
+            this.lblActive.Size = new System.Drawing.Size(53, 22);
             this.lblActive.TabIndex = 31;
             this.lblActive.Text = "Ativo";
             // 
             // tbxPassword
             // 
-            this.tbxPassword.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPassword.Location = new System.Drawing.Point(260, 168);
+            this.tbxPassword.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPassword.Location = new System.Drawing.Point(281, 168);
             this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(127, 28);
+            this.tbxPassword.Size = new System.Drawing.Size(127, 30);
             this.tbxPassword.TabIndex = 30;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(202, 171);
+            this.lblPassword.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(220, 172);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(51, 20);
+            this.lblPassword.Size = new System.Drawing.Size(58, 22);
             this.lblPassword.TabIndex = 29;
             this.lblPassword.Text = "Senha";
             // 
             // tbxEmail
             // 
-            this.tbxEmail.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEmail.Location = new System.Drawing.Point(260, 131);
+            this.tbxEmail.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxEmail.Location = new System.Drawing.Point(281, 131);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(127, 28);
+            this.tbxEmail.Size = new System.Drawing.Size(127, 30);
             this.tbxEmail.TabIndex = 34;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(203, 134);
+            this.lblEmail.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(221, 135);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(45, 20);
+            this.lblEmail.Size = new System.Drawing.Size(56, 22);
             this.lblEmail.TabIndex = 33;
             this.lblEmail.Text = "Email";
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(260, 205);
+            this.textBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(281, 205);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 28);
+            this.textBox3.Size = new System.Drawing.Size(127, 30);
             this.textBox3.TabIndex = 36;
             // 
             // lblProfile
             // 
             this.lblProfile.AutoSize = true;
-            this.lblProfile.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfile.Location = new System.Drawing.Point(202, 244);
+            this.lblProfile.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.Location = new System.Drawing.Point(221, 245);
             this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(48, 20);
+            this.lblProfile.Size = new System.Drawing.Size(54, 22);
             this.lblProfile.TabIndex = 35;
             this.lblProfile.Text = "Perfil";
             // 
             // tbxName
             // 
-            this.tbxName.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxName.Location = new System.Drawing.Point(260, 94);
+            this.tbxName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxName.Location = new System.Drawing.Point(281, 94);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(127, 28);
+            this.tbxName.Size = new System.Drawing.Size(127, 30);
             this.tbxName.TabIndex = 38;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(202, 97);
+            this.lblName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(220, 98);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(48, 20);
+            this.lblName.Size = new System.Drawing.Size(58, 22);
             this.lblName.TabIndex = 37;
             this.lblName.Text = "Nome";
             // 
             // cmbProfile
             // 
-            this.cmbProfile.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProfile.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProfile.FormattingEnabled = true;
-            this.cmbProfile.Location = new System.Drawing.Point(260, 241);
+            this.cmbProfile.Location = new System.Drawing.Point(281, 241);
             this.cmbProfile.Name = "cmbProfile";
-            this.cmbProfile.Size = new System.Drawing.Size(165, 28);
+            this.cmbProfile.Size = new System.Drawing.Size(165, 30);
             this.cmbProfile.TabIndex = 39;
             // 
             // lblConfirmationPassword
             // 
             this.lblConfirmationPassword.AutoSize = true;
-            this.lblConfirmationPassword.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmationPassword.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmationPassword.Location = new System.Drawing.Point(93, 208);
             this.lblConfirmationPassword.Name = "lblConfirmationPassword";
-            this.lblConfirmationPassword.Size = new System.Drawing.Size(160, 20);
+            this.lblConfirmationPassword.Size = new System.Drawing.Size(188, 22);
             this.lblConfirmationPassword.TabIndex = 40;
             this.lblConfirmationPassword.Text = "Confirmação da senha";
             // 
@@ -196,6 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(594, 429);
             this.Controls.Add(this.lblConfirmationPassword);
             this.Controls.Add(this.cmbProfile);

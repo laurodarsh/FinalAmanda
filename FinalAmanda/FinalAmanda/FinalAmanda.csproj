@@ -192,6 +192,7 @@
     <Content Include="Icons\Delete.png" />
     <Content Include="Icons\Edit.png" />
     <Content Include="Icons\Enter.png" />
+    <Content Include="Icons\Send.png" />
     <Content Include="Icons\Log.png" />
     <Content Include="Icons\Product.png" />
     <Content Include="Icons\Save.png" />

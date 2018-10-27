@@ -47,8 +47,8 @@
             // cbxActive
             // 
             this.cbxActive.AutoSize = true;
-            this.cbxActive.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxActive.Location = new System.Drawing.Point(243, 232);
+            this.cbxActive.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxActive.Location = new System.Drawing.Point(243, 234);
             this.cbxActive.Name = "cbxActive";
             this.cbxActive.Size = new System.Drawing.Size(15, 14);
             this.cbxActive.TabIndex = 30;
@@ -57,65 +57,65 @@
             // lblActive
             // 
             this.lblActive.AutoSize = true;
-            this.lblActive.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.Location = new System.Drawing.Point(188, 228);
+            this.lblActive.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActive.Location = new System.Drawing.Point(184, 228);
             this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(46, 20);
+            this.lblActive.Size = new System.Drawing.Size(53, 22);
             this.lblActive.TabIndex = 29;
             this.lblActive.Text = "Ativo";
             // 
             // tbxName
             // 
-            this.tbxName.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxName.Location = new System.Drawing.Point(243, 114);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(127, 28);
+            this.tbxName.Size = new System.Drawing.Size(127, 30);
             this.tbxName.TabIndex = 28;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(184, 117);
+            this.lblName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(180, 118);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(48, 20);
+            this.lblName.Size = new System.Drawing.Size(58, 22);
             this.lblName.TabIndex = 27;
             this.lblName.Text = "Nome";
             // 
             // tbxPrice
             // 
-            this.tbxPrice.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPrice.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxPrice.Location = new System.Drawing.Point(243, 153);
             this.tbxPrice.Name = "tbxPrice";
-            this.tbxPrice.Size = new System.Drawing.Size(127, 28);
+            this.tbxPrice.Size = new System.Drawing.Size(127, 30);
             this.tbxPrice.TabIndex = 34;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(184, 156);
+            this.lblPrice.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(180, 157);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(48, 20);
+            this.lblPrice.Size = new System.Drawing.Size(56, 22);
             this.lblPrice.TabIndex = 33;
             this.lblPrice.Text = "Preço";
             // 
             // cmbCategory
             // 
-            this.cmbCategory.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategory.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Location = new System.Drawing.Point(243, 192);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(165, 28);
+            this.cmbCategory.Size = new System.Drawing.Size(165, 30);
             this.cmbCategory.TabIndex = 41;
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.Location = new System.Drawing.Point(158, 196);
+            this.lblCategory.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.Location = new System.Drawing.Point(154, 196);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(76, 20);
+            this.lblCategory.Size = new System.Drawing.Size(86, 22);
             this.lblCategory.TabIndex = 40;
             this.lblCategory.Text = "Categoria";
             // 
@@ -156,6 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(594, 429);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.lblCategory);

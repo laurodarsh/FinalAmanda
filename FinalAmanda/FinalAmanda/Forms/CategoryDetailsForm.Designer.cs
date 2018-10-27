@@ -43,36 +43,36 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(199, 158);
+            this.lblName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(214, 160);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(48, 20);
+            this.lblName.Size = new System.Drawing.Size(58, 22);
             this.lblName.TabIndex = 20;
             this.lblName.Text = "Nome";
             // 
             // tbxName
             // 
-            this.tbxName.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxName.Location = new System.Drawing.Point(255, 154);
+            this.tbxName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxName.Location = new System.Drawing.Point(274, 157);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(127, 28);
+            this.tbxName.Size = new System.Drawing.Size(127, 30);
             this.tbxName.TabIndex = 21;
             // 
             // lblActive
             // 
             this.lblActive.AutoSize = true;
-            this.lblActive.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.Location = new System.Drawing.Point(201, 196);
+            this.lblActive.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActive.Location = new System.Drawing.Point(215, 197);
             this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(46, 20);
+            this.lblActive.Size = new System.Drawing.Size(53, 22);
             this.lblActive.TabIndex = 22;
             this.lblActive.Text = "Ativo";
             // 
             // cbxActive
             // 
             this.cbxActive.AutoSize = true;
-            this.cbxActive.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxActive.Location = new System.Drawing.Point(255, 200);
+            this.cbxActive.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxActive.Location = new System.Drawing.Point(274, 203);
             this.cbxActive.Name = "cbxActive";
             this.cbxActive.Size = new System.Drawing.Size(15, 14);
             this.cbxActive.TabIndex = 23;
@@ -115,6 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(594, 429);
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxSave);

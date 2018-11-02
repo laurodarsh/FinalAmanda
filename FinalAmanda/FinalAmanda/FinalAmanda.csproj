@@ -192,6 +192,13 @@
     <Content Include="Icons\Delete.png" />
     <Content Include="Icons\Edit.png" />
     <Content Include="Icons\Enter.png" />
+    <Content Include="Icons\Home.ico" />
+    <Content Include="Icons\Login.ico" />
+    <Content Include="Icons\User Grupe.ico" />
+    <Content Include="Icons\Product.ico" />
+    <Content Include="Icons\Category.ico" />
+    <Content Include="Icons\Log.ico" />
+    <Content Include="Icons\User.ico" />
     <Content Include="Icons\logo teste.png" />
     <Content Include="Icons\Send.png" />
     <Content Include="Icons\Log.png" />

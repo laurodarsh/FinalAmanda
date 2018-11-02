@@ -14,6 +14,7 @@ namespace FinalAmanda.Forms
     {
         string name;
         float price;
+        string category;
         bool active;
 
         public ProductDetailsForm()
@@ -21,32 +22,47 @@ namespace FinalAmanda.Forms
             InitializeComponent();
         }
 
-        private void pbxBack_Click(object sender, EventArgs e)
-        {
-            ProductAllForm product = new ProductAllForm();
-            product.Show();
-        }
-
+        //Save Button
         private void pbxSave_Click(object sender, EventArgs e)
         {
             GetData();
         }
 
+        //Delete Button
         private void pbxDelete_Click(object sender, EventArgs e)
         {
             CleanData();
         }
 
+        //Data stuff
         void GetData()
         {
             name = tbxName.Text;
             price = float.Parse(tbxPrice.Text);
+            category = cmbCategory.Text;
+            if (cbxActive.Checked)
+            {
+                active = true;
+            }
+            else
+            {
+                active = false;
+            }
         }
-
         void CleanData()
         {
             tbxName.Text = "";
             tbxPrice.Text = "";
+            cmbCategory.Text = "";
+            cbxActive.Checked = false;
+        }
+
+        //Back Button (Product)
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            ProductAllForm product = new ProductAllForm();
+            product.Show();
+            this.Close();
         }
     }
 }

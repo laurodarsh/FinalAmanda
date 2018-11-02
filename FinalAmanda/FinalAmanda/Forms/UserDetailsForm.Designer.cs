@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDetailsForm));
             this.cbxActive = new System.Windows.Forms.CheckBox();
-            this.lblActive = new System.Windows.Forms.Label();
             this.tbxPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbxConfPassword = new System.Windows.Forms.TextBox();
             this.lblProfile = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
@@ -51,113 +51,106 @@
             // cbxActive
             // 
             this.cbxActive.AutoSize = true;
-            this.cbxActive.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxActive.Location = new System.Drawing.Point(281, 279);
+            this.cbxActive.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxActive.Location = new System.Drawing.Point(189, 339);
             this.cbxActive.Name = "cbxActive";
-            this.cbxActive.Size = new System.Drawing.Size(15, 14);
+            this.cbxActive.Size = new System.Drawing.Size(65, 22);
             this.cbxActive.TabIndex = 32;
+            this.cbxActive.Text = "Ativo";
             this.cbxActive.UseVisualStyleBackColor = true;
-            // 
-            // lblActive
-            // 
-            this.lblActive.AutoSize = true;
-            this.lblActive.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.Location = new System.Drawing.Point(222, 273);
-            this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(53, 22);
-            this.lblActive.TabIndex = 31;
-            this.lblActive.Text = "Ativo";
             // 
             // tbxPassword
             // 
-            this.tbxPassword.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPassword.Location = new System.Drawing.Point(281, 168);
+            this.tbxPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPassword.Location = new System.Drawing.Point(187, 189);
             this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(127, 30);
+            this.tbxPassword.Size = new System.Drawing.Size(229, 27);
             this.tbxPassword.TabIndex = 30;
+            this.tbxPassword.TextChanged += new System.EventHandler(this.tbxPassword_TextChanged);
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(220, 172);
+            this.lblPassword.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(184, 168);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(58, 22);
+            this.lblPassword.Size = new System.Drawing.Size(54, 18);
             this.lblPassword.TabIndex = 29;
             this.lblPassword.Text = "Senha";
             // 
             // tbxEmail
             // 
-            this.tbxEmail.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEmail.Location = new System.Drawing.Point(281, 131);
+            this.tbxEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxEmail.Location = new System.Drawing.Point(187, 132);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(127, 30);
+            this.tbxEmail.Size = new System.Drawing.Size(229, 27);
             this.tbxEmail.TabIndex = 34;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(221, 135);
+            this.lblEmail.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(184, 110);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(56, 22);
+            this.lblEmail.Size = new System.Drawing.Size(47, 18);
             this.lblEmail.TabIndex = 33;
             this.lblEmail.Text = "Email";
             // 
-            // textBox3
+            // tbxConfPassword
             // 
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(281, 205);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 30);
-            this.textBox3.TabIndex = 36;
+            this.tbxConfPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxConfPassword.Location = new System.Drawing.Point(187, 247);
+            this.tbxConfPassword.Name = "tbxConfPassword";
+            this.tbxConfPassword.Size = new System.Drawing.Size(229, 27);
+            this.tbxConfPassword.TabIndex = 36;
+            this.tbxConfPassword.TextChanged += new System.EventHandler(this.tbxConfPassword_TextChanged);
             // 
             // lblProfile
             // 
             this.lblProfile.AutoSize = true;
-            this.lblProfile.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfile.Location = new System.Drawing.Point(221, 245);
+            this.lblProfile.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.Location = new System.Drawing.Point(184, 284);
             this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(54, 22);
+            this.lblProfile.Size = new System.Drawing.Size(43, 18);
             this.lblProfile.TabIndex = 35;
             this.lblProfile.Text = "Perfil";
             // 
             // tbxName
             // 
-            this.tbxName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxName.Location = new System.Drawing.Point(281, 94);
+            this.tbxName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxName.Location = new System.Drawing.Point(187, 74);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(127, 30);
+            this.tbxName.Size = new System.Drawing.Size(229, 27);
             this.tbxName.TabIndex = 38;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(220, 98);
+            this.lblName.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(184, 52);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(58, 22);
+            this.lblName.Size = new System.Drawing.Size(53, 18);
             this.lblName.TabIndex = 37;
             this.lblName.Text = "Nome";
             // 
             // cmbProfile
             // 
-            this.cmbProfile.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProfile.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProfile.FormattingEnabled = true;
-            this.cmbProfile.Location = new System.Drawing.Point(281, 241);
+            this.cmbProfile.Location = new System.Drawing.Point(187, 306);
             this.cmbProfile.Name = "cmbProfile";
-            this.cmbProfile.Size = new System.Drawing.Size(165, 30);
+            this.cmbProfile.Size = new System.Drawing.Size(229, 26);
             this.cmbProfile.TabIndex = 39;
             // 
             // lblConfirmationPassword
             // 
             this.lblConfirmationPassword.AutoSize = true;
-            this.lblConfirmationPassword.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmationPassword.Location = new System.Drawing.Point(93, 208);
+            this.lblConfirmationPassword.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmationPassword.Location = new System.Drawing.Point(184, 225);
             this.lblConfirmationPassword.Name = "lblConfirmationPassword";
-            this.lblConfirmationPassword.Size = new System.Drawing.Size(188, 22);
+            this.lblConfirmationPassword.Size = new System.Drawing.Size(131, 18);
             this.lblConfirmationPassword.TabIndex = 40;
-            this.lblConfirmationPassword.Text = "Confirmação da senha";
+            this.lblConfirmationPassword.Text = "Confirmar senha";
             // 
             // pbxDelete
             // 
@@ -169,6 +162,7 @@
             this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxDelete.TabIndex = 28;
             this.pbxDelete.TabStop = false;
+            this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
             // 
             // pbxSave
             // 
@@ -180,6 +174,7 @@
             this.pbxSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxSave.TabIndex = 27;
             this.pbxSave.TabStop = false;
+            this.pbxSave.Click += new System.EventHandler(this.pbxSave_Click);
             // 
             // pbxBack
             // 
@@ -203,20 +198,20 @@
             this.Controls.Add(this.cmbProfile);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbxConfPassword);
             this.Controls.Add(this.lblProfile);
             this.Controls.Add(this.tbxEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.cbxActive);
-            this.Controls.Add(this.lblActive);
             this.Controls.Add(this.tbxPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxSave);
             this.Controls.Add(this.pbxBack);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserDetailsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserDetailsForm";
+            this.Text = "Usuário";
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
@@ -231,12 +226,11 @@
         private System.Windows.Forms.PictureBox pbxSave;
         private System.Windows.Forms.PictureBox pbxBack;
         private System.Windows.Forms.CheckBox cbxActive;
-        private System.Windows.Forms.Label lblActive;
         private System.Windows.Forms.TextBox tbxPassword;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbxConfPassword;
         private System.Windows.Forms.Label lblProfile;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label lblName;

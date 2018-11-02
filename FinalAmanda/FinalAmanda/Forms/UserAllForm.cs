@@ -19,47 +19,55 @@ namespace FinalAmanda.Forms
             InitializeComponent();
         }
 
-        private void pbxBack_Click(object sender, EventArgs e)
-        {
-            HomeForm home = new HomeForm();
-            home.Show();
-        }
-
-        private void pbxAdd_Click(object sender, EventArgs e)
-        {
-            UserDetailsForm details = new UserDetailsForm();
-            details.Show();
-        }
-
-        private void pbxEdit_Click(object sender, EventArgs e)
-        {
-            UserDetailsForm details = new UserDetailsForm();
-            details.Show();
-        }
-
+        //Clean Button (eraser)
         private void pbxClean_Click(object sender, EventArgs e)
         {
             CleanData();
         }
 
+        //Search Button
         private void pbxSearch_Click(object sender, EventArgs e)
         {
             GetData();
         }
 
+        //Data stuff
+        void GetData()
+        {
+            search = tbxSearch.Text;
+        }
+        void CleanData()
+        {
+            tbxSearch.Text = "";
+        }
+
+        //Edit and Add things
+        private void pbxEdit_Click(object sender, EventArgs e)
+        {
+            //Edit
+            UserDetailsForm details = new UserDetailsForm();
+            details.Show();
+        }
+        private void pbxAdd_Click(object sender, EventArgs e)
+        {
+            //Add
+            UserDetailsForm details = new UserDetailsForm();
+            details.Show();
+        }
+
+        //Trash (delete)
         private void pbxDelete_Click(object sender, EventArgs e)
         {
 
         }
 
-        void GetData()
+        //Back Button (Home)
+        private void pbxBack_Click(object sender, EventArgs e)
         {
-            search = tbxSearch.Text;
+            HomeForm home = new HomeForm();
+            home.Show();
+            this.Close();
         }
-
-        void CleanData()
-        {
-            tbxSearch.Text = "";
-        }
+        
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pbxClean = new System.Windows.Forms.PictureBox();
             this.pbxSearch = new System.Windows.Forms.PictureBox();
@@ -71,6 +72,7 @@
             this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxSearch.TabIndex = 43;
             this.pbxSearch.TabStop = false;
+            this.pbxSearch.Click += new System.EventHandler(this.pbxSearch_Click);
             // 
             // pbxBack
             // 
@@ -86,19 +88,19 @@
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxSearch.Location = new System.Drawing.Point(102, 18);
+            this.tbxSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxSearch.Location = new System.Drawing.Point(103, 19);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(342, 30);
+            this.tbxSearch.Size = new System.Drawing.Size(342, 27);
             this.tbxSearch.TabIndex = 41;
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(11, 21);
+            this.lblSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(12, 23);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(89, 22);
+            this.lblSearch.Size = new System.Drawing.Size(87, 18);
             this.lblSearch.TabIndex = 40;
             this.lblSearch.Text = "Pesquisar";
             // 
@@ -114,6 +116,7 @@
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.lblSearch);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log";

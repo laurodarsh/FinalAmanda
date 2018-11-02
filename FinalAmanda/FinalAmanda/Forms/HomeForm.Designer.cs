@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.lblProduct = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
@@ -60,66 +61,66 @@
             // lblProduct
             // 
             this.lblProduct.AutoSize = true;
-            this.lblProduct.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProduct.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblProduct.Location = new System.Drawing.Point(115, 166);
+            this.lblProduct.Location = new System.Drawing.Point(112, 166);
             this.lblProduct.Name = "lblProduct";
-            this.lblProduct.Size = new System.Drawing.Size(78, 17);
+            this.lblProduct.Size = new System.Drawing.Size(91, 18);
             this.lblProduct.TabIndex = 6;
             this.lblProduct.Text = "PRODUTO";
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.lblCategory.Location = new System.Drawing.Point(410, 167);
+            this.lblCategory.Location = new System.Drawing.Point(404, 167);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(90, 17);
+            this.lblCategory.Size = new System.Drawing.Size(108, 18);
             this.lblCategory.TabIndex = 7;
             this.lblCategory.Text = "CATEGORIA";
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lblUser.Location = new System.Drawing.Point(272, 273);
+            this.lblUser.Location = new System.Drawing.Point(263, 273);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(70, 17);
+            this.lblUser.Size = new System.Drawing.Size(88, 18);
             this.lblUser.TabIndex = 8;
             this.lblUser.Text = "USUÁRIO";
             // 
             // lblUserProfile
             // 
             this.lblUserProfile.AutoSize = true;
-            this.lblUserProfile.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserProfile.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserProfile.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.lblUserProfile.Location = new System.Drawing.Point(128, 379);
+            this.lblUserProfile.Location = new System.Drawing.Point(122, 379);
             this.lblUserProfile.Name = "lblUserProfile";
-            this.lblUserProfile.Size = new System.Drawing.Size(57, 17);
+            this.lblUserProfile.Size = new System.Drawing.Size(69, 18);
             this.lblUserProfile.TabIndex = 9;
             this.lblUserProfile.Text = "PERFIL";
             // 
             // lblLog
             // 
             this.lblLog.AutoSize = true;
-            this.lblLog.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLog.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLog.ForeColor = System.Drawing.Color.MediumPurple;
-            this.lblLog.Location = new System.Drawing.Point(438, 379);
+            this.lblLog.Location = new System.Drawing.Point(436, 379);
             this.lblLog.Name = "lblLog";
-            this.lblLog.Size = new System.Drawing.Size(36, 17);
+            this.lblLog.Size = new System.Drawing.Size(43, 18);
             this.lblLog.TabIndex = 10;
             this.lblLog.Text = "LOG";
             // 
             // lblHomeMessage
             // 
             this.lblHomeMessage.AutoSize = true;
-            this.lblHomeMessage.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHomeMessage.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHomeMessage.ForeColor = System.Drawing.Color.Black;
-            this.lblHomeMessage.Location = new System.Drawing.Point(247, 25);
+            this.lblHomeMessage.Location = new System.Drawing.Point(241, 25);
             this.lblHomeMessage.Name = "lblHomeMessage";
-            this.lblHomeMessage.Size = new System.Drawing.Size(116, 19);
+            this.lblHomeMessage.Size = new System.Drawing.Size(138, 18);
             this.lblHomeMessage.TabIndex = 12;
             this.lblHomeMessage.Text = "Bem vindo \"   \"!";
             // 
@@ -200,7 +201,7 @@
             // 
             this.pbxUserUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxUserUser.Image = global::FinalAmanda.Properties.Resources.User;
-            this.pbxUserUser.Location = new System.Drawing.Point(210, 234);
+            this.pbxUserUser.Location = new System.Drawing.Point(214, 238);
             this.pbxUserUser.Name = "pbxUserUser";
             this.pbxUserUser.Size = new System.Drawing.Size(178, 132);
             this.pbxUserUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -213,7 +214,7 @@
             // 
             this.pbxCategoryUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxCategoryUser.Image = global::FinalAmanda.Properties.Resources.Category;
-            this.pbxCategoryUser.Location = new System.Drawing.Point(360, 68);
+            this.pbxCategoryUser.Location = new System.Drawing.Point(364, 72);
             this.pbxCategoryUser.Name = "pbxCategoryUser";
             this.pbxCategoryUser.Size = new System.Drawing.Size(178, 132);
             this.pbxCategoryUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -226,7 +227,7 @@
             // 
             this.pbxProductUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxProductUser.Image = global::FinalAmanda.Properties.Resources.Product;
-            this.pbxProductUser.Location = new System.Drawing.Point(66, 68);
+            this.pbxProductUser.Location = new System.Drawing.Point(70, 72);
             this.pbxProductUser.Name = "pbxProductUser";
             this.pbxProductUser.Size = new System.Drawing.Size(178, 132);
             this.pbxProductUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -238,11 +239,11 @@
             // lblUserUser
             // 
             this.lblUserUser.AutoSize = true;
-            this.lblUserUser.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserUser.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lblUserUser.Location = new System.Drawing.Point(265, 367);
+            this.lblUserUser.Location = new System.Drawing.Point(261, 371);
             this.lblUserUser.Name = "lblUserUser";
-            this.lblUserUser.Size = new System.Drawing.Size(70, 17);
+            this.lblUserUser.Size = new System.Drawing.Size(88, 18);
             this.lblUserUser.TabIndex = 21;
             this.lblUserUser.Text = "USUÁRIO";
             this.lblUserUser.Visible = false;
@@ -250,11 +251,11 @@
             // lblCategoryUser
             // 
             this.lblCategoryUser.AutoSize = true;
-            this.lblCategoryUser.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoryUser.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoryUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.lblCategoryUser.Location = new System.Drawing.Point(406, 201);
+            this.lblCategoryUser.Location = new System.Drawing.Point(403, 205);
             this.lblCategoryUser.Name = "lblCategoryUser";
-            this.lblCategoryUser.Size = new System.Drawing.Size(90, 17);
+            this.lblCategoryUser.Size = new System.Drawing.Size(108, 18);
             this.lblCategoryUser.TabIndex = 20;
             this.lblCategoryUser.Text = "CATEGORIA";
             this.lblCategoryUser.Visible = false;
@@ -262,11 +263,11 @@
             // lblProductUser
             // 
             this.lblProductUser.AutoSize = true;
-            this.lblProductUser.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductUser.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductUser.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblProductUser.Location = new System.Drawing.Point(114, 201);
+            this.lblProductUser.Location = new System.Drawing.Point(117, 205);
             this.lblProductUser.Name = "lblProductUser";
-            this.lblProductUser.Size = new System.Drawing.Size(78, 17);
+            this.lblProductUser.Size = new System.Drawing.Size(91, 18);
             this.lblProductUser.TabIndex = 19;
             this.lblProductUser.Text = "PRODUTO";
             this.lblProductUser.Visible = false;
@@ -295,6 +296,7 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.lblProduct);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";

@@ -22,18 +22,21 @@ namespace FinalAmanda.Forms
         {
             ProductAllForm product = new ProductAllForm();
             product.Show();
+            this.Hide();
         }
 
         private void pbxCategoryUser_Click(object sender, EventArgs e)
         {
             CategoryAllForm category = new CategoryAllForm();
             category.Show();
+            this.Hide();
         }
 
         private void pbxUserUser_Click(object sender, EventArgs e)
         {
             UserAllForm user = new UserAllForm();
             user.Show();
+            this.Hide();
         }
         //End access only, employee
 
@@ -42,36 +45,43 @@ namespace FinalAmanda.Forms
         {
             ProductAllForm product = new ProductAllForm();
             product.Show();
+            this.Hide();
         }
         
         private void pbxCategory_Click(object sender, EventArgs e)
         {
             CategoryAllForm category = new CategoryAllForm();
             category.Show();
+            this.Hide();
         }
         
         private void pbxUser_Click(object sender, EventArgs e)
         {
             UserAllForm user = new UserAllForm();
             user.Show();
+            this.Hide();
         }
 
         private void pbxUserProfile_Click(object sender, EventArgs e)
         {
             UserProfileAllForm profile = new UserProfileAllForm();
             profile.Show();
+            this.Hide();
         }
 
         private void pbxLog_Click(object sender, EventArgs e)
         {
             LogForm log = new LogForm();
             log.Show();
+            this.Hide();
         }
 
+        //Back Button (Login)
         private void pbxBack_Click(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
             login.Show();
+            this.Hide();
         }
     }
 }

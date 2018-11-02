@@ -12,32 +12,62 @@ namespace FinalAmanda.Forms
 {
     public partial class ProductAllForm : Form
     {
+        string search;
+
         public ProductAllForm()
         {
             InitializeComponent();
         }
 
+        //Clean Button (eraser)
+        private void pbxClean_Click(object sender, EventArgs e)
+        {
+            CleanData();
+        }
+
+        //Search Button
+        private void pbxSearch_Click(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        //Data stuff
+        void GetData()
+        {
+            search = tbxSearch.Text;
+        }
+        void CleanData()
+        {
+            tbxSearch.Text = "";
+        }
+
+        //Edit and Add things
+        private void pbxEdit_Click(object sender, EventArgs e)
+        {
+            //Edit
+            ProductDetailsForm details = new ProductDetailsForm();
+            details.Show();
+        }
+        private void pbxAdd_Click(object sender, EventArgs e)
+        {
+            //Add
+            ProductDetailsForm details = new ProductDetailsForm();
+            details.Show();
+        }
+
+        //Trash (delete)
+        private void pbxDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Back Button (Home)
         private void pbxBack_Click(object sender, EventArgs e)
         {
             HomeForm home = new HomeForm();
             home.Show();
+            this.Close();
         }
-
-        private void pbxAdd_Click(object sender, EventArgs e)
-        {
-            ProductDetailsForm details = new ProductDetailsForm();
-            details.Show();
-        }
-
-        private void pbxEdit_Click(object sender, EventArgs e)
-        {
-            ProductDetailsForm details = new ProductDetailsForm();
-            details.Show();
-        }
-
-        private void pbxClean_Click(object sender, EventArgs e)
-        {
-            tbxSearch.Text = "";
-        }
+        
     }
 }

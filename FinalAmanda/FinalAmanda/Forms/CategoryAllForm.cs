@@ -19,47 +19,54 @@ namespace FinalAmanda.Forms
             InitializeComponent();
         }
 
-        private void pbxEdit_Click(object sender, EventArgs e)
-        {
-            CategoryDetailsForm details = new CategoryDetailsForm();
-            details.Show();
-        }
-
-        private void pbxAdd_Click(object sender, EventArgs e)
-        {
-            CategoryDetailsForm details = new CategoryDetailsForm();
-            details.Show();
-        }
-
+        //Clean Button (eraser)
         private void pbxClean_Click(object sender, EventArgs e)
         {
             CleanData();
         }
 
-        void GetData()
-        {
-            search = tbxSearch.Text;
-        }
-
-        void CleanData()
-        {
-            tbxSearch.Text = "";
-        }
-
-        private void pbxBack_Click(object sender, EventArgs e)
-        {
-            HomeForm home = new HomeForm();
-            home.Show();
-        }
-
+        //Search Button
         private void pbxSearch_Click(object sender, EventArgs e)
         {
             GetData();
         }
 
+        //Data stuff
+        void GetData()
+        {
+            search = tbxSearch.Text;
+        }
+        void CleanData()
+        {
+            tbxSearch.Text = "";
+        }
+        
+        //Edit and Add things
+        private void pbxEdit_Click(object sender, EventArgs e)
+        {
+            //Edit
+            CategoryDetailsForm details = new CategoryDetailsForm();
+            details.Show();
+        }
+        private void pbxAdd_Click(object sender, EventArgs e)
+        {
+            //Add
+            CategoryDetailsForm details = new CategoryDetailsForm();
+            details.Show();
+        }
+
+        //Trash (delete)
         private void pbxDelete_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //Back Button (Home)
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            HomeForm home = new HomeForm();
+            home.Show();
+            this.Close();
         }
     }
 }

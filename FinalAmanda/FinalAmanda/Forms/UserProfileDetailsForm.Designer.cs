@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProfileDetailsForm));
             this.cbxActive = new System.Windows.Forms.CheckBox();
-            this.lblActive = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.pbxDelete = new System.Windows.Forms.PictureBox();
@@ -43,38 +43,29 @@
             // cbxActive
             // 
             this.cbxActive.AutoSize = true;
-            this.cbxActive.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxActive.Location = new System.Drawing.Point(258, 208);
+            this.cbxActive.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxActive.Location = new System.Drawing.Point(202, 202);
             this.cbxActive.Name = "cbxActive";
-            this.cbxActive.Size = new System.Drawing.Size(15, 14);
+            this.cbxActive.Size = new System.Drawing.Size(65, 22);
             this.cbxActive.TabIndex = 30;
+            this.cbxActive.Text = "Ativo";
             this.cbxActive.UseVisualStyleBackColor = true;
-            // 
-            // lblActive
-            // 
-            this.lblActive.AutoSize = true;
-            this.lblActive.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.Location = new System.Drawing.Point(201, 201);
-            this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(53, 22);
-            this.lblActive.TabIndex = 29;
-            this.lblActive.Text = "Ativo";
             // 
             // tbxName
             // 
-            this.tbxName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxName.Location = new System.Drawing.Point(258, 161);
+            this.tbxName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxName.Location = new System.Drawing.Point(202, 168);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(127, 30);
+            this.tbxName.Size = new System.Drawing.Size(229, 27);
             this.tbxName.TabIndex = 28;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(200, 164);
+            this.lblName.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(199, 146);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(58, 22);
+            this.lblName.Size = new System.Drawing.Size(53, 18);
             this.lblName.TabIndex = 27;
             this.lblName.Text = "Nome";
             // 
@@ -123,13 +114,13 @@
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxSave);
             this.Controls.Add(this.cbxActive);
-            this.Controls.Add(this.lblActive);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pbxBack);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserProfileDetailsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserProfileDetailsForm";
+            this.Text = "Perfil";
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
@@ -143,7 +134,6 @@
         private System.Windows.Forms.PictureBox pbxDelete;
         private System.Windows.Forms.PictureBox pbxSave;
         private System.Windows.Forms.CheckBox cbxActive;
-        private System.Windows.Forms.Label lblActive;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.PictureBox pbxBack;

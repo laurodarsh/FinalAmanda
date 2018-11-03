@@ -79,6 +79,14 @@ namespace FinalAmanda.Classes
             }
         }
 
+        public Product(int id, string name, bool active, Category category, float price)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Active = active;
+            this.Category = category;
+            this.Price = price;
+        }
         public Product(string name, bool active, Category category, float price)
         {
             this.Name = name;

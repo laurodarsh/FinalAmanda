@@ -64,9 +64,9 @@
             this.tbxPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxPassword.Location = new System.Drawing.Point(187, 189);
             this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.PasswordChar = '•';
             this.tbxPassword.Size = new System.Drawing.Size(229, 27);
             this.tbxPassword.TabIndex = 30;
-            this.tbxPassword.TextChanged += new System.EventHandler(this.tbxPassword_TextChanged);
             // 
             // lblPassword
             // 
@@ -101,9 +101,9 @@
             this.tbxConfPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxConfPassword.Location = new System.Drawing.Point(187, 247);
             this.tbxConfPassword.Name = "tbxConfPassword";
+            this.tbxConfPassword.PasswordChar = '•';
             this.tbxConfPassword.Size = new System.Drawing.Size(229, 27);
             this.tbxConfPassword.TabIndex = 36;
-            this.tbxConfPassword.TextChanged += new System.EventHandler(this.tbxConfPassword_TextChanged);
             // 
             // lblProfile
             // 

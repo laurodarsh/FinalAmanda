@@ -93,6 +93,15 @@ namespace FinalAmanda.Classes
             }
         }
 
+        public User(int id, string name, string password, string email, UserProfile userprofile, bool active)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Password = password;
+            this.Email = email;
+            this.Userprofile = userprofile;
+            this.Active = active;
+        }
         public User(string name,string password, string email, UserProfile userprofile,bool active)
         {
             this.Name = name;

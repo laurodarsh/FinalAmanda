@@ -1,7 +1,9 @@
-﻿using System;
+﻿using FinalAmanda.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,32 +20,89 @@ namespace FinalAmanda.Forms
         string confPassword;
         string perfil;
         bool active;
+        string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
+        List<UserProfile> uprofile = new List<UserProfile>();
 
         public UserDetailsForm()
         {
             InitializeComponent();
+            cmbProfile.DisplayMember = "NAME";
+            LoadComboBox();
         }
 
-        //Hide Password Characters
-        private void tbxPassword_TextChanged(object sender, EventArgs e)
+        //Load CMB
+        void LoadComboBox()
         {
-            tbxPassword.Text = "•";
-            tbxPassword.MaxLength = 14;
-        }
-        private void tbxConfPassword_TextChanged(object sender, EventArgs e)
-        {
-            tbxConfPassword.Text = "•";
-            tbxConfPassword.MaxLength = 14;
-        }
+            SqlConnection cn = new SqlConnection(connectionString);
 
+            try
+            {
+                cn.Open();
+                SqlCommand sqlCommand = new SqlCommand("SELECT * FROM USER_PROFILE", cn);
+
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    UserProfile up = new UserProfile(Int32.Parse(reader["ID"].ToString()), reader["NAME"].ToString(), bool.Parse(reader["ACTIVE"].ToString()));
+                    uprofile.Add(up);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+            foreach (UserProfile c in uprofile)
+            {
+                cmbProfile.Items.Add(c);
+            }
+        }
+        
         //Save Button
         private void pbxSave_Click(object sender, EventArgs e)
         {
-            GetData();
-            if (password == confPassword)
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+            try
             {
-                MessageBox.Show("Salvo com sucesso!");
+                GetData();
+
+                if (password == confPassword)
+                {
+                    UserProfile up = (UserProfile)cmbProfile.SelectedItem;
+                    User u = new User(name,password,email,up,active);
+
+                    sqlConnect.Open();
+                    string sql = "INSERT INTO [USER](NAME, PASSWORD, EMAIL, ACTIVE, FK_USERPROFILE) VALUES (@name, @password,@email, @active, @userprofile)";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@name", u.Name));
+                    cmd.Parameters.Add(new SqlParameter("@password", u.Password));
+                    cmd.Parameters.Add(new SqlParameter("@email", u.Email));
+                    cmd.Parameters.Add(new SqlParameter("@active", u.Active));
+                    cmd.Parameters.Add(new SqlParameter("@userprofile", u.Userprofile.Id));
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Adicionado com sucesso!");
+                    CleanData();
+                }
+                else
+                {
+                    MessageBox.Show("Confirmação de senha incorreta!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar usuário!" + ex.Message);
                 CleanData();
+            }
+            finally
+            {
+                sqlConnect.Close();
+
             }
         }
 
@@ -52,7 +111,7 @@ namespace FinalAmanda.Forms
         {
             CleanData();
         }
-        
+
         //Data stuff
         void GetData()
         {

@@ -51,6 +51,12 @@ namespace FinalAmanda.Classes
             }
         }
 
+        public Category(int id,string name, bool active)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Active = active;
+        }
         public Category (string name,bool active)
         {
             this.Name = name;

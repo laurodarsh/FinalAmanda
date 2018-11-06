@@ -71,7 +71,6 @@
             this.tbxPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbxPassword.Size = new System.Drawing.Size(216, 27);
             this.tbxPassword.TabIndex = 3;
-            this.tbxPassword.TextChanged += new System.EventHandler(this.tbxPassword_TextChanged);
             // 
             // lblPassword
             // 

@@ -70,14 +70,7 @@ namespace FinalAmanda.Forms
             //GetData Email
             email = tbxEmail.Text;
         }
-
-        //Hide Password Characters
-        private void tbxPassword_TextChanged(object sender, EventArgs e)
-        {
-            tbxPassword.Text = "•";
-            tbxPassword.MaxLength = 14;
-        }
-
+        
         //Hehehe :D
         private void pbxLUA_Click(object sender, EventArgs e)
         {

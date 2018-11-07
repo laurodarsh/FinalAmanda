@@ -143,7 +143,7 @@ namespace FinalAmanda.Forms
 
         #region Hide Login
 
-        //Forgot Password Button Click
+        //Forgot Password Label Click
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
             //Hide Login things
@@ -192,5 +192,48 @@ namespace FinalAmanda.Forms
             }
         }
         #endregion
+
+        #region Forgot Password Label
+
+        //Mouse Enter
+        private void lblForgotPassword_MouseEnter(object sender, EventArgs e)
+        {
+            lblForgotPassword.Font = new Font(lblForgotPassword.Font.Name, lblForgotPassword.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        //Mouse Leave
+        private void lblForgotPassword_MouseLeave(object sender, EventArgs e)
+        {
+            lblForgotPassword.Font = new Font(lblForgotPassword.Font.Name, lblForgotPassword.Font.SizeInPoints, FontStyle.Regular);
+        }
+        #endregion
+
+        #region Hide Forgot Password
+        
+        //Back Login Button Click
+        private void lblBackLogin_Click(object sender, EventArgs e)
+        {
+            //Hide Forgot Password things
+            this.pnlHide.Location = new Point(pnlHide.Location.X - 340, pnlHide.Location.Y - 0);
+            this.pnlHide.BackColor = Color.White;
+        }
+
+        #endregion
+
+        #region Back Login Label
+
+        //Mouse Enter
+        private void lblBackLogin_MouseEnter(object sender, EventArgs e)
+        {
+            lblBackLogin.Font = new Font(lblBackLogin.Font.Name, lblBackLogin.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        //Mouse Leave
+        private void lblBackLogin_MouseLeave(object sender, EventArgs e)
+        {
+            lblBackLogin.Font = new Font(lblBackLogin.Font.Name, lblBackLogin.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+#endregion
     }
 }

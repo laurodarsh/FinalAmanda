@@ -19,7 +19,7 @@ namespace FinalAmanda.Forms
         {
             InitializeComponent();
         }
-        
+
         private void pbxBack_Click(object sender, EventArgs e)
         {
             LoginForm2 home = new LoginForm2();
@@ -29,24 +29,30 @@ namespace FinalAmanda.Forms
 
         private void pbxSearch_Click(object sender, EventArgs e)
         {
-
+            GetData();
         }
 
         private void pbxClean_Click(object sender, EventArgs e)
         {
-
+            CleanData();
         }
 
-        //Data stuff
+        #region Data stuff
+        
+        //Get
         void GetData()
         {
             search = tbxSearch.Text;
         }
+
+        //Clean
         void CleanData()
         {
             tbxSearch.Text = "";
         }
-        
+
+        #endregion
+
         #region Product
 
         //Product Button
@@ -182,7 +188,7 @@ namespace FinalAmanda.Forms
         #region Log
 
         //Log Button
-        private void pnlLog_Paint(object sender, PaintEventArgs e)
+        private void pnlLog_MouseClick(object sender, MouseEventArgs e)
         {
             //Hide Itens
             if (lblSearch.Visible == true)
@@ -211,6 +217,20 @@ namespace FinalAmanda.Forms
         }
 
         #endregion
-        
+
+        private void pbxAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -83,6 +83,7 @@
             this.pbxAdd.TabIndex = 46;
             this.pbxAdd.TabStop = false;
             this.pbxAdd.Visible = false;
+            this.pbxAdd.Click += new System.EventHandler(this.pbxAdd_Click);
             // 
             // pbxDelete
             // 
@@ -95,6 +96,7 @@
             this.pbxDelete.TabIndex = 45;
             this.pbxDelete.TabStop = false;
             this.pbxDelete.Visible = false;
+            this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
             // 
             // pbxEdit
             // 
@@ -107,6 +109,7 @@
             this.pbxEdit.TabIndex = 44;
             this.pbxEdit.TabStop = false;
             this.pbxEdit.Visible = false;
+            this.pbxEdit.Click += new System.EventHandler(this.pbxEdit_Click);
             // 
             // dgvAll
             // 
@@ -170,11 +173,11 @@
             // 
             this.pnlLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.pnlLog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlLog.Location = new System.Drawing.Point(0, 393);
+            this.pnlLog.Location = new System.Drawing.Point(0, 394);
             this.pnlLog.Name = "pnlLog";
             this.pnlLog.Size = new System.Drawing.Size(254, 88);
             this.pnlLog.TabIndex = 2;
-            this.pnlLog.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLog_Paint);
+            this.pnlLog.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlLog_MouseClick);
             // 
             // panel2
             // 
@@ -182,7 +185,7 @@
             this.panel2.Controls.Add(this.pbxBack);
             this.panel2.Location = new System.Drawing.Point(55, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(894, 41);
+            this.panel2.Size = new System.Drawing.Size(894, 42);
             this.panel2.TabIndex = 1;
             // 
             // pbxBack
@@ -201,7 +204,7 @@
             // 
             this.pnlProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.pnlProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlProduct.Location = new System.Drawing.Point(55, 91);
+            this.pnlProduct.Location = new System.Drawing.Point(55, 92);
             this.pnlProduct.Name = "pnlProduct";
             this.pnlProduct.Size = new System.Drawing.Size(254, 88);
             this.pnlProduct.TabIndex = 0;
@@ -211,7 +214,7 @@
             // 
             this.pnlCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pnlCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlCategory.Location = new System.Drawing.Point(55, 179);
+            this.pnlCategory.Location = new System.Drawing.Point(55, 180);
             this.pnlCategory.Name = "pnlCategory";
             this.pnlCategory.Size = new System.Drawing.Size(254, 88);
             this.pnlCategory.TabIndex = 1;
@@ -221,7 +224,7 @@
             // 
             this.pnlUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.pnlUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlUser.Location = new System.Drawing.Point(55, 267);
+            this.pnlUser.Location = new System.Drawing.Point(55, 268);
             this.pnlUser.Name = "pnlUser";
             this.pnlUser.Size = new System.Drawing.Size(254, 88);
             this.pnlUser.TabIndex = 2;
@@ -231,7 +234,7 @@
             // 
             this.pnlUserProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pnlUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlUserProfile.Location = new System.Drawing.Point(55, 355);
+            this.pnlUserProfile.Location = new System.Drawing.Point(55, 356);
             this.pnlUserProfile.Name = "pnlUserProfile";
             this.pnlUserProfile.Size = new System.Drawing.Size(254, 88);
             this.pnlUserProfile.TabIndex = 2;

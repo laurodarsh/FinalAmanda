@@ -99,7 +99,7 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.BackColor = System.Drawing.Color.Transparent;
             this.lblLogin.Font = new System.Drawing.Font("Corbel", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblLogin.ForeColor = System.Drawing.Color.White;
             this.lblLogin.Location = new System.Drawing.Point(477, 57);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(112, 42);
@@ -139,7 +139,7 @@
             // 
             // pnlHide
             // 
-            this.pnlHide.BackColor = System.Drawing.Color.Aquamarine;
+            this.pnlHide.BackColor = System.Drawing.Color.White;
             this.pnlHide.Location = new System.Drawing.Point(168, 65);
             this.pnlHide.Name = "pnlHide";
             this.pnlHide.Size = new System.Drawing.Size(337, 436);

@@ -32,7 +32,7 @@ namespace FinalAmanda.Forms
             tbxPassword.Text = "Senha";
             this.tbxPassword.Leave += new System.EventHandler(this.tbxPassword_Leave);
             this.tbxPassword.Enter += new System.EventHandler(this.tbxPassword_Enter);
-
+            
             //Email ivisible label
             tbxEmail.ForeColor = SystemColors.GrayText;
             tbxEmail.Text = "E-mail";
@@ -116,7 +116,7 @@ namespace FinalAmanda.Forms
         private void pbxLogin_Click(object sender, EventArgs e)
         {
             GetData();
-            HomeForm home = new HomeForm();
+            HomeForm2 home = new HomeForm2();
             home.Show();
             ClenData();
             this.Hide();
@@ -176,10 +176,11 @@ namespace FinalAmanda.Forms
             this.pbxEye.BackColor = Color.White;
         }
         #endregion
-
+        
         #region Hide Password Button
         private void pbxEye_Click(object sender, EventArgs e)
-        {
+        { 
+            
             if (tbxPassword.UseSystemPasswordChar == true)
             {
                 tbxPassword.UseSystemPasswordChar = false;
@@ -187,6 +188,7 @@ namespace FinalAmanda.Forms
             else
             {
                 tbxPassword.UseSystemPasswordChar = true;
+
             }
         }
         #endregion

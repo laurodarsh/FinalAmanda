@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlLogFor = new System.Windows.Forms.Panel();
+            this.lblBackLogin = new System.Windows.Forms.Label();
             this.pbxEye = new System.Windows.Forms.PictureBox();
             this.pbxSend = new System.Windows.Forms.PictureBox();
             this.pbxLogin = new System.Windows.Forms.PictureBox();
@@ -40,7 +41,6 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblForgotPass = new System.Windows.Forms.Label();
             this.pnlHide = new System.Windows.Forms.Panel();
-            this.lblBackLogin = new System.Windows.Forms.Label();
             this.pnlLogFor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSend)).BeginInit();
@@ -65,6 +65,22 @@
             this.pnlLogFor.Name = "pnlLogFor";
             this.pnlLogFor.Size = new System.Drawing.Size(704, 332);
             this.pnlLogFor.TabIndex = 0;
+            // 
+            // lblBackLogin
+            // 
+            this.lblBackLogin.AutoSize = true;
+            this.lblBackLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblBackLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblBackLogin.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBackLogin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblBackLogin.Location = new System.Drawing.Point(19, 240);
+            this.lblBackLogin.Name = "lblBackLogin";
+            this.lblBackLogin.Size = new System.Drawing.Size(124, 18);
+            this.lblBackLogin.TabIndex = 13;
+            this.lblBackLogin.Text = "Voltar para o login?";
+            this.lblBackLogin.Click += new System.EventHandler(this.lblBackLogin_Click);
+            this.lblBackLogin.MouseEnter += new System.EventHandler(this.lblBackLogin_MouseEnter);
+            this.lblBackLogin.MouseLeave += new System.EventHandler(this.lblBackLogin_MouseLeave);
             // 
             // pbxEye
             // 
@@ -185,27 +201,11 @@
             // pnlHide
             // 
             this.pnlHide.BackColor = System.Drawing.Color.White;
-            this.pnlHide.Location = new System.Drawing.Point(168, 65);
+            this.pnlHide.Location = new System.Drawing.Point(154, 117);
             this.pnlHide.Name = "pnlHide";
-            this.pnlHide.Size = new System.Drawing.Size(337, 436);
+            this.pnlHide.Size = new System.Drawing.Size(351, 332);
             this.pnlHide.TabIndex = 12;
             this.pnlHide.UseWaitCursor = true;
-            // 
-            // lblBackLogin
-            // 
-            this.lblBackLogin.AutoSize = true;
-            this.lblBackLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lblBackLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblBackLogin.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBackLogin.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblBackLogin.Location = new System.Drawing.Point(19, 240);
-            this.lblBackLogin.Name = "lblBackLogin";
-            this.lblBackLogin.Size = new System.Drawing.Size(124, 18);
-            this.lblBackLogin.TabIndex = 13;
-            this.lblBackLogin.Text = "Voltar para o login?";
-            this.lblBackLogin.Click += new System.EventHandler(this.lblBackLogin_Click);
-            this.lblBackLogin.MouseEnter += new System.EventHandler(this.lblBackLogin_MouseEnter);
-            this.lblBackLogin.MouseLeave += new System.EventHandler(this.lblBackLogin_MouseLeave);
             // 
             // LoginForm2
             // 

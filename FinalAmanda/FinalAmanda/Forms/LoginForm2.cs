@@ -147,7 +147,7 @@ namespace FinalAmanda.Forms
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
             //Hide Login things
-            this.pnlHide.Location = new Point(pnlHide.Location.X + 340, pnlHide.Location.Y + 0);
+            this.pnlHide.Location = new Point(pnlHide.Location.X + 353, pnlHide.Location.Y + 0);
             this.pnlHide.BackColor = Color.DarkViolet;
         }
 
@@ -214,7 +214,7 @@ namespace FinalAmanda.Forms
         private void lblBackLogin_Click(object sender, EventArgs e)
         {
             //Hide Forgot Password things
-            this.pnlHide.Location = new Point(pnlHide.Location.X - 340, pnlHide.Location.Y - 0);
+            this.pnlHide.Location = new Point(pnlHide.Location.X - 353, pnlHide.Location.Y - 0);
             this.pnlHide.BackColor = Color.White;
         }
 

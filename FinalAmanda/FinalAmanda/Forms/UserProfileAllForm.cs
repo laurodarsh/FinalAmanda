@@ -1,7 +1,9 @@
-﻿using System;
+﻿using FinalAmanda.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,18 +20,28 @@ namespace FinalAmanda.Forms
         public UserProfileAllForm()
         {
             InitializeComponent();
+            ShowData();
+            ResizeDataGridView();
         }
 
         //Clean Button (eraser)
         private void pbxClean_Click(object sender, EventArgs e)
         {
             CleanData();
+            ShowData();
+            ResizeDataGridView();
         }
 
         //Search Button
         private void pbxSearch_Click(object sender, EventArgs e)
         {
             GetData();
+
+            string optionForm = "UserProfileForm";
+            string optionString = "name";
+
+            Search search2 = new Search();
+            dgvUProfile.DataSource = search2.SearchFilter(connectionString, search, optionString, optionForm);
         }
 
         //Data stuff
@@ -68,6 +80,50 @@ namespace FinalAmanda.Forms
             HomeForm home = new HomeForm();
             home.Show();
             this.Close();
+        }
+
+        //Show Data
+        private void ShowData()
+        {
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                sqlConnect.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM USER_PROFILE", sqlConnect);
+
+                cmd.ExecuteNonQuery();
+
+                DataTable dt = new DataTable();
+                SqlDataAdapter sqlDtAdapter = new SqlDataAdapter(cmd);
+                sqlDtAdapter.Fill(dt);
+
+                dgvUProfile.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar. " + ex.Message);
+            }
+            finally
+            {
+                sqlConnect.Close();
+            }
+        }
+
+        //Resize DataGridView
+        private void ResizeDataGridView()
+        {
+            dgvUProfile.Columns["ID"].Visible = false;
+            dgvUProfile.Columns["NAME"].HeaderText = "Nome";
+            dgvUProfile.Columns["ACTIVE"].HeaderText = "Ativo";
+
+            foreach (DataGridViewColumn col in dgvUProfile.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+            }
         }
     }
 }

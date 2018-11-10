@@ -1,7 +1,9 @@
-﻿using System;
+﻿using FinalAmanda.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,18 +20,29 @@ namespace FinalAmanda.Forms
         public CategoryAllForm()
         {
             InitializeComponent();
+            ShowData();
+            ResizeDataGridView();
+
         }
 
         //Clean Button (eraser)
         private void pbxClean_Click(object sender, EventArgs e)
         {
             CleanData();
+            ShowData();
+            ResizeDataGridView();
         }
 
         //Search Button
         private void pbxSearch_Click(object sender, EventArgs e)
         {
             GetData();
+
+            string optionForm = "CategoryForm";
+            string optionString = "name";
+
+            Search search2 = new Search();
+            dgvCategory.DataSource = search2.SearchFilter(connectionString, search, optionString, optionForm);
         }
 
         //Data stuff
@@ -41,19 +54,21 @@ namespace FinalAmanda.Forms
         {
             tbxSearch.Text = "";
         }
-        
+
         //Edit and Add things
         private void pbxEdit_Click(object sender, EventArgs e)
         {
             //Edit
             CategoryDetailsForm details = new CategoryDetailsForm();
             details.Show();
+            this.Close();
         }
         private void pbxAdd_Click(object sender, EventArgs e)
         {
             //Add
             CategoryDetailsForm details = new CategoryDetailsForm();
             details.Show();
+            this.Close();
         }
 
         //Trash (delete)
@@ -68,6 +83,49 @@ namespace FinalAmanda.Forms
             HomeForm home = new HomeForm();
             home.Show();
             this.Close();
+        }
+
+        //Show Data
+        private void ShowData()
+        {
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                sqlConnect.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM CATEGORY", sqlConnect);
+
+                cmd.ExecuteNonQuery();
+
+                DataTable dt = new DataTable();
+                SqlDataAdapter sqlDtAdapter = new SqlDataAdapter(cmd);
+                sqlDtAdapter.Fill(dt);
+
+                dgvCategory.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar. " + ex.Message);
+            }
+            finally
+            {
+                sqlConnect.Close();
+            }
+        }
+
+        private void ResizeDataGridView()
+        {
+            dgvCategory.Columns["ID"].Visible = false;
+            dgvCategory.Columns["NAME"].HeaderText = "Nome";
+            dgvCategory.Columns["ACTIVE"].HeaderText = "Ativo";
+
+            foreach (DataGridViewColumn col in dgvCategory.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+            }
         }
     }
 }

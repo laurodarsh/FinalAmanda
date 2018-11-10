@@ -1,7 +1,9 @@
-﻿using System;
+﻿using FinalAmanda.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,18 +20,28 @@ namespace FinalAmanda.Forms
         public ProductAllForm()
         {
             InitializeComponent();
+            ShowData();
+            ResizeDataGridView();
         }
 
         //Clean Button (eraser)
         private void pbxClean_Click(object sender, EventArgs e)
         {
             CleanData();
+            ShowData();
+            ResizeDataGridView();
         }
 
         //Search Button
         private void pbxSearch_Click(object sender, EventArgs e)
         {
             GetData();
+
+            string optionForm = "ProductForm";
+            string optionString = "name";
+
+            Search search2 = new Search();
+            dgvProduct.DataSource = search2.SearchFilter(connectionString, search, optionString, optionForm);
         }
 
         //Data stuff
@@ -69,6 +81,52 @@ namespace FinalAmanda.Forms
             home.Show();
             this.Close();
         }
-        
+
+        //Show Data
+        private void ShowData()
+        {
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                sqlConnect.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT PRODUCT.ID, PRODUCT.NAME, PRODUCT.ACTIVE, PRODUCT.PRICE, CATEGORY.NAME FROM PRODUCT INNER JOIN CATEGORY ON PRODUCT.FK_PRODUCT = CATEGORY.ID;", sqlConnect);
+
+                cmd.ExecuteNonQuery();
+
+                DataTable dt = new DataTable();
+                SqlDataAdapter sqlDtAdapter = new SqlDataAdapter(cmd);
+                sqlDtAdapter.Fill(dt);
+
+                dgvProduct.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar. " + ex.Message);
+            }
+            finally
+            {
+                sqlConnect.Close();
+            }
+        }
+
+        private void ResizeDataGridView()
+        {
+            dgvProduct.Columns["ID"].Visible = false;
+            dgvProduct.Columns["ACTIVE"].HeaderText = "Ativo";
+            dgvProduct.Columns["ACTIVE"].DisplayIndex = 4;
+            dgvProduct.Columns["NAME1"].HeaderText = "Categoria";
+            dgvProduct.Columns["NAME1"].DisplayIndex = 3;
+            dgvProduct.Columns["PRICE"].HeaderText = "Preço";
+            dgvProduct.Columns["NAME"].HeaderText = "Nome";
+
+            foreach (DataGridViewColumn col in dgvProduct.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+            }
+        }
     }
 }

@@ -38,12 +38,12 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.pnlLog = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pbxBack = new System.Windows.Forms.PictureBox();
             this.pnlProduct = new System.Windows.Forms.Panel();
             this.pnlCategory = new System.Windows.Forms.Panel();
             this.pnlUser = new System.Windows.Forms.Panel();
             this.pnlUserProfile = new System.Windows.Forms.Panel();
+            this.pbxBack = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
@@ -51,8 +51,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxClean)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -179,27 +179,6 @@
             this.pnlLog.TabIndex = 2;
             this.pnlLog.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlLog_MouseClick);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Aquamarine;
-            this.panel2.Controls.Add(this.pbxBack);
-            this.panel2.Location = new System.Drawing.Point(55, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(894, 42);
-            this.panel2.TabIndex = 1;
-            // 
-            // pbxBack
-            // 
-            this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
-            this.pbxBack.Location = new System.Drawing.Point(3, 5);
-            this.pbxBack.Name = "pbxBack";
-            this.pbxBack.Size = new System.Drawing.Size(43, 33);
-            this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxBack.TabIndex = 43;
-            this.pbxBack.TabStop = false;
-            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
-            // 
             // pnlProduct
             // 
             this.pnlProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -208,6 +187,7 @@
             this.pnlProduct.Name = "pnlProduct";
             this.pnlProduct.Size = new System.Drawing.Size(254, 88);
             this.pnlProduct.TabIndex = 0;
+            this.pnlProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlProduct_Paint);
             this.pnlProduct.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlProduct_MouseClick);
             // 
             // pnlCategory
@@ -240,6 +220,27 @@
             this.pnlUserProfile.TabIndex = 2;
             this.pnlUserProfile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlUserProfile_MouseClick);
             // 
+            // pbxBack
+            // 
+            this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
+            this.pbxBack.Location = new System.Drawing.Point(3, 5);
+            this.pbxBack.Name = "pbxBack";
+            this.pbxBack.Size = new System.Drawing.Size(43, 33);
+            this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxBack.TabIndex = 43;
+            this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Aquamarine;
+            this.panel2.Controls.Add(this.pbxBack);
+            this.panel2.Location = new System.Drawing.Point(55, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(894, 42);
+            this.panel2.TabIndex = 1;
+            // 
             // HomeForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,8 +264,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxClean)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -273,7 +274,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlLog;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlProduct;
         private System.Windows.Forms.Panel pnlCategory;
         private System.Windows.Forms.Panel pnlUser;
@@ -287,5 +287,6 @@
         private System.Windows.Forms.PictureBox pbxDelete;
         private System.Windows.Forms.PictureBox pbxEdit;
         private System.Windows.Forms.PictureBox pbxBack;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -12,9 +12,9 @@ namespace FinalAmanda.Forms
 {
     public partial class LoginForm2 : Form
     {
-        string user;
-        string password;
-        string email;
+        string user = "";
+        string password = "";
+        string email = "";
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
 
         public LoginForm2()

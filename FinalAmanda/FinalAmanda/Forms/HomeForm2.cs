@@ -232,5 +232,10 @@ namespace FinalAmanda.Forms
         {
 
         }
+
+        private void pnlProduct_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

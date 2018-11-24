@@ -24,6 +24,59 @@ namespace FinalAmanda.Forms
 
         }
 
+        public UserProfileDetailsForm(int idUProfile)
+        {
+
+            InitializeComponent();
+
+            lblId.Text = idUProfile.ToString();
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                try
+                {
+                    sqlConnect.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM USER_PROFILE WHERE ID = @id", sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", idUProfile));
+
+                    UserProfile userProfile = new UserProfile();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            userProfile.Id = Int32.Parse(reader["ID"].ToString());
+                            userProfile.Name = reader["NAME"].ToString();
+                            userProfile.Active = bool.Parse(reader["ACTIVE"].ToString());
+
+
+
+
+
+                        }
+                    }
+
+                    tbxName.Text = userProfile.Name;
+                    cbxActive.Checked = userProfile.Active;
+
+
+                }
+                catch (Exception EX)
+                {
+                    MessageBox.Show("Erro ao carregar perfil!");
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+            }
+        }
+
         //Save Button
         private void pbxSave_Click(object sender, EventArgs e)
         {
@@ -62,7 +115,36 @@ namespace FinalAmanda.Forms
         //Delete Button
         private void pbxDelete_Click(object sender, EventArgs e)
         {
-            CleanData();
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+                try
+
+                {
+                    sqlConnect.Open();
+                    string sql = "UPDATE USER_PRODILE SET ACTIVE = @active WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
+                    cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Perfil inativa!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao desativar esta perfil!" + "\n\n" + Ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+
+            }
         }
 
         //Data stuff

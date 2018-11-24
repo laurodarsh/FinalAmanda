@@ -57,9 +57,12 @@ namespace FinalAmanda.Forms
         //Edit and Add things
         private void pbxEdit_Click(object sender, EventArgs e)
         {
-            //Edit
-            UserDetailsForm details = new UserDetailsForm();
-            details.Show();
+            int idUser = Int32.Parse(dgvUser.SelectedRows[0].Cells[0].Value.ToString());
+
+            UserDetailsForm userDetails = new UserDetailsForm(idUser);
+            userDetails.Show();
+
+            this.Close();
         }
         private void pbxAdd_Click(object sender, EventArgs e)
         {
@@ -71,7 +74,34 @@ namespace FinalAmanda.Forms
         //Trash (delete)
         private void pbxDelete_Click(object sender, EventArgs e)
         {
+            int idUser = Int32.Parse(dgvUser.SelectedRows[0].Cells[0].Value.ToString());
 
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                sqlConnect.Open();
+                string sql = "UPDATE [USER] SET ACTIVE = @active WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                cmd.Parameters.Add(new SqlParameter("@id", idUser));
+                cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                cmd.ExecuteNonQuery();
+
+                ShowData();
+                MessageBox.Show("Usuário inativo!");
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Erro ao editar este usuário!" + "\n\n" + Ex.Message);
+                throw;
+            }
+            finally
+            {
+                sqlConnect.Close();
+            }
         }
 
         //Back Button (Home)

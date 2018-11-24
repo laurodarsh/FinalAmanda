@@ -57,9 +57,12 @@ namespace FinalAmanda.Forms
         //Edit and Add things
         private void pbxEdit_Click(object sender, EventArgs e)
         {
-            //Edit
-            ProductDetailsForm details = new ProductDetailsForm();
-            details.Show();
+            int idProduct = Int32.Parse(dgvProduct.SelectedRows[0].Cells[0].Value.ToString());
+
+            ProductDetailsForm productDetails = new ProductDetailsForm(idProduct);
+            productDetails.Show();
+
+            this.Close();
         }
         private void pbxAdd_Click(object sender, EventArgs e)
         {
@@ -71,7 +74,34 @@ namespace FinalAmanda.Forms
         //Trash (delete)
         private void pbxDelete_Click(object sender, EventArgs e)
         {
+            int idProduct = Int32.Parse(dgvProduct.SelectedRows[0].Cells[0].Value.ToString());
 
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                sqlConnect.Open();
+                string sql = "UPDATE PRODUCT SET ACTIVE = @active WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                cmd.Parameters.Add(new SqlParameter("@id", idProduct));
+                cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                cmd.ExecuteNonQuery();
+
+                ShowData();
+                MessageBox.Show("Produto inativo!");
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Erro ao editar este produto!" + "\n\n" + Ex.Message);
+                throw;
+            }
+            finally
+            {
+                sqlConnect.Close();
+            }
         }
 
         //Back Button (Home)

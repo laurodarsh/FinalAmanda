@@ -55,17 +55,19 @@ namespace FinalAmanda.Forms
             tbxSearch.Text = "";
         }
 
-        //Edit and Add things
+        //Edit
         private void pbxEdit_Click(object sender, EventArgs e)
         {
-            //Edit
-            CategoryDetailsForm details = new CategoryDetailsForm();
-            details.Show();
+            int idCategory = Int32.Parse(dgvCategory.SelectedRows[0].Cells[0].Value.ToString());
+
+            CategoryDetailsForm categoryDetails = new CategoryDetailsForm(idCategory);
+            categoryDetails.Show();
+
             this.Close();
         }
+        //Add
         private void pbxAdd_Click(object sender, EventArgs e)
         {
-            //Add
             CategoryDetailsForm details = new CategoryDetailsForm();
             details.Show();
             this.Close();
@@ -75,6 +77,34 @@ namespace FinalAmanda.Forms
         private void pbxDelete_Click(object sender, EventArgs e)
         {
 
+            int idCategory = Int32.Parse(dgvCategory.SelectedRows[0].Cells[0].Value.ToString());
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                sqlConnect.Open();
+                string sql = "UPDATE CATEGORY SET ACTIVE = @active WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                cmd.Parameters.Add(new SqlParameter("@id", idCategory));
+                cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                cmd.ExecuteNonQuery();
+
+                ShowData();
+                MessageBox.Show("Categoria inativo!");
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Erro ao editar este categoria!" + "\n\n" + Ex.Message);
+                throw;
+            }
+            finally
+            {
+                sqlConnect.Close();
+            }
         }
 
         //Back Button (Home)

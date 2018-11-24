@@ -30,6 +30,60 @@ namespace FinalAmanda.Forms
             LoadComboBox();
         }
 
+        public UserDetailsForm(int idUser)
+        {
+
+            InitializeComponent();
+            cmbProfile.DisplayMember = "NAME";
+            LoadComboBox();
+
+            lblId.Text = idUser.ToString();
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                try
+                {
+                    sqlConnect.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM [USER] WHERE ID = @id", sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", idUser));
+
+                    User user = new User();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            user.Id = Int32.Parse(reader["ID"].ToString());
+                            user.Name = reader["NAME"].ToString();
+                            user.Active = bool.Parse(reader["ACTIVE"].ToString());
+                            user.Email = reader["EMAIL"].ToString();
+                            user.Password = reader["PASSWORD"].ToString();
+                        }
+                    }
+
+                    tbxName.Text = user.Name;
+                    cbxActive.Checked = user.Active;
+                    tbxEmail.Text = user.Email;
+                    tbxPassword.Text = user.Password;
+
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Erro ao carregar usuário!");
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+            }
+        }
+
         //Load CMB
         void LoadComboBox()
         {
@@ -47,7 +101,7 @@ namespace FinalAmanda.Forms
                     uprofile.Add(up);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -60,7 +114,7 @@ namespace FinalAmanda.Forms
                 cmbProfile.Items.Add(c);
             }
         }
-        
+
         //Save Button
         private void pbxSave_Click(object sender, EventArgs e)
         {
@@ -72,7 +126,7 @@ namespace FinalAmanda.Forms
                 if (password == confPassword)
                 {
                     UserProfile up = (UserProfile)cmbProfile.SelectedItem;
-                    User u = new User(name,password,email,up,active);
+                    User u = new User(name, password, email, up, active);
 
                     sqlConnect.Open();
                     string sql = "INSERT INTO [USER](NAME, PASSWORD, EMAIL, ACTIVE, FK_USERPROFILE) VALUES (@name, @password,@email, @active, @userprofile)";
@@ -109,7 +163,36 @@ namespace FinalAmanda.Forms
         //Delete Button
         private void pbxDelete_Click(object sender, EventArgs e)
         {
-            CleanData();
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+                try
+
+                {
+                    sqlConnect.Open();
+                    string sql = "UPDATE [USER] SET ACTIVE = @active WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
+                    cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Usuário inativa!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao desativar esta ususário!" + "\n\n" + Ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+
+            }
         }
 
         //Data stuff

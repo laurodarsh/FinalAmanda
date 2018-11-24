@@ -17,7 +17,7 @@ namespace FinalAmanda
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm2());
+            Application.Run(new HomeForm());
         }
     }
 }

@@ -22,7 +22,60 @@ namespace FinalAmanda.Forms
         {
             InitializeComponent();
         }
-        
+
+        public CategoryDetailsForm(int idCategory)
+        {
+
+            InitializeComponent();
+
+            lblId.Text = idCategory.ToString();
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                try
+                {
+                    sqlConnect.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM CATEGORY WHERE ID = @id", sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", idCategory));
+
+                    Category category = new Category();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            category.Id = Int32.Parse(reader["ID"].ToString());
+                            category.Name = reader["NAME"].ToString();
+                            category.Active = bool.Parse(reader["ACTIVE"].ToString());
+
+
+
+
+
+                        }
+                    }
+
+                    tbxName.Text = category.Name;
+                    cbxActive.Checked = category.Active;
+
+
+                }
+                catch (Exception EX)
+                {
+                    MessageBox.Show("Erro ao carregar categoria!");
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+            }
+        }
+
         //Save Button
         private void pbxSave_Click(object sender, EventArgs e)
         {
@@ -31,7 +84,7 @@ namespace FinalAmanda.Forms
             {
                 GetData();
 
-                Category c = new Category(name,active);
+                Category c = new Category(name, active);
 
                 sqlConnect.Open();
                 string sql = "INSERT INTO CATEGORY(NAME, ACTIVE) VALUES (@name, @active)";
@@ -61,7 +114,36 @@ namespace FinalAmanda.Forms
         //Delete Button
         private void pbxDelete_Click(object sender, EventArgs e)
         {
-            CleanData();
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+                try
+
+                {
+                    sqlConnect.Open();
+                    string sql = "UPDATE CATEGORY SET ACTIVE = @active WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
+                    cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("categoria inativa!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao desativar esta categoria!" + "\n\n" + Ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+
+            }
         }
 
         //Data stuff
@@ -80,7 +162,7 @@ namespace FinalAmanda.Forms
         void CleanData()
         {
             tbxName.Text = "";
-            cbxActive. Checked = false;
+            cbxActive.Checked = false;
         }
 
         //Back Button (Categoty)

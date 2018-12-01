@@ -80,35 +80,74 @@ namespace FinalAmanda.Forms
         private void pbxSave_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
-            try
+
+            //Save
+            if (string.IsNullOrEmpty(lblId.Text))
             {
-                GetData();
+                try
+                {
+                    GetData();
 
-                Category c = new Category(name, active);
+                    Category c = new Category(name, active);
 
-                sqlConnect.Open();
-                string sql = "INSERT INTO CATEGORY(NAME, ACTIVE) VALUES (@name, @active)";
+                    sqlConnect.Open();
+                    string sql = "INSERT INTO CATEGORY(NAME, ACTIVE) VALUES (@name, @active)";
 
-                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
-                cmd.Parameters.Add(new SqlParameter("@name", c.Name));
-                cmd.Parameters.Add(new SqlParameter("@active", c.Active));
+                    cmd.Parameters.Add(new SqlParameter("@name", c.Name));
+                    cmd.Parameters.Add(new SqlParameter("@active", c.Active));
 
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Adicionado com sucesso!");
-                CleanData();
+                    MessageBox.Show("Adicionado com sucesso!");
+                    CleanData();
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao adicionar categoria!" + ex.Message);
+                    CleanData();
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
             }
-            catch (Exception ex)
+            //Edit
+            else
             {
-                MessageBox.Show("Erro ao adicionar categoria!" + ex.Message);
-                CleanData();
+                try
+                {
+                    GetData();
+
+                    sqlConnect.Open();
+                    string sql = "UPDATE CATEGORY(NAME, ACTIVE) VALUES (@name, @active) WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@name", name));
+                    cmd.Parameters.Add(new SqlParameter("@active", active));
+                    cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Altereções salvas com sucesso!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao editar esta categoria!" + "\n\n" + Ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+
+                    CategoryAllForm category = new CategoryAllForm();
+                    category.Show();
+                    this.Close();
+                }
             }
-            finally
-            {
-                sqlConnect.Close();
-            }
+
         }
 
         //Delete Button

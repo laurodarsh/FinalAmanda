@@ -93,6 +93,8 @@ namespace FinalAmanda.Classes
             }
         }
 
+        public UserProfile UserProfile { get; internal set; }
+
         public User(int id, string name, string password, string email, UserProfile userprofile, bool active)
         {
             this.Id = id;

@@ -81,34 +81,72 @@ namespace FinalAmanda.Forms
         private void pbxSave_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
-            try
+
+            //Save
+            if (string.IsNullOrEmpty(lblId.Text))
             {
-                GetData();
+                try
+                {
+                    GetData();
 
-                UserProfile up = new UserProfile(name, active);
+                    UserProfile up = new UserProfile(name, active);
 
-                sqlConnect.Open();
-                string sql = "INSERT INTO USER_PROFILE(NAME, ACTIVE) VALUES (@name, @active)";
+                    sqlConnect.Open();
+                    string sql = "INSERT INTO USER_PROFILE(NAME, ACTIVE) VALUES (@name, @active)";
 
-                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
-                cmd.Parameters.Add(new SqlParameter("@name", up.Name));
-                cmd.Parameters.Add(new SqlParameter("@active", up.Active));
+                    cmd.Parameters.Add(new SqlParameter("@name", up.Name));
+                    cmd.Parameters.Add(new SqlParameter("@active", up.Active));
 
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Adicionado com sucesso!");
-                CleanData();
+                    MessageBox.Show("Adicionado com sucesso!");
+                    CleanData();
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao adicionar perfil!" + ex.Message);
+                    CleanData();
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
             }
-            catch (Exception ex)
+            //Edit
+            else
             {
-                MessageBox.Show("Erro ao adicionar perfil!" + ex.Message);
-                CleanData();
-            }
-            finally
-            {
-                sqlConnect.Close();
+                try
+                {
+                    GetData();
+
+                    sqlConnect.Open();
+                    string sql = "UPDATE USER_PROFILE(NAME, ACTIVE) VALUES (@name, @active) WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@name", name));
+                    cmd.Parameters.Add(new SqlParameter("@active", active));
+                    cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Altereções salvas com sucesso!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao editar este perfil!" + "\n\n" + Ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+
+                    UserProfileAllForm profile = new UserProfileAllForm();
+                    profile.Show();
+                    this.Close();
+                }
             }
         }
 

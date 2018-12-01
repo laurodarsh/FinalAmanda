@@ -119,44 +119,87 @@ namespace FinalAmanda.Forms
         private void pbxSave_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
-            try
-            {
-                GetData();
 
-                if (password == confPassword)
+            //Save
+            if (string.IsNullOrEmpty(lblId.Text))
+            {
+                try
                 {
+                    GetData();
+
+                    if (password == confPassword)
+                    {
+                        UserProfile up = (UserProfile)cmbProfile.SelectedItem;
+                        User u = new User(name, password, email, up, active);
+
+                        sqlConnect.Open();
+                        string sql = "INSERT INTO [USER](NAME, PASSWORD, EMAIL, ACTIVE, FK_USERPROFILE) VALUES (@name, @password,@email, @active, @userprofile)";
+
+                        SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                        cmd.Parameters.Add(new SqlParameter("@name", u.Name));
+                        cmd.Parameters.Add(new SqlParameter("@password", u.Password));
+                        cmd.Parameters.Add(new SqlParameter("@email", u.Email));
+                        cmd.Parameters.Add(new SqlParameter("@active", u.Active));
+                        cmd.Parameters.Add(new SqlParameter("@userprofile", u.Userprofile.Id));
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Adicionado com sucesso!");
+                        CleanData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Confirmação de senha incorreta!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao adicionar usuário!" + ex.Message);
+                    CleanData();
+                }
+                finally
+                {
+                    sqlConnect.Close();
+
+                }
+            }
+            //Edit
+            else
+            {
+                try
+                {
+                    GetData();
+
                     UserProfile up = (UserProfile)cmbProfile.SelectedItem;
-                    User u = new User(name, password, email, up, active);
 
                     sqlConnect.Open();
-                    string sql = "INSERT INTO [USER](NAME, PASSWORD, EMAIL, ACTIVE, FK_USERPROFILE) VALUES (@name, @password,@email, @active, @userprofile)";
+                    string sql = "UPDATE [USER](NAME, PASSWORD, EMAIL, ACTIVE, FK_USERPROFILE) VALUES (@name, @password,@email, @active, @userprofile) WHERE ID = @id";
 
                     SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
-                    cmd.Parameters.Add(new SqlParameter("@name", u.Name));
-                    cmd.Parameters.Add(new SqlParameter("@password", u.Password));
-                    cmd.Parameters.Add(new SqlParameter("@email", u.Email));
-                    cmd.Parameters.Add(new SqlParameter("@active", u.Active));
-                    cmd.Parameters.Add(new SqlParameter("@userprofile", u.Userprofile.Id));
+                    cmd.Parameters.Add(new SqlParameter("@name", name));
+                    cmd.Parameters.Add(new SqlParameter("@password", password));
+                    cmd.Parameters.Add(new SqlParameter("@email", email));
+                    cmd.Parameters.Add(new SqlParameter("@active", active));
+                    cmd.Parameters.Add(new SqlParameter("@userprofile", up.Id));
+                    cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Adicionado com sucesso!");
-                    CleanData();
+                    MessageBox.Show("Altereções salvas com sucesso!");
                 }
-                else
+                catch (Exception Ex)
                 {
-                    MessageBox.Show("Confirmação de senha incorreta!");
+                    MessageBox.Show("Erro ao editar este usuário!" + "\n\n" + Ex.Message);
+                    throw;
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao adicionar usuário!" + ex.Message);
-                CleanData();
-            }
-            finally
-            {
-                sqlConnect.Close();
+                finally
+                {
+                    sqlConnect.Close();
 
+                    UserAllForm useAll = new UserAllForm();
+                    useAll.Show();
+                    this.Close();
+                }
             }
         }
 

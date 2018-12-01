@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalAmanda.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace FinalAmanda.Forms
 {
     public partial class HomeForm : Form
     {
-        public HomeForm()
+        public HomeForm(User user)
         {
             InitializeComponent();
+            if (user.Userprofile.Name != "Gerente")
+            {
+                pbxProductUser.Visible = true;
+                pbxCategoryUser.Visible = true;
+
+                pbxCategory.Visible = false;
+                pbxLog.Visible = false;
+                pbxUser.Visible = false;
+                pbxProduct.Visible = false;
+                pbxUserProfile.Visible = false;
+            }
         }
 
         //Access only, employee
@@ -29,13 +41,6 @@ namespace FinalAmanda.Forms
         {
             CategoryAllForm category = new CategoryAllForm();
             category.Show();
-            this.Hide();
-        }
-
-        private void pbxUserUser_Click(object sender, EventArgs e)
-        {
-            UserAllForm user = new UserAllForm();
-            user.Show();
             this.Hide();
         }
         //End access only, employee

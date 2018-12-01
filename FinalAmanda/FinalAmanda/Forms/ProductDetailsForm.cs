@@ -115,9 +115,14 @@ namespace FinalAmanda.Forms
         private void pbxSave_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
-            try
+            
+            //Save
+            if (string.IsNullOrEmpty(lblId.Text))
+            {
+                try
             {
                 GetData();
+
                 Category c = (Category)cmbCategory.SelectedItem;
                 Product p = new Product(name, active, c, price);
 
@@ -146,6 +151,45 @@ namespace FinalAmanda.Forms
                 sqlConnect.Close();
 
             }
+        }
+            //Edit
+            else
+            {
+                try
+                {
+                    GetData();
+
+                    Category c = (Category)cmbCategory.SelectedItem;
+
+                    sqlConnect.Open();
+                    string sql = "UPDATE PRODUCT(NAME, PRICE, ACTIVE, FK_PRODUCT) VALUES (@name, @price, @active, @category) WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@name", name));
+                    cmd.Parameters.Add(new SqlParameter("@price", price));
+                    cmd.Parameters.Add(new SqlParameter("@active", active));
+                    cmd.Parameters.Add(new SqlParameter("@category", c.Id));
+                    cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Altereções salvas com sucesso!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao editar este produto!" + "\n\n" + Ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+
+                    ProductAllForm product = new ProductAllForm();
+                    product.Show();
+                    this.Close();
+                }
+            }
+
         }
 
         //Delete Button

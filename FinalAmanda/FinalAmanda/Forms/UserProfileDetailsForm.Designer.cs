@@ -112,9 +112,8 @@
             this.lblId.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.Location = new System.Drawing.Point(12, 9);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(15, 18);
+            this.lblId.Size = new System.Drawing.Size(0, 18);
             this.lblId.TabIndex = 33;
-            this.lblId.Text = "-";
             this.lblId.Visible = false;
             // 
             // UserProfileDetailsForm

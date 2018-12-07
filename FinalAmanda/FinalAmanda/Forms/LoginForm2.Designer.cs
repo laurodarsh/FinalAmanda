@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm2));
             this.pnlHide = new System.Windows.Forms.Panel();
             this.lblForgotPass = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -50,9 +51,9 @@
             // pnlHide
             // 
             this.pnlHide.BackColor = System.Drawing.Color.White;
-            this.pnlHide.Location = new System.Drawing.Point(154, 117);
+            this.pnlHide.Location = new System.Drawing.Point(26, 24);
             this.pnlHide.Name = "pnlHide";
-            this.pnlHide.Size = new System.Drawing.Size(351, 332);
+            this.pnlHide.Size = new System.Drawing.Size(351, 432);
             this.pnlHide.TabIndex = 12;
             this.pnlHide.UseWaitCursor = true;
             // 
@@ -62,7 +63,7 @@
             this.lblForgotPass.BackColor = System.Drawing.Color.Transparent;
             this.lblForgotPass.Font = new System.Drawing.Font("Corbel", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPass.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblForgotPass.Location = new System.Drawing.Point(9, 57);
+            this.lblForgotPass.Location = new System.Drawing.Point(19, 100);
             this.lblForgotPass.Name = "lblForgotPass";
             this.lblForgotPass.Size = new System.Drawing.Size(333, 42);
             this.lblForgotPass.TabIndex = 0;
@@ -73,7 +74,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEmail.Location = new System.Drawing.Point(11, 127);
+            this.lblEmail.Location = new System.Drawing.Point(21, 170);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(155, 26);
             this.lblEmail.TabIndex = 1;
@@ -82,7 +83,7 @@
             // tbxEmail
             // 
             this.tbxEmail.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEmail.Location = new System.Drawing.Point(14, 155);
+            this.tbxEmail.Location = new System.Drawing.Point(24, 198);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(313, 33);
             this.tbxEmail.TabIndex = 2;
@@ -93,7 +94,7 @@
             this.lblLogin.BackColor = System.Drawing.Color.Transparent;
             this.lblLogin.Font = new System.Drawing.Font("Corbel", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.White;
-            this.lblLogin.Location = new System.Drawing.Point(477, 57);
+            this.lblLogin.Location = new System.Drawing.Point(472, 100);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(112, 42);
             this.lblLogin.TabIndex = 3;
@@ -102,7 +103,7 @@
             // tbxUser
             // 
             this.tbxUser.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxUser.Location = new System.Drawing.Point(378, 133);
+            this.tbxUser.Location = new System.Drawing.Point(373, 176);
             this.tbxUser.Name = "tbxUser";
             this.tbxUser.Size = new System.Drawing.Size(313, 33);
             this.tbxUser.TabIndex = 6;
@@ -110,7 +111,7 @@
             // tbxPassword
             // 
             this.tbxPassword.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPassword.Location = new System.Drawing.Point(378, 172);
+            this.tbxPassword.Location = new System.Drawing.Point(373, 215);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Size = new System.Drawing.Size(313, 33);
             this.tbxPassword.TabIndex = 7;
@@ -122,7 +123,7 @@
             this.lblForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblForgotPassword.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPassword.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblForgotPassword.Location = new System.Drawing.Point(376, 241);
+            this.lblForgotPassword.Location = new System.Drawing.Point(371, 284);
             this.lblForgotPassword.Name = "lblForgotPassword";
             this.lblForgotPassword.Size = new System.Drawing.Size(136, 18);
             this.lblForgotPassword.TabIndex = 8;
@@ -136,7 +137,7 @@
             this.pbxLogin.BackColor = System.Drawing.Color.Transparent;
             this.pbxLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxLogin.Image = global::FinalAmanda.Properties.Resources.Enter1;
-            this.pbxLogin.Location = new System.Drawing.Point(591, 235);
+            this.pbxLogin.Location = new System.Drawing.Point(586, 278);
             this.pbxLogin.Name = "pbxLogin";
             this.pbxLogin.Size = new System.Drawing.Size(100, 29);
             this.pbxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -149,7 +150,7 @@
             this.pbxSend.BackColor = System.Drawing.Color.Transparent;
             this.pbxSend.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSend.Image = global::FinalAmanda.Properties.Resources.Send;
-            this.pbxSend.Location = new System.Drawing.Point(229, 235);
+            this.pbxSend.Location = new System.Drawing.Point(239, 278);
             this.pbxSend.Name = "pbxSend";
             this.pbxSend.Size = new System.Drawing.Size(100, 29);
             this.pbxSend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,7 +164,7 @@
             this.pbxEye.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxEye.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxEye.Image = global::FinalAmanda.Properties.Resources.Eye_icon;
-            this.pbxEye.Location = new System.Drawing.Point(657, 172);
+            this.pbxEye.Location = new System.Drawing.Point(652, 215);
             this.pbxEye.Name = "pbxEye";
             this.pbxEye.Size = new System.Drawing.Size(34, 33);
             this.pbxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -180,7 +181,7 @@
             this.lblBackLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBackLogin.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBackLogin.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblBackLogin.Location = new System.Drawing.Point(19, 240);
+            this.lblBackLogin.Location = new System.Drawing.Point(29, 283);
             this.lblBackLogin.Name = "lblBackLogin";
             this.lblBackLogin.Size = new System.Drawing.Size(124, 18);
             this.lblBackLogin.TabIndex = 13;
@@ -203,9 +204,9 @@
             this.pnlLogFor.Controls.Add(this.tbxEmail);
             this.pnlLogFor.Controls.Add(this.lblEmail);
             this.pnlLogFor.Controls.Add(this.lblForgotPass);
-            this.pnlLogFor.Location = new System.Drawing.Point(154, 117);
+            this.pnlLogFor.Location = new System.Drawing.Point(26, 24);
             this.pnlLogFor.Name = "pnlLogFor";
-            this.pnlLogFor.Size = new System.Drawing.Size(704, 332);
+            this.pnlLogFor.Size = new System.Drawing.Size(705, 432);
             this.pnlLogFor.TabIndex = 0;
             // 
             // LoginForm2
@@ -213,10 +214,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.ClientSize = new System.Drawing.Size(1003, 579);
+            this.ClientSize = new System.Drawing.Size(760, 480);
             this.Controls.Add(this.pnlHide);
             this.Controls.Add(this.pnlLogFor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm2";

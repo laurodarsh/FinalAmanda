@@ -22,19 +22,19 @@ namespace FinalAmanda.Forms
             InitializeComponent();
 
             //User ivisible label
-            tbxUser.ForeColor = SystemColors.GrayText;
+            tbxUser.ForeColor = Color.Silver;
             tbxUser.Text = "Usuário";
             this.tbxUser.Leave += new System.EventHandler(this.tbxUser_Leave);
             this.tbxUser.Enter += new System.EventHandler(this.tbxUser_Enter);
 
             //Password ivisible label
-            tbxPassword.ForeColor = SystemColors.GrayText;
+            tbxPassword.ForeColor = Color.Silver;
             tbxPassword.Text = "Senha";
             this.tbxPassword.Leave += new System.EventHandler(this.tbxPassword_Leave);
             this.tbxPassword.Enter += new System.EventHandler(this.tbxPassword_Enter);
-            
+
             //Email ivisible label
-            tbxEmail.ForeColor = SystemColors.GrayText;
+            tbxEmail.ForeColor = Color.Silver;
             tbxEmail.Text = "E-mail";
             this.tbxEmail.Leave += new System.EventHandler(this.tbxEmail_Leave);
             this.tbxEmail.Enter += new System.EventHandler(this.tbxEmail_Enter);
@@ -48,7 +48,7 @@ namespace FinalAmanda.Forms
             if (tbxUser.Text.Length == 0)
             {
                 tbxUser.Text = "Usuário";
-                tbxUser.ForeColor = SystemColors.GrayText;
+                tbxUser.ForeColor = Color.Silver;
             }
         }
 
@@ -69,10 +69,13 @@ namespace FinalAmanda.Forms
         //Mouse Leave
         private void tbxPassword_Leave(object sender, EventArgs e)
         {
+            
             if (tbxPassword.Text.Length == 0)
             {
                 tbxPassword.Text = "Senha";
-                tbxPassword.ForeColor = SystemColors.GrayText;
+                tbxPassword.ForeColor = Color.Silver;
+                //tbxPassword.PasswordChar = '\0';
+                tbxPassword.UseSystemPasswordChar = false;
             }
         }
 
@@ -82,7 +85,9 @@ namespace FinalAmanda.Forms
             if (tbxPassword.Text == "Senha")
             {
                 tbxPassword.Text = "";
-                tbxPassword.ForeColor = SystemColors.WindowText;
+                tbxPassword.ForeColor = Color.Black;
+                //tbxPassword.PasswordChar = '*';
+                tbxPassword.UseSystemPasswordChar = true;
             }
         }
 
@@ -96,7 +101,7 @@ namespace FinalAmanda.Forms
             if (tbxEmail.Text.Length == 0)
             {
                 tbxEmail.Text = "E-mail";
-                tbxEmail.ForeColor = SystemColors.GrayText;
+                tbxEmail.ForeColor = Color.Silver;
             }
         }
 
@@ -106,7 +111,7 @@ namespace FinalAmanda.Forms
             if (tbxEmail.Text == "E-mail")
             {
                 tbxEmail.Text = "";
-                tbxEmail.ForeColor = SystemColors.WindowText;
+                tbxEmail.ForeColor = Color.Silver;
             }
         }
 
@@ -179,8 +184,7 @@ namespace FinalAmanda.Forms
         
         #region Hide Password Button
         private void pbxEye_Click(object sender, EventArgs e)
-        { 
-            
+        {
             if (tbxPassword.UseSystemPasswordChar == true)
             {
                 tbxPassword.UseSystemPasswordChar = false;
@@ -209,7 +213,7 @@ namespace FinalAmanda.Forms
         #endregion
 
         #region Hide Forgot Password
-        
+
         //Back Login Button Click
         private void lblBackLogin_Click(object sender, EventArgs e)
         {
@@ -234,6 +238,7 @@ namespace FinalAmanda.Forms
             lblBackLogin.Font = new Font(lblBackLogin.Font.Name, lblBackLogin.Font.SizeInPoints, FontStyle.Regular);
         }
 
-#endregion
+        #endregion
+
     }
 }

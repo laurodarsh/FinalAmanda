@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalAmanda.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,8 @@ namespace FinalAmanda.Forms
 {
     public partial class LoginForm2 : Form
     {
-        string user = "";
+        User user;
+        string login = "";
         string password = "";
         string email = "";
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
@@ -69,7 +71,7 @@ namespace FinalAmanda.Forms
         //Mouse Leave
         private void tbxPassword_Leave(object sender, EventArgs e)
         {
-            
+
             if (tbxPassword.Text.Length == 0)
             {
                 tbxPassword.Text = "Senha";
@@ -117,27 +119,62 @@ namespace FinalAmanda.Forms
 
         #endregion
 
+        #region Login Stuff
+
         //Login Button Stuff
         private void pbxLogin_Click(object sender, EventArgs e)
         {
-            GetData();
-            HomeForm2 home = new HomeForm2();
-            home.Show();
-            ClenData();
-            this.Hide();
+            try
+            {
+                GetData();
+
+                if (CheckLogin(password, login))
+                {
+                    HomeForm home = new HomeForm(user);
+                    home.Show();
+                    CleanData();
+                    this.Hide();
+                }
+                else
+                {
+                    CleanData();
+                    MessageBox.Show("Usuário ou senha incorretos!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                CleanData();
+            }
         }
+
+        //Check Login
+        private bool CheckLogin(string password, string name)
+        {
+            user = UserHelper.SelectByName(name);
+
+            if (user != null)
+            {
+                if (UserHelper.Hash(password) == user.Password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        #endregion
 
         #region Data stuff
 
         //Get
         void GetData()
         {
-            user = tbxUser.Text;
+            login = tbxUser.Text;
             password = tbxPassword.Text;
         }
 
         //Clean
-        void ClenData()
+        void CleanData()
         {
             tbxUser.Text = "";
             tbxPassword.Text = "";
@@ -155,7 +192,7 @@ namespace FinalAmanda.Forms
             this.pnlHide.Location = new Point(pnlHide.Location.X + 353, pnlHide.Location.Y + 0);
             this.pnlHide.BackColor = Color.DarkViolet;
         }
-
+        
         #endregion
 
         //Send Button
@@ -181,8 +218,10 @@ namespace FinalAmanda.Forms
             this.pbxEye.BackColor = Color.White;
         }
         #endregion
-        
-        #region Hide Password Button
+
+        #region Eye Hide Password Button
+
+        //Hide and Unhide Password
         private void pbxEye_Click(object sender, EventArgs e)
         {
             if (tbxPassword.UseSystemPasswordChar == true)

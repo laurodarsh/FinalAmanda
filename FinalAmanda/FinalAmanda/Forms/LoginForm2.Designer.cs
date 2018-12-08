@@ -51,7 +51,7 @@
             // pnlHide
             // 
             this.pnlHide.BackColor = System.Drawing.Color.White;
-            this.pnlHide.Location = new System.Drawing.Point(26, 24);
+            this.pnlHide.Location = new System.Drawing.Point(27, 24);
             this.pnlHide.Name = "pnlHide";
             this.pnlHide.Size = new System.Drawing.Size(351, 432);
             this.pnlHide.TabIndex = 12;
@@ -204,9 +204,9 @@
             this.pnlLogFor.Controls.Add(this.tbxEmail);
             this.pnlLogFor.Controls.Add(this.lblEmail);
             this.pnlLogFor.Controls.Add(this.lblForgotPass);
-            this.pnlLogFor.Location = new System.Drawing.Point(26, 24);
+            this.pnlLogFor.Location = new System.Drawing.Point(27, 24);
             this.pnlLogFor.Name = "pnlLogFor";
-            this.pnlLogFor.Size = new System.Drawing.Size(705, 432);
+            this.pnlLogFor.Size = new System.Drawing.Size(704, 432);
             this.pnlLogFor.TabIndex = 0;
             // 
             // LoginForm2

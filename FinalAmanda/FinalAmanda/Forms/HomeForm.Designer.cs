@@ -54,11 +54,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCategoryUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProductUser)).BeginInit();
+            this.pnlLogFor.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblProduct
             // 
             this.lblProduct.AutoSize = true;
+            this.lblProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblProduct.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProduct.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lblProduct.Location = new System.Drawing.Point(183, 188);
@@ -70,6 +72,7 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
+            this.lblCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCategory.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lblCategory.Location = new System.Drawing.Point(475, 189);
@@ -81,6 +84,7 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblUser.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.lblUser.Location = new System.Drawing.Point(334, 295);
@@ -92,6 +96,7 @@
             // lblUserProfile
             // 
             this.lblUserProfile.AutoSize = true;
+            this.lblUserProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblUserProfile.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserProfile.ForeColor = System.Drawing.Color.MediumTurquoise;
             this.lblUserProfile.Location = new System.Drawing.Point(193, 401);
@@ -103,6 +108,7 @@
             // lblLog
             // 
             this.lblLog.AutoSize = true;
+            this.lblLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblLog.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLog.ForeColor = System.Drawing.Color.MediumPurple;
             this.lblLog.Location = new System.Drawing.Point(507, 401);
@@ -117,7 +123,7 @@
             this.lblHomeMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblHomeMessage.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHomeMessage.ForeColor = System.Drawing.Color.White;
-            this.lblHomeMessage.Location = new System.Drawing.Point(312, 33);
+            this.lblHomeMessage.Location = new System.Drawing.Point(272, 17);
             this.lblHomeMessage.Name = "lblHomeMessage";
             this.lblHomeMessage.Size = new System.Drawing.Size(138, 18);
             this.lblHomeMessage.TabIndex = 12;
@@ -128,7 +134,7 @@
             this.pbxBack.BackColor = System.Drawing.Color.Transparent;
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
-            this.pbxBack.Location = new System.Drawing.Point(12, 420);
+            this.pbxBack.Location = new System.Drawing.Point(1, 382);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(53, 48);
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,7 +144,7 @@
             // 
             // pbxUser
             // 
-            this.pbxUser.BackColor = System.Drawing.Color.Transparent;
+            this.pbxUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxUser.Image = global::FinalAmanda.Properties.Resources.User;
             this.pbxUser.Location = new System.Drawing.Point(303, 185);
@@ -151,7 +157,7 @@
             // 
             // pbxLog
             // 
-            this.pbxLog.BackColor = System.Drawing.Color.Transparent;
+            this.pbxLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxLog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxLog.Image = global::FinalAmanda.Properties.Resources.Log;
             this.pbxLog.Location = new System.Drawing.Point(452, 291);
@@ -164,7 +170,7 @@
             // 
             // pbxUserProfile
             // 
-            this.pbxUserProfile.BackColor = System.Drawing.Color.Transparent;
+            this.pbxUserProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxUserProfile.Image = global::FinalAmanda.Properties.Resources.User_Grupe;
             this.pbxUserProfile.Location = new System.Drawing.Point(154, 291);
@@ -177,7 +183,7 @@
             // 
             // pbxCategory
             // 
-            this.pbxCategory.BackColor = System.Drawing.Color.Transparent;
+            this.pbxCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxCategory.Image = global::FinalAmanda.Properties.Resources.Category;
             this.pbxCategory.Location = new System.Drawing.Point(452, 78);
@@ -190,7 +196,7 @@
             // 
             // pbxProduct
             // 
-            this.pbxProduct.BackColor = System.Drawing.Color.Transparent;
+            this.pbxProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxProduct.Image = global::FinalAmanda.Properties.Resources.Product;
             this.pbxProduct.Location = new System.Drawing.Point(154, 78);
@@ -203,10 +209,10 @@
             // 
             // pbxCategoryUser
             // 
-            this.pbxCategoryUser.BackColor = System.Drawing.Color.Transparent;
+            this.pbxCategoryUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxCategoryUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxCategoryUser.Image = global::FinalAmanda.Properties.Resources.Category;
-            this.pbxCategoryUser.Location = new System.Drawing.Point(438, 162);
+            this.pbxCategoryUser.Location = new System.Drawing.Point(409, 148);
             this.pbxCategoryUser.Name = "pbxCategoryUser";
             this.pbxCategoryUser.Size = new System.Drawing.Size(178, 132);
             this.pbxCategoryUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,10 +223,10 @@
             // 
             // pbxProductUser
             // 
-            this.pbxProductUser.BackColor = System.Drawing.Color.Transparent;
+            this.pbxProductUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxProductUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxProductUser.Image = global::FinalAmanda.Properties.Resources.Product;
-            this.pbxProductUser.Location = new System.Drawing.Point(144, 162);
+            this.pbxProductUser.Location = new System.Drawing.Point(115, 148);
             this.pbxProductUser.Name = "pbxProductUser";
             this.pbxProductUser.Size = new System.Drawing.Size(178, 132);
             this.pbxProductUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -232,9 +238,10 @@
             // lblCategoryUser
             // 
             this.lblCategoryUser.AutoSize = true;
+            this.lblCategoryUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCategoryUser.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoryUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.lblCategoryUser.Location = new System.Drawing.Point(477, 295);
+            this.lblCategoryUser.Location = new System.Drawing.Point(448, 281);
             this.lblCategoryUser.Name = "lblCategoryUser";
             this.lblCategoryUser.Size = new System.Drawing.Size(108, 18);
             this.lblCategoryUser.TabIndex = 20;
@@ -244,9 +251,10 @@
             // lblProductUser
             // 
             this.lblProductUser.AutoSize = true;
+            this.lblProductUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblProductUser.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductUser.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblProductUser.Location = new System.Drawing.Point(191, 295);
+            this.lblProductUser.Location = new System.Drawing.Point(162, 281);
             this.lblProductUser.Name = "lblProductUser";
             this.lblProductUser.Size = new System.Drawing.Size(91, 18);
             this.lblProductUser.TabIndex = 19;
@@ -256,6 +264,12 @@
             // pnlLogFor
             // 
             this.pnlLogFor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlLogFor.Controls.Add(this.pbxBack);
+            this.pnlLogFor.Controls.Add(this.pbxCategoryUser);
+            this.pnlLogFor.Controls.Add(this.pbxProductUser);
+            this.pnlLogFor.Controls.Add(this.lblProductUser);
+            this.pnlLogFor.Controls.Add(this.lblCategoryUser);
+            this.pnlLogFor.Controls.Add(this.lblHomeMessage);
             this.pnlLogFor.Location = new System.Drawing.Point(28, 24);
             this.pnlLogFor.Name = "pnlLogFor";
             this.pnlLogFor.Size = new System.Drawing.Size(704, 432);
@@ -267,17 +281,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(760, 480);
-            this.Controls.Add(this.pbxCategoryUser);
-            this.Controls.Add(this.pbxProductUser);
-            this.Controls.Add(this.lblCategoryUser);
-            this.Controls.Add(this.lblProductUser);
-            this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.pbxUser);
             this.Controls.Add(this.pbxLog);
             this.Controls.Add(this.pbxUserProfile);
             this.Controls.Add(this.pbxCategory);
             this.Controls.Add(this.pbxProduct);
-            this.Controls.Add(this.lblHomeMessage);
             this.Controls.Add(this.lblLog);
             this.Controls.Add(this.lblUserProfile);
             this.Controls.Add(this.lblUser);
@@ -297,6 +305,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCategoryUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProductUser)).EndInit();
+            this.pnlLogFor.ResumeLayout(false);
+            this.pnlLogFor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

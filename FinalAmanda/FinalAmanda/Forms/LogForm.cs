@@ -14,12 +14,14 @@ namespace FinalAmanda.Forms
 {
     public partial class LogForm : Form
     {
+        User aux;
         string search;
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
 
-        public LogForm()
+        public LogForm(User user)
         {
             InitializeComponent();
+            aux = user;
             ShowData();
             ResizeDataGridView();
         }
@@ -57,7 +59,8 @@ namespace FinalAmanda.Forms
         //Back Button (Home)
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            
+            HomeForm home = new HomeForm(aux);
+            home.Show();
             this.Close();
         }
 

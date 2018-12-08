@@ -14,6 +14,7 @@ namespace FinalAmanda.Forms
 {
     public partial class ProductDetailsForm : Form
     {
+        User aux;
         string name = "";
         float price = 0;
         string category = "";
@@ -21,17 +22,19 @@ namespace FinalAmanda.Forms
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
         List<Category> categories = new List<Category>();
 
-        public ProductDetailsForm()
+        public ProductDetailsForm(User user)
         {
             InitializeComponent();
             cmbCategory.DisplayMember = "NAME";
             LoadComboBox();
+            aux = user;
         }
 
-        public ProductDetailsForm(int idProduct)
+        public ProductDetailsForm(int idProduct, User user)
         {
 
             InitializeComponent();
+            aux = user;
             cmbCategory.DisplayMember = "NAME";
             LoadComboBox();
 
@@ -115,43 +118,44 @@ namespace FinalAmanda.Forms
         private void pbxSave_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
-            
+
             //Save
             if (string.IsNullOrEmpty(lblId.Text))
             {
                 try
-            {
-                GetData();
+                {
+                    GetData();
 
-                Category c = (Category)cmbCategory.SelectedItem;
-                Product p = new Product(name, active, c, price);
+                    Category c = (Category)cmbCategory.SelectedItem;
+                    Product p = new Product(name, active, c, price);
 
-                sqlConnect.Open();
-                string sql = "INSERT INTO PRODUCT(NAME, PRICE, ACTIVE, FK_PRODUCT) VALUES (@name, @price, @active, @category)";
+                    sqlConnect.Open();
+                    string sql = "INSERT INTO PRODUCT(NAME, PRICE, ACTIVE, FK_PRODUCT) VALUES (@name, @price, @active, @category)";
 
-                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
-                cmd.Parameters.Add(new SqlParameter("@name", p.Name));
-                cmd.Parameters.Add(new SqlParameter("@price", p.Price));
-                cmd.Parameters.Add(new SqlParameter("@active", p.Active));
-                cmd.Parameters.Add(new SqlParameter("@category", p.Category.Id));
-                cmd.ExecuteNonQuery();
+                    cmd.Parameters.Add(new SqlParameter("@name", p.Name));
+                    cmd.Parameters.Add(new SqlParameter("@price", p.Price));
+                    cmd.Parameters.Add(new SqlParameter("@active", p.Active));
+                    cmd.Parameters.Add(new SqlParameter("@category", p.Category.Id));
+                    cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Adicionado com sucesso!");
-                CleanData();
+                    MessageBox.Show("Adicionado com sucesso!");
+                    Log.SalvarLog("Produto inserido", DateTime.Now, "Inserção");
+                    CleanData();
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao adicionar categoria!" + ex.Message);
+                    CleanData();
+                }
+                finally
+                {
+                    sqlConnect.Close();
+
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao adicionar categoria!" + ex.Message);
-                CleanData();
-            }
-            finally
-            {
-                sqlConnect.Close();
-
-            }
-        }
             //Edit
             else
             {
@@ -174,6 +178,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Altereções salvas com sucesso!");
+                    Log.SalvarLog("Produto editado", DateTime.Now, "Edição");
                 }
                 catch (Exception Ex)
                 {
@@ -184,7 +189,7 @@ namespace FinalAmanda.Forms
                 {
                     sqlConnect.Close();
 
-                    ProductAllForm product = new ProductAllForm();
+                    ProductAllForm product = new ProductAllForm(aux);
                     product.Show();
                     this.Close();
                 }
@@ -213,6 +218,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Produto inativa!");
+                    Log.SalvarLog("Produto excluído", DateTime.Now, "Exclusão");
                 }
                 catch (Exception Ex)
                 {
@@ -253,7 +259,7 @@ namespace FinalAmanda.Forms
         //Back Button (Product)
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            ProductAllForm product = new ProductAllForm();
+            ProductAllForm product = new ProductAllForm(aux);
             product.Show();
             this.Close();
         }

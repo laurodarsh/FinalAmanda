@@ -14,20 +14,23 @@ namespace FinalAmanda.Forms
 {
     public partial class UserProfileDetailsForm : Form
     {
+        User aux;
         string name;
         bool active;
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
 
-        public UserProfileDetailsForm()
+        public UserProfileDetailsForm(User user)
         {
             InitializeComponent();
+            aux = user;
 
         }
 
-        public UserProfileDetailsForm(int idUProfile)
+        public UserProfileDetailsForm(int idUProfile, User user)
         {
 
             InitializeComponent();
+            aux = user;
 
             lblId.Text = idUProfile.ToString();
 
@@ -102,6 +105,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
+                    Log.SalvarLog("Perfil inserido", DateTime.Now, "Inserção");
                     CleanData();
 
                 }
@@ -133,6 +137,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Altereções salvas com sucesso!");
+                    Log.SalvarLog("Perfil editado", DateTime.Now, "Edição");
                 }
                 catch (Exception Ex)
                 {
@@ -143,7 +148,7 @@ namespace FinalAmanda.Forms
                 {
                     sqlConnect.Close();
 
-                    UserProfileAllForm profile = new UserProfileAllForm();
+                    UserProfileAllForm profile = new UserProfileAllForm(aux);
                     profile.Show();
                     this.Close();
                 }
@@ -171,6 +176,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Perfil inativa!");
+                    Log.SalvarLog("Perfil excluído", DateTime.Now, "Exclusão");
                 }
                 catch (Exception Ex)
                 {
@@ -207,7 +213,7 @@ namespace FinalAmanda.Forms
         //Back Button (User Profile)
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            UserProfileAllForm profile = new UserProfileAllForm();
+            UserProfileAllForm profile = new UserProfileAllForm(aux);
             profile.Show();
             this.Close();
         }

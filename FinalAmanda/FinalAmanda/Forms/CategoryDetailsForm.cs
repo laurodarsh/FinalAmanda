@@ -14,19 +14,22 @@ namespace FinalAmanda.Forms
 {
     public partial class CategoryDetailsForm : Form
     {
+        User aux;
         string name = "";
         bool active = false;
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
 
-        public CategoryDetailsForm()
+        public CategoryDetailsForm(User user)
         {
             InitializeComponent();
+            aux = user;
         }
 
-        public CategoryDetailsForm(int idCategory)
+        public CategoryDetailsForm(int idCategory, User user)
         {
 
             InitializeComponent();
+            aux = user;
 
             lblId.Text = idCategory.ToString();
 
@@ -101,6 +104,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
+                    Log.SalvarLog("Categoria inserida", DateTime.Now, "Inserção");
                     CleanData();
 
                 }
@@ -132,6 +136,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Altereções salvas com sucesso!");
+                    Log.SalvarLog("Categoria editada", DateTime.Now, "Edição");
                 }
                 catch (Exception Ex)
                 {
@@ -142,7 +147,7 @@ namespace FinalAmanda.Forms
                 {
                     sqlConnect.Close();
 
-                    CategoryAllForm category = new CategoryAllForm();
+                    CategoryAllForm category = new CategoryAllForm(aux);
                     category.Show();
                     this.Close();
                 }
@@ -171,6 +176,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("categoria inativa!");
+                    Log.SalvarLog("Categoria excluída", DateTime.Now, "Exclusão");
                 }
                 catch (Exception Ex)
                 {
@@ -207,7 +213,7 @@ namespace FinalAmanda.Forms
         //Back Button (Categoty)
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            CategoryAllForm category = new CategoryAllForm();
+            CategoryAllForm category = new CategoryAllForm(aux);
             category.Show();
             this.Close();
         }

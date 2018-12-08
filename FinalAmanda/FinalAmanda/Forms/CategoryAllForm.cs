@@ -14,12 +14,14 @@ namespace FinalAmanda.Forms
 {
     public partial class CategoryAllForm : Form
     {
+        User aux;
         string search;
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
 
-        public CategoryAllForm()
+        public CategoryAllForm(User user)
         {
             InitializeComponent();
+            aux = user;
             ShowData();
             ResizeDataGridView();
 
@@ -60,7 +62,7 @@ namespace FinalAmanda.Forms
         {
             int idCategory = Int32.Parse(dgvCategory.SelectedRows[0].Cells[0].Value.ToString());
 
-            CategoryDetailsForm categoryDetails = new CategoryDetailsForm(idCategory);
+            CategoryDetailsForm categoryDetails = new CategoryDetailsForm(idCategory,aux);
             categoryDetails.Show();
 
             this.Close();
@@ -68,7 +70,7 @@ namespace FinalAmanda.Forms
         //Add
         private void pbxAdd_Click(object sender, EventArgs e)
         {
-            CategoryDetailsForm details = new CategoryDetailsForm();
+            CategoryDetailsForm details = new CategoryDetailsForm(aux);
             details.Show();
             this.Close();
         }
@@ -95,6 +97,7 @@ namespace FinalAmanda.Forms
 
                 ShowData();
                 MessageBox.Show("Categoria inativo!");
+                Log.SalvarLog("Categoria excluída", DateTime.Now,"Exclusão");
             }
             catch (Exception Ex)
             {
@@ -110,6 +113,8 @@ namespace FinalAmanda.Forms
         //Back Button (Home)
         private void pbxBack_Click(object sender, EventArgs e)
         {
+            HomeForm home = new HomeForm(aux);
+            home.Show();
             this.Close();
         }
 

@@ -23,7 +23,7 @@ namespace FinalAmanda.Classes
 
             SqlConnection sqlConnect = new SqlConnection(connectionString);
             User user = new User();
-
+            int idAux = 0;
             try
             {
                 sqlConnect.Open();
@@ -40,14 +40,10 @@ namespace FinalAmanda.Classes
                         user.Active = bool.Parse(reader["ACTIVE"].ToString());
                         user.Email = reader["EMAIL"].ToString();
                         user.Password = reader["PASSWORD"].ToString();
-                        user.UserProfile = new UserProfile
-                        {
-                            Id = Int32.Parse(reader["FK_USERPROFILE"].ToString())
-                        };
+                        idAux = Int32.Parse(reader["FK_USERPROFILE"].ToString());
                     }
                 }
-
-
+                
             }
             catch (Exception ex)
             {
@@ -58,10 +54,49 @@ namespace FinalAmanda.Classes
                 sqlConnect.Close();
             }
 
+            user.Userprofile = LoadProfile(idAux);
             return user;
 
         }
-    
+
+        private static UserProfile LoadProfile(int idAux)
+        {
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+            UserProfile userProfile = new UserProfile();
+            
+            try
+            {
+                sqlConnect.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM USER_PROFILE WHERE ID = @id", sqlConnect);
+                cmd.Parameters.Add(new SqlParameter("@id", idAux));
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        userProfile.Id = Int32.Parse(reader["ID"].ToString());
+                        userProfile.Name = reader["NAME"].ToString();
+                        userProfile.Active = bool.Parse(reader["ACTIVE"].ToString());
+                      
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                sqlConnect.Close();
+            }
+
+            return userProfile;
+
         }
+
     }
+}
 

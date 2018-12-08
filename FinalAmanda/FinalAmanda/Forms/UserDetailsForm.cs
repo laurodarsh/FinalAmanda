@@ -14,6 +14,7 @@ namespace FinalAmanda.Forms
 {
     public partial class UserDetailsForm : Form
     {
+        User aux;
         string name;
         string email;
         string password;
@@ -23,17 +24,19 @@ namespace FinalAmanda.Forms
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
         List<UserProfile> uprofile = new List<UserProfile>();
 
-        public UserDetailsForm()
+        public UserDetailsForm(User user)
         {
             InitializeComponent();
+            aux = user;
             cmbProfile.DisplayMember = "NAME";
             LoadComboBox();
         }
 
-        public UserDetailsForm(int idUser)
+        public UserDetailsForm(int idUser,User user2)
         {
 
             InitializeComponent();
+            aux = user2;
             cmbProfile.DisplayMember = "NAME";
             LoadComboBox();
 
@@ -145,6 +148,7 @@ namespace FinalAmanda.Forms
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Adicionado com sucesso!");
+                        Log.SalvarLog("Usuário inserido", DateTime.Now, "Inserção");
                         CleanData();
                     }
                     else
@@ -186,6 +190,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Altereções salvas com sucesso!");
+                    Log.SalvarLog("Usuário editado", DateTime.Now, "Edição");
                 }
                 catch (Exception Ex)
                 {
@@ -196,7 +201,7 @@ namespace FinalAmanda.Forms
                 {
                     sqlConnect.Close();
 
-                    UserAllForm useAll = new UserAllForm();
+                    UserAllForm useAll = new UserAllForm(aux);
                     useAll.Show();
                     this.Close();
                 }
@@ -224,6 +229,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Usuário inativa!");
+                    Log.SalvarLog("Usuário excluído", DateTime.Now, "Exclusão");
                 }
                 catch (Exception Ex)
                 {
@@ -268,7 +274,7 @@ namespace FinalAmanda.Forms
         //Back Button (User)
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            UserAllForm useAll = new UserAllForm();
+            UserAllForm useAll = new UserAllForm(aux);
             useAll.Show();
             this.Close();
         }

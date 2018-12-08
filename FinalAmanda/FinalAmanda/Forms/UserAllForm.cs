@@ -14,12 +14,14 @@ namespace FinalAmanda.Forms
 {
     public partial class UserAllForm : Form
     {
+        User aux;
         string search;
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
 
-        public UserAllForm()
+        public UserAllForm(User user)
         {
             InitializeComponent();
+            aux = user;
             ShowData();
             ResizeDataGridView();
         }
@@ -59,7 +61,7 @@ namespace FinalAmanda.Forms
         {
             int idUser = Int32.Parse(dgvUser.SelectedRows[0].Cells[0].Value.ToString());
 
-            UserDetailsForm userDetails = new UserDetailsForm(idUser);
+            UserDetailsForm userDetails = new UserDetailsForm(idUser, aux);
             userDetails.Show();
 
             this.Close();
@@ -67,7 +69,7 @@ namespace FinalAmanda.Forms
         private void pbxAdd_Click(object sender, EventArgs e)
         {
             //Add
-            UserDetailsForm details = new UserDetailsForm();
+            UserDetailsForm details = new UserDetailsForm(aux);
             details.Show();
         }
 
@@ -92,6 +94,7 @@ namespace FinalAmanda.Forms
 
                 ShowData();
                 MessageBox.Show("Usuário inativo!");
+                Log.SalvarLog("Usuário excluído", DateTime.Now, "Exclusão");
             }
             catch (Exception Ex)
             {
@@ -107,6 +110,8 @@ namespace FinalAmanda.Forms
         //Back Button (Home)
         private void pbxBack_Click(object sender, EventArgs e)
         {
+            HomeForm home = new HomeForm(aux);
+            home.Show();
             this.Close();
         }
 

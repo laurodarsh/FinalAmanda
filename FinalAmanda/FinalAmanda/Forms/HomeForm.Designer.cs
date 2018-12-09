@@ -45,7 +45,8 @@
             this.pbxProductUser = new System.Windows.Forms.PictureBox();
             this.lblCategoryUser = new System.Windows.Forms.Label();
             this.lblProductUser = new System.Windows.Forms.Label();
-            this.pnlLogFor = new System.Windows.Forms.Panel();
+            this.pnlHome = new System.Windows.Forms.Panel();
+            this.pnlHomeAux = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).BeginInit();
@@ -54,7 +55,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCategoryUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProductUser)).BeginInit();
-            this.pnlLogFor.SuspendLayout();
+            this.pnlHome.SuspendLayout();
+            this.pnlHomeAux.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblProduct
@@ -121,11 +123,11 @@
             // 
             this.lblHomeMessage.AutoSize = true;
             this.lblHomeMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblHomeMessage.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHomeMessage.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHomeMessage.ForeColor = System.Drawing.Color.White;
-            this.lblHomeMessage.Location = new System.Drawing.Point(272, 17);
+            this.lblHomeMessage.Location = new System.Drawing.Point(315, 28);
             this.lblHomeMessage.Name = "lblHomeMessage";
-            this.lblHomeMessage.Size = new System.Drawing.Size(138, 18);
+            this.lblHomeMessage.Size = new System.Drawing.Size(108, 19);
             this.lblHomeMessage.TabIndex = 12;
             this.lblHomeMessage.Text = "Bem vindo \"   \"!";
             // 
@@ -134,7 +136,7 @@
             this.pbxBack.BackColor = System.Drawing.Color.Transparent;
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
-            this.pbxBack.Location = new System.Drawing.Point(1, 382);
+            this.pbxBack.Location = new System.Drawing.Point(12, 368);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(53, 48);
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -261,19 +263,28 @@
             this.lblProductUser.Text = "PRODUTO";
             this.lblProductUser.Visible = false;
             // 
-            // pnlLogFor
+            // pnlHome
             // 
-            this.pnlLogFor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlLogFor.Controls.Add(this.pbxBack);
-            this.pnlLogFor.Controls.Add(this.pbxCategoryUser);
-            this.pnlLogFor.Controls.Add(this.pbxProductUser);
-            this.pnlLogFor.Controls.Add(this.lblProductUser);
-            this.pnlLogFor.Controls.Add(this.lblCategoryUser);
-            this.pnlLogFor.Controls.Add(this.lblHomeMessage);
-            this.pnlLogFor.Location = new System.Drawing.Point(28, 24);
-            this.pnlLogFor.Name = "pnlLogFor";
-            this.pnlLogFor.Size = new System.Drawing.Size(704, 432);
-            this.pnlLogFor.TabIndex = 24;
+            this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlHome.Controls.Add(this.pnlHomeAux);
+            this.pnlHome.Controls.Add(this.lblHomeMessage);
+            this.pnlHome.Controls.Add(this.pbxCategoryUser);
+            this.pnlHome.Controls.Add(this.pbxProductUser);
+            this.pnlHome.Controls.Add(this.lblProductUser);
+            this.pnlHome.Controls.Add(this.lblCategoryUser);
+            this.pnlHome.Location = new System.Drawing.Point(27, 24);
+            this.pnlHome.Name = "pnlHome";
+            this.pnlHome.Size = new System.Drawing.Size(704, 432);
+            this.pnlHome.TabIndex = 24;
+            // 
+            // pnlHomeAux
+            // 
+            this.pnlHomeAux.BackColor = System.Drawing.Color.White;
+            this.pnlHomeAux.Controls.Add(this.pbxBack);
+            this.pnlHomeAux.Location = new System.Drawing.Point(3, 3);
+            this.pnlHomeAux.Name = "pnlHomeAux";
+            this.pnlHomeAux.Size = new System.Drawing.Size(75, 426);
+            this.pnlHomeAux.TabIndex = 24;
             // 
             // HomeForm
             // 
@@ -291,7 +302,7 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.lblProduct);
-            this.Controls.Add(this.pnlLogFor);
+            this.Controls.Add(this.pnlHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomeForm";
@@ -305,8 +316,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCategoryUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProductUser)).EndInit();
-            this.pnlLogFor.ResumeLayout(false);
-            this.pnlLogFor.PerformLayout();
+            this.pnlHome.ResumeLayout(false);
+            this.pnlHome.PerformLayout();
+            this.pnlHomeAux.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,6 +341,7 @@
         private System.Windows.Forms.PictureBox pbxProductUser;
         private System.Windows.Forms.Label lblCategoryUser;
         private System.Windows.Forms.Label lblProductUser;
-        private System.Windows.Forms.Panel pnlLogFor;
+        private System.Windows.Forms.Panel pnlHome;
+        private System.Windows.Forms.Panel pnlHomeAux;
     }
 }

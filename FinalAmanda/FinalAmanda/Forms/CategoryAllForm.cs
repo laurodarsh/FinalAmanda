@@ -157,7 +157,7 @@ namespace FinalAmanda.Forms
             foreach (DataGridViewColumn col in dgvCategory.Columns)
             {
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+                col.HeaderCell.Style.Font = new Font("Corbel", 16F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
         }
     }

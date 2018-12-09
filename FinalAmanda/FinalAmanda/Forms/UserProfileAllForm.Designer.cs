@@ -39,6 +39,7 @@
             this.pbxSearch = new System.Windows.Forms.PictureBox();
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.pnlUProfile = new System.Windows.Forms.Panel();
+            this.pnlHomeAux = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
@@ -47,6 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             this.pnlUProfile.SuspendLayout();
+            this.pnlHomeAux.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvUProfile
@@ -58,28 +60,29 @@
             this.dgvUProfile.BackgroundColor = System.Drawing.Color.White;
             this.dgvUProfile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUProfile.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvUProfile.Location = new System.Drawing.Point(67, 58);
+            this.dgvUProfile.Location = new System.Drawing.Point(92, 76);
             this.dgvUProfile.MultiSelect = false;
             this.dgvUProfile.Name = "dgvUProfile";
             this.dgvUProfile.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUProfile.Size = new System.Drawing.Size(581, 313);
+            this.dgvUProfile.Size = new System.Drawing.Size(595, 343);
             this.dgvUProfile.TabIndex = 48;
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxSearch.Location = new System.Drawing.Point(163, 19);
+            this.tbxSearch.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxSearch.Location = new System.Drawing.Point(190, 27);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(342, 27);
+            this.tbxSearch.Size = new System.Drawing.Size(412, 33);
             this.tbxSearch.TabIndex = 44;
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(72, 23);
+            this.lblSearch.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.ForeColor = System.Drawing.Color.White;
+            this.lblSearch.Location = new System.Drawing.Point(91, 30);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(87, 18);
+            this.lblSearch.Size = new System.Drawing.Size(93, 26);
             this.lblSearch.TabIndex = 43;
             this.lblSearch.Text = "Pesquisar";
             // 
@@ -87,7 +90,7 @@
             // 
             this.pbxAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxAdd.Image = global::FinalAmanda.Properties.Resources.Add;
-            this.pbxAdd.Location = new System.Drawing.Point(477, 377);
+            this.pbxAdd.Location = new System.Drawing.Point(12, 73);
             this.pbxAdd.Name = "pbxAdd";
             this.pbxAdd.Size = new System.Drawing.Size(53, 48);
             this.pbxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,7 +102,7 @@
             // 
             this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxDelete.Image = global::FinalAmanda.Properties.Resources.Delete;
-            this.pbxDelete.Location = new System.Drawing.Point(536, 377);
+            this.pbxDelete.Location = new System.Drawing.Point(12, 127);
             this.pbxDelete.Name = "pbxDelete";
             this.pbxDelete.Size = new System.Drawing.Size(53, 48);
             this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,7 +114,7 @@
             // 
             this.pbxEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxEdit.Image = global::FinalAmanda.Properties.Resources.Edit;
-            this.pbxEdit.Location = new System.Drawing.Point(595, 377);
+            this.pbxEdit.Location = new System.Drawing.Point(12, 19);
             this.pbxEdit.Name = "pbxEdit";
             this.pbxEdit.Size = new System.Drawing.Size(53, 48);
             this.pbxEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,9 +126,9 @@
             // 
             this.pbxClean.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxClean.Image = global::FinalAmanda.Properties.Resources.Clean;
-            this.pbxClean.Location = new System.Drawing.Point(551, 18);
+            this.pbxClean.Location = new System.Drawing.Point(654, 27);
             this.pbxClean.Name = "pbxClean";
-            this.pbxClean.Size = new System.Drawing.Size(33, 30);
+            this.pbxClean.Size = new System.Drawing.Size(33, 33);
             this.pbxClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxClean.TabIndex = 47;
             this.pbxClean.TabStop = false;
@@ -135,9 +138,9 @@
             // 
             this.pbxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSearch.Image = global::FinalAmanda.Properties.Resources.Search;
-            this.pbxSearch.Location = new System.Drawing.Point(512, 18);
+            this.pbxSearch.Location = new System.Drawing.Point(614, 27);
             this.pbxSearch.Name = "pbxSearch";
-            this.pbxSearch.Size = new System.Drawing.Size(33, 30);
+            this.pbxSearch.Size = new System.Drawing.Size(33, 33);
             this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxSearch.TabIndex = 46;
             this.pbxSearch.TabStop = false;
@@ -147,7 +150,7 @@
             // 
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
-            this.pbxBack.Location = new System.Drawing.Point(62, 377);
+            this.pbxBack.Location = new System.Drawing.Point(12, 368);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(53, 48);
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,12 +161,9 @@
             // pnlUProfile
             // 
             this.pnlUProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlUProfile.Controls.Add(this.pbxAdd);
+            this.pnlUProfile.Controls.Add(this.pnlHomeAux);
             this.pnlUProfile.Controls.Add(this.tbxSearch);
-            this.pnlUProfile.Controls.Add(this.pbxDelete);
             this.pnlUProfile.Controls.Add(this.lblSearch);
-            this.pnlUProfile.Controls.Add(this.pbxEdit);
-            this.pnlUProfile.Controls.Add(this.pbxBack);
             this.pnlUProfile.Controls.Add(this.dgvUProfile);
             this.pnlUProfile.Controls.Add(this.pbxSearch);
             this.pnlUProfile.Controls.Add(this.pbxClean);
@@ -171,6 +171,18 @@
             this.pnlUProfile.Name = "pnlUProfile";
             this.pnlUProfile.Size = new System.Drawing.Size(704, 432);
             this.pnlUProfile.TabIndex = 54;
+            // 
+            // pnlHomeAux
+            // 
+            this.pnlHomeAux.BackColor = System.Drawing.Color.White;
+            this.pnlHomeAux.Controls.Add(this.pbxBack);
+            this.pnlHomeAux.Controls.Add(this.pbxAdd);
+            this.pnlHomeAux.Controls.Add(this.pbxDelete);
+            this.pnlHomeAux.Controls.Add(this.pbxEdit);
+            this.pnlHomeAux.Location = new System.Drawing.Point(3, 3);
+            this.pnlHomeAux.Name = "pnlHomeAux";
+            this.pnlHomeAux.Size = new System.Drawing.Size(75, 426);
+            this.pnlHomeAux.TabIndex = 55;
             // 
             // UserProfileAllForm
             // 
@@ -193,6 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             this.pnlUProfile.ResumeLayout(false);
             this.pnlUProfile.PerformLayout();
+            this.pnlHomeAux.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -209,5 +222,6 @@
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Panel pnlUProfile;
+        private System.Windows.Forms.Panel pnlHomeAux;
     }
 }

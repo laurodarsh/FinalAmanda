@@ -22,14 +22,17 @@ namespace FinalAmanda.Forms
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
         List<Category> categories = new List<Category>();
 
+        //Save
         public ProductDetailsForm(User user)
         {
             InitializeComponent();
             cmbCategory.DisplayMember = "NAME";
             LoadComboBox();
             aux = user;
+            pbxDelete.Visible = false;
         }
 
+        //Edit
         public ProductDetailsForm(int idProduct, User user)
         {
 
@@ -83,7 +86,7 @@ namespace FinalAmanda.Forms
             }
         }
 
-        //Load CMB
+        #region Load CMB
         void LoadComboBox()
         {
             SqlConnection cn = new SqlConnection(connectionString);
@@ -113,8 +116,9 @@ namespace FinalAmanda.Forms
                 cmbCategory.Items.Add(c);
             }
         }
+        #endregion
 
-        //Save Button
+        #region Save Button
         private void pbxSave_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
@@ -196,8 +200,10 @@ namespace FinalAmanda.Forms
             }
 
         }
+        #endregion
 
-        //Delete Button
+        #region Delete Button
+        //Used only in Edit
         private void pbxDelete_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(lblId.Text))
@@ -232,8 +238,10 @@ namespace FinalAmanda.Forms
 
             }
         }
+        #endregion
 
-        //Data stuff
+        #region Data stuff
+        //Get
         void GetData()
         {
             name = tbxName.Text;
@@ -248,6 +256,8 @@ namespace FinalAmanda.Forms
                 active = false;
             }
         }
+
+        //Clean
         void CleanData()
         {
             tbxName.Text = "";
@@ -255,13 +265,15 @@ namespace FinalAmanda.Forms
             cmbCategory.Text = "";
             cbxActive.Checked = false;
         }
+        #endregion
 
-        //Back Button (Product)
+        #region Back Button Product
         private void pbxBack_Click(object sender, EventArgs e)
         {
             ProductAllForm product = new ProductAllForm(aux);
             product.Show();
             this.Close();
         }
+        #endregion
     }
 }

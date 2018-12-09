@@ -24,15 +24,18 @@ namespace FinalAmanda.Forms
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
         List<UserProfile> uprofile = new List<UserProfile>();
 
+        //Save
         public UserDetailsForm(User user)
         {
             InitializeComponent();
             aux = user;
             cmbProfile.DisplayMember = "NAME";
             LoadComboBox();
+            pbxDelete.Visible = false;
         }
 
-        public UserDetailsForm(int idUser,User user2)
+        //Edit
+        public UserDetailsForm(int idUser, User user2)
         {
 
             InitializeComponent();
@@ -87,7 +90,7 @@ namespace FinalAmanda.Forms
             }
         }
 
-        //Load CMB
+        #region Load CMB
         void LoadComboBox()
         {
             SqlConnection cn = new SqlConnection(connectionString);
@@ -117,8 +120,9 @@ namespace FinalAmanda.Forms
                 cmbProfile.Items.Add(c);
             }
         }
+        #endregion
 
-        //Save Button
+        #region Save Button
         private void pbxSave_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
@@ -207,8 +211,10 @@ namespace FinalAmanda.Forms
                 }
             }
         }
+        #endregion
 
-        //Delete Button
+        #region Delete Button
+        //Used only in Edit
         private void pbxDelete_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(lblId.Text))
@@ -243,8 +249,10 @@ namespace FinalAmanda.Forms
 
             }
         }
+        #endregion
 
-        //Data stuff
+        #region Data stuff
+        //Get
         void GetData()
         {
             name = tbxName.Text;
@@ -261,6 +269,8 @@ namespace FinalAmanda.Forms
                 active = false;
             }
         }
+
+        //Clean
         void CleanData()
         {
             tbxName.Text = "";
@@ -270,13 +280,15 @@ namespace FinalAmanda.Forms
             cmbProfile.Text = "";
             cbxActive.Checked = false;
         }
+        #endregion
 
-        //Back Button (User)
+        #region Back Button User
         private void pbxBack_Click(object sender, EventArgs e)
         {
             UserAllForm useAll = new UserAllForm(aux);
             useAll.Show();
             this.Close();
         }
+        #endregion
     }
 }

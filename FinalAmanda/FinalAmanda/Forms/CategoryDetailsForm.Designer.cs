@@ -50,7 +50,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblName.Location = new System.Drawing.Point(271, 170);
+            this.lblName.Location = new System.Drawing.Point(270, 169);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(65, 26);
             this.lblName.TabIndex = 20;
@@ -59,7 +59,7 @@
             // tbxName
             // 
             this.tbxName.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxName.Location = new System.Drawing.Point(276, 198);
+            this.tbxName.Location = new System.Drawing.Point(275, 198);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(229, 33);
             this.tbxName.TabIndex = 21;
@@ -70,7 +70,7 @@
             this.cbxActive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbxActive.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxActive.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.cbxActive.Location = new System.Drawing.Point(277, 233);
+            this.cbxActive.Location = new System.Drawing.Point(276, 237);
             this.cbxActive.Name = "cbxActive";
             this.cbxActive.Size = new System.Drawing.Size(75, 30);
             this.cbxActive.TabIndex = 23;

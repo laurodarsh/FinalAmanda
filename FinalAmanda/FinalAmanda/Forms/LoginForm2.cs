@@ -192,9 +192,10 @@ namespace FinalAmanda.Forms
             this.pnlHide.Location = new Point(pnlHide.Location.X + 353, pnlHide.Location.Y + 0);
             this.pnlHide.BackColor = Color.DarkViolet;
         }
-        
+
         #endregion
 
+        #region Send Email
         //Send Button
         private void pbxSend_Click(object sender, EventArgs e)
         {
@@ -204,6 +205,8 @@ namespace FinalAmanda.Forms
             tbxEmail.Visible = false;
             lblEmail.Text = "Um e-mail foi enviado para o endereço " + Environment.NewLine + "...." + Environment.NewLine + "  Siga as instruções para redefinir sua " + Environment.NewLine + "senha.";
         }
+
+        #endregion
 
         #region Eye Mouse Move
         //Mouse Enter

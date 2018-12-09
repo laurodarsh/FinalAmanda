@@ -21,12 +21,13 @@ namespace FinalAmanda.Forms
             aux = user;
             if (user.Userprofile.Name != "Administrador")
             {
-                //"Gerente"
+                //Visible for employee
                 pbxProductUser.Visible = true;
                 lblProductUser.Visible = true;
                 pbxCategoryUser.Visible = true;
                 lblCategoryUser.Visible = true;
                 
+                //Invisible for employee
                 pbxCategory.Visible = false;
                 lblCategory.Visible = false;
                 pbxLog.Visible = false;
@@ -42,63 +43,78 @@ namespace FinalAmanda.Forms
         }
 
         //Access only, employee
+        #region Product, No Admin, Button
         private void pbxProductUser_Click(object sender, EventArgs e)
         {
             ProductAllForm product = new ProductAllForm(aux);
             product.Show();
             this.Hide();
         }
+        #endregion
 
+        #region Category, No Admin, Button
         private void pbxCategoryUser_Click(object sender, EventArgs e)
         {
             CategoryAllForm category = new CategoryAllForm(aux);
             category.Show();
             this.Hide();
         }
+        #endregion
         //End access only, employee
 
         //Admin access
+        #region Product Button
         private void pbxProduct_Click(object sender, EventArgs e)
         {
             ProductAllForm product = new ProductAllForm(aux);
             product.Show();
             this.Hide();
         }
+        #endregion
 
+        #region Category Button
         private void pbxCategory_Click(object sender, EventArgs e)
         {
             CategoryAllForm category = new CategoryAllForm(aux);
             category.Show();
             this.Hide();
         }
+        #endregion
 
+        #region Uer Button
         private void pbxUser_Click(object sender, EventArgs e)
         {
             UserAllForm user = new UserAllForm(aux);
             user.Show();
             this.Hide();
         }
+        #endregion
 
+        #region User Profile Button
         private void pbxUserProfile_Click(object sender, EventArgs e)
         {
             UserProfileAllForm profile = new UserProfileAllForm(aux);
             profile.Show();
             this.Hide();
         }
+        #endregion
 
+        #region Log Button
         private void pbxLog_Click(object sender, EventArgs e)
         {
             LogForm log = new LogForm(aux);
             log.Show();
             this.Hide();
         }
+        #endregion
 
-        //Back Button (Login)
+        #region Logoff
         private void pbxBack_Click(object sender, EventArgs e)
         {
             LoginForm2 login = new LoginForm2();
             login.Show();
             this.Hide();
         }
+        #endregion
     }
 }

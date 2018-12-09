@@ -24,18 +24,18 @@ namespace FinalAmanda.Forms
             aux = user;
             ShowData();
             ResizeDataGridView();
-
         }
 
-        //Clean Button (eraser)
+        #region Clean Button (eraser)
         private void pbxClean_Click(object sender, EventArgs e)
         {
             CleanData();
             ShowData();
             ResizeDataGridView();
         }
+        #endregion
 
-        //Search Button
+        #region Search Button
         private void pbxSearch_Click(object sender, EventArgs e)
         {
             GetData();
@@ -46,18 +46,23 @@ namespace FinalAmanda.Forms
             Search search2 = new Search();
             dgvCategory.DataSource = search2.SearchFilter(connectionString, search, optionString, optionForm);
         }
+        #endregion
 
-        //Data stuff
+        #region Data stuff
+        //Get
         void GetData()
         {
             search = tbxSearch.Text;
         }
+
+        //Clean
         void CleanData()
         {
             tbxSearch.Text = "";
         }
+        #endregion
 
-        //Edit
+        #region Edit Stuff
         private void pbxEdit_Click(object sender, EventArgs e)
         {
             int idCategory = Int32.Parse(dgvCategory.SelectedRows[0].Cells[0].Value.ToString());
@@ -67,15 +72,18 @@ namespace FinalAmanda.Forms
 
             this.Close();
         }
-        //Add
+        #endregion
+
+        #region Add Stuff
         private void pbxAdd_Click(object sender, EventArgs e)
         {
             CategoryDetailsForm details = new CategoryDetailsForm(aux);
             details.Show();
             this.Close();
         }
+        #endregion
 
-        //Trash (delete)
+        #region Trash (delete)
         private void pbxDelete_Click(object sender, EventArgs e)
         {
 
@@ -109,16 +117,9 @@ namespace FinalAmanda.Forms
                 sqlConnect.Close();
             }
         }
-
-        //Back Button (Home)
-        private void pbxBack_Click(object sender, EventArgs e)
-        {
-            HomeForm home = new HomeForm(aux);
-            home.Show();
-            this.Close();
-        }
-
-        //Show Data
+        #endregion
+        
+        #region Show Data
         private void ShowData()
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
@@ -147,7 +148,9 @@ namespace FinalAmanda.Forms
                 sqlConnect.Close();
             }
         }
+        #endregion
 
+        #region Resize Dat Grid View
         private void ResizeDataGridView()
         {
             dgvCategory.Columns["ID"].Visible = false;
@@ -160,5 +163,15 @@ namespace FinalAmanda.Forms
                 col.HeaderCell.Style.Font = new Font("Corbel", 16F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
         }
+        #endregion
+        
+        #region Back Button Home
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            HomeForm home = new HomeForm(aux);
+            home.Show();
+            this.Close();
+        }
+        #endregion
     }
 }

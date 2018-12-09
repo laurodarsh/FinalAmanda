@@ -53,10 +53,10 @@
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxSearch.Location = new System.Drawing.Point(198, 30);
+            this.tbxSearch.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxSearch.Location = new System.Drawing.Point(190, 27);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(411, 27);
+            this.tbxSearch.Size = new System.Drawing.Size(412, 33);
             this.tbxSearch.TabIndex = 30;
             // 
             // lblSearch
@@ -64,7 +64,7 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.ForeColor = System.Drawing.Color.White;
-            this.lblSearch.Location = new System.Drawing.Point(100, 30);
+            this.lblSearch.Location = new System.Drawing.Point(91, 30);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(93, 26);
             this.lblSearch.TabIndex = 29;
@@ -86,9 +86,9 @@
             // 
             this.pbxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSearch.Image = global::FinalAmanda.Properties.Resources.Search;
-            this.pbxSearch.Location = new System.Drawing.Point(615, 28);
+            this.pbxSearch.Location = new System.Drawing.Point(614, 27);
             this.pbxSearch.Name = "pbxSearch";
-            this.pbxSearch.Size = new System.Drawing.Size(33, 30);
+            this.pbxSearch.Size = new System.Drawing.Size(33, 33);
             this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxSearch.TabIndex = 36;
             this.pbxSearch.TabStop = false;
@@ -98,9 +98,9 @@
             // 
             this.pbxClean.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxClean.Image = global::FinalAmanda.Properties.Resources.Clean;
-            this.pbxClean.Location = new System.Drawing.Point(654, 28);
+            this.pbxClean.Location = new System.Drawing.Point(654, 27);
             this.pbxClean.Name = "pbxClean";
-            this.pbxClean.Size = new System.Drawing.Size(33, 30);
+            this.pbxClean.Size = new System.Drawing.Size(33, 33);
             this.pbxClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxClean.TabIndex = 37;
             this.pbxClean.TabStop = false;

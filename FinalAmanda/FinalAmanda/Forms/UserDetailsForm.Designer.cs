@@ -45,113 +45,122 @@
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.lblId = new System.Windows.Forms.Label();
             this.pnlLogFor = new System.Windows.Forms.Panel();
+            this.pnlHomeAux = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             this.pnlLogFor.SuspendLayout();
+            this.pnlHomeAux.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbxActive
             // 
             this.cbxActive.AutoSize = true;
-            this.cbxActive.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxActive.Location = new System.Drawing.Point(242, 339);
+            this.cbxActive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbxActive.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxActive.ForeColor = System.Drawing.Color.White;
+            this.cbxActive.Location = new System.Drawing.Point(143, 315);
             this.cbxActive.Name = "cbxActive";
-            this.cbxActive.Size = new System.Drawing.Size(65, 22);
+            this.cbxActive.Size = new System.Drawing.Size(75, 30);
             this.cbxActive.TabIndex = 32;
             this.cbxActive.Text = "Ativo";
             this.cbxActive.UseVisualStyleBackColor = true;
             // 
             // tbxPassword
             // 
-            this.tbxPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPassword.Location = new System.Drawing.Point(240, 189);
+            this.tbxPassword.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPassword.Location = new System.Drawing.Point(408, 115);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.PasswordChar = '•';
-            this.tbxPassword.Size = new System.Drawing.Size(229, 27);
+            this.tbxPassword.Size = new System.Drawing.Size(229, 33);
             this.tbxPassword.TabIndex = 30;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(237, 168);
+            this.lblPassword.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
+            this.lblPassword.Location = new System.Drawing.Point(403, 86);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(54, 18);
+            this.lblPassword.Size = new System.Drawing.Size(66, 26);
             this.lblPassword.TabIndex = 29;
             this.lblPassword.Text = "Senha";
             // 
             // tbxEmail
             // 
-            this.tbxEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEmail.Location = new System.Drawing.Point(240, 132);
+            this.tbxEmail.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxEmail.Location = new System.Drawing.Point(143, 189);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(229, 27);
+            this.tbxEmail.Size = new System.Drawing.Size(229, 33);
             this.tbxEmail.TabIndex = 34;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(237, 110);
+            this.lblEmail.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(139, 160);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(47, 18);
+            this.lblEmail.Size = new System.Drawing.Size(61, 26);
             this.lblEmail.TabIndex = 33;
             this.lblEmail.Text = "Email";
             // 
             // tbxConfPassword
             // 
-            this.tbxConfPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxConfPassword.Location = new System.Drawing.Point(240, 247);
+            this.tbxConfPassword.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxConfPassword.Location = new System.Drawing.Point(408, 189);
             this.tbxConfPassword.Name = "tbxConfPassword";
             this.tbxConfPassword.PasswordChar = '•';
-            this.tbxConfPassword.Size = new System.Drawing.Size(229, 27);
+            this.tbxConfPassword.Size = new System.Drawing.Size(229, 33);
             this.tbxConfPassword.TabIndex = 36;
             // 
             // lblProfile
             // 
             this.lblProfile.AutoSize = true;
-            this.lblProfile.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfile.Location = new System.Drawing.Point(237, 284);
+            this.lblProfile.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.ForeColor = System.Drawing.Color.White;
+            this.lblProfile.Location = new System.Drawing.Point(139, 236);
             this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(43, 18);
+            this.lblProfile.Size = new System.Drawing.Size(56, 26);
             this.lblProfile.TabIndex = 35;
             this.lblProfile.Text = "Perfil";
             // 
             // tbxName
             // 
-            this.tbxName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxName.Location = new System.Drawing.Point(240, 74);
+            this.tbxName.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxName.Location = new System.Drawing.Point(144, 116);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(229, 27);
+            this.tbxName.Size = new System.Drawing.Size(229, 33);
             this.tbxName.TabIndex = 38;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(237, 52);
+            this.lblName.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(141, 87);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(53, 18);
+            this.lblName.Size = new System.Drawing.Size(65, 26);
             this.lblName.TabIndex = 37;
             this.lblName.Text = "Nome";
             // 
             // cmbProfile
             // 
-            this.cmbProfile.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProfile.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProfile.FormattingEnabled = true;
-            this.cmbProfile.Location = new System.Drawing.Point(240, 306);
+            this.cmbProfile.Location = new System.Drawing.Point(144, 265);
             this.cmbProfile.Name = "cmbProfile";
-            this.cmbProfile.Size = new System.Drawing.Size(229, 26);
+            this.cmbProfile.Size = new System.Drawing.Size(229, 34);
             this.cmbProfile.TabIndex = 39;
             // 
             // lblConfirmationPassword
             // 
             this.lblConfirmationPassword.AutoSize = true;
-            this.lblConfirmationPassword.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmationPassword.Location = new System.Drawing.Point(237, 225);
+            this.lblConfirmationPassword.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmationPassword.ForeColor = System.Drawing.Color.White;
+            this.lblConfirmationPassword.Location = new System.Drawing.Point(403, 160);
             this.lblConfirmationPassword.Name = "lblConfirmationPassword";
-            this.lblConfirmationPassword.Size = new System.Drawing.Size(131, 18);
+            this.lblConfirmationPassword.Size = new System.Drawing.Size(152, 26);
             this.lblConfirmationPassword.TabIndex = 40;
             this.lblConfirmationPassword.Text = "Confirmar senha";
             // 
@@ -159,7 +168,7 @@
             // 
             this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxDelete.Image = global::FinalAmanda.Properties.Resources.Delete;
-            this.pbxDelete.Location = new System.Drawing.Point(571, 355);
+            this.pbxDelete.Location = new System.Drawing.Point(539, 350);
             this.pbxDelete.Name = "pbxDelete";
             this.pbxDelete.Size = new System.Drawing.Size(72, 69);
             this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,7 +180,7 @@
             // 
             this.pbxSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSave.Image = global::FinalAmanda.Properties.Resources.Save;
-            this.pbxSave.Location = new System.Drawing.Point(490, 355);
+            this.pbxSave.Location = new System.Drawing.Point(617, 350);
             this.pbxSave.Name = "pbxSave";
             this.pbxSave.Size = new System.Drawing.Size(72, 69);
             this.pbxSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,7 +192,7 @@
             // 
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
-            this.pbxBack.Location = new System.Drawing.Point(55, 377);
+            this.pbxBack.Location = new System.Drawing.Point(12, 368);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(53, 48);
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,9 +213,9 @@
             // pnlLogFor
             // 
             this.pnlLogFor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlLogFor.Controls.Add(this.pnlHomeAux);
             this.pnlLogFor.Controls.Add(this.tbxPassword);
             this.pnlLogFor.Controls.Add(this.lblConfirmationPassword);
-            this.pnlLogFor.Controls.Add(this.pbxBack);
             this.pnlLogFor.Controls.Add(this.cmbProfile);
             this.pnlLogFor.Controls.Add(this.pbxSave);
             this.pnlLogFor.Controls.Add(this.tbxName);
@@ -222,6 +231,15 @@
             this.pnlLogFor.Name = "pnlLogFor";
             this.pnlLogFor.Size = new System.Drawing.Size(704, 432);
             this.pnlLogFor.TabIndex = 53;
+            // 
+            // pnlHomeAux
+            // 
+            this.pnlHomeAux.BackColor = System.Drawing.Color.White;
+            this.pnlHomeAux.Controls.Add(this.pbxBack);
+            this.pnlHomeAux.Location = new System.Drawing.Point(3, 3);
+            this.pnlHomeAux.Name = "pnlHomeAux";
+            this.pnlHomeAux.Size = new System.Drawing.Size(75, 426);
+            this.pnlHomeAux.TabIndex = 54;
             // 
             // UserDetailsForm
             // 
@@ -241,6 +259,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             this.pnlLogFor.ResumeLayout(false);
             this.pnlLogFor.PerformLayout();
+            this.pnlHomeAux.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +283,6 @@
         private System.Windows.Forms.Label lblConfirmationPassword;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Panel pnlLogFor;
+        private System.Windows.Forms.Panel pnlHomeAux;
     }
 }

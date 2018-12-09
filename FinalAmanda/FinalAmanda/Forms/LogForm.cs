@@ -26,15 +26,16 @@ namespace FinalAmanda.Forms
             ResizeDataGridView();
         }
 
-        //Clean Button (eraser)
+        #region Clean Button (eraser)
         private void pbxClean_Click(object sender, EventArgs e)
         {
             CleanData();
             ShowData();
             ResizeDataGridView();
         }
+        #endregion
 
-        //Search Button
+        #region Search Button
         private void pbxSearch_Click(object sender, EventArgs e)
         {
             GetData();
@@ -45,26 +46,23 @@ namespace FinalAmanda.Forms
             Search search2 = new Search();
             dgvLog.DataSource = search2.SearchFilter(connectionString, search, optionString, optionForm);
         }
+        #endregion
 
-        //Data stuff
+        #region Data stuff
+        //Get
         void GetData()
         {
             search = tbxSearch.Text;
         }
+
+        //Clean
         void CleanData()
         {
             tbxSearch.Text = "";
         }
+        #endregion
 
-        //Back Button (Home)
-        private void pbxBack_Click(object sender, EventArgs e)
-        {
-            HomeForm home = new HomeForm(aux);
-            home.Show();
-            this.Close();
-        }
-
-        //Show Data
+        #region Show Data
         private void ShowData()
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
@@ -93,8 +91,9 @@ namespace FinalAmanda.Forms
                 sqlConnect.Close();
             }
         }
+        #endregion
 
-        //Resize DataGridView
+        #region Resize Data Grid View
         private void ResizeDataGridView()
         {
             dgvLog.Columns["ID"].Visible = false;
@@ -105,8 +104,18 @@ namespace FinalAmanda.Forms
             foreach (DataGridViewColumn col in dgvLog.Columns)
             {
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+                col.HeaderCell.Style.Font = new Font("Corbel", 16F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
         }
+        #endregion
+
+        #region Back Button (Home)
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            HomeForm home = new HomeForm(aux);
+            home.Show();
+            this.Close();
+        }
+        #endregion
     }
 }

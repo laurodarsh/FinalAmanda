@@ -84,12 +84,6 @@
     <Compile Include="Forms\LogForm.Designer.cs">
       <DependentUpon>LogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\LoginForm2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,9 +142,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LogForm.resx">
       <DependentUpon>LogForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm2.resx">
       <DependentUpon>LoginForm2.cs</DependentUpon>
@@ -212,7 +203,6 @@
     <Content Include="Icons\Category.ico" />
     <Content Include="Icons\Log.ico" />
     <Content Include="Icons\User.ico" />
-    <Content Include="Icons\logo teste.png" />
     <Content Include="Icons\Send.png" />
     <Content Include="Icons\Log.png" />
     <Content Include="Icons\Product.png" />

@@ -282,5 +282,8 @@ namespace FinalAmanda.Forms
 
         #endregion
 
+        //Hehehe :D
+        //System.Diagnostics.Process.Start("http://levelupacademy.com.br/");
+
     }
 }

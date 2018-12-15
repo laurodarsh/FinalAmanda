@@ -123,7 +123,6 @@
             // pbxDelete
             // 
             this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxDelete.Image = global::FinalAmanda.Properties.Resources.Delete;
             this.pbxDelete.Location = new System.Drawing.Point(539, 350);
             this.pbxDelete.Name = "pbxDelete";
             this.pbxDelete.Size = new System.Drawing.Size(72, 69);
@@ -135,7 +134,6 @@
             // pbxSave
             // 
             this.pbxSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxSave.Image = global::FinalAmanda.Properties.Resources.Save;
             this.pbxSave.Location = new System.Drawing.Point(617, 350);
             this.pbxSave.Name = "pbxSave";
             this.pbxSave.Size = new System.Drawing.Size(72, 69);
@@ -147,7 +145,6 @@
             // pbxBack
             // 
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
             this.pbxBack.Location = new System.Drawing.Point(12, 368);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(53, 48);

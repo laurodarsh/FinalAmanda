@@ -42,16 +42,25 @@
             this.pbxEye = new System.Windows.Forms.PictureBox();
             this.lblBackLogin = new System.Windows.Forms.Label();
             this.pnlLogFor = new System.Windows.Forms.Panel();
+            this.pbxOkay = new System.Windows.Forms.PictureBox();
+            this.pbxLua = new System.Windows.Forms.PictureBox();
+            this.pbxLua2 = new System.Windows.Forms.PictureBox();
+            this.pnlHide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSend)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).BeginInit();
             this.pnlLogFor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxOkay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLua2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHide
             // 
             this.pnlHide.BackColor = System.Drawing.Color.White;
-            this.pnlHide.Location = new System.Drawing.Point(27, 24);
+            this.pnlHide.Controls.Add(this.pbxLua2);
+            this.pnlHide.Controls.Add(this.pbxLua);
+            this.pnlHide.Location = new System.Drawing.Point(0, 0);
             this.pnlHide.Name = "pnlHide";
             this.pnlHide.Size = new System.Drawing.Size(351, 432);
             this.pnlHide.TabIndex = 12;
@@ -62,8 +71,8 @@
             this.lblForgotPass.AutoSize = true;
             this.lblForgotPass.BackColor = System.Drawing.Color.Transparent;
             this.lblForgotPass.Font = new System.Drawing.Font("Corbel", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgotPass.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblForgotPass.Location = new System.Drawing.Point(19, 100);
+            this.lblForgotPass.ForeColor = System.Drawing.Color.Salmon;
+            this.lblForgotPass.Location = new System.Drawing.Point(10, 100);
             this.lblForgotPass.Name = "lblForgotPass";
             this.lblForgotPass.Size = new System.Drawing.Size(333, 42);
             this.lblForgotPass.TabIndex = 0;
@@ -74,7 +83,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEmail.Location = new System.Drawing.Point(21, 170);
+            this.lblEmail.Location = new System.Drawing.Point(13, 161);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(155, 26);
             this.lblEmail.TabIndex = 1;
@@ -83,7 +92,7 @@
             // tbxEmail
             // 
             this.tbxEmail.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEmail.Location = new System.Drawing.Point(24, 198);
+            this.tbxEmail.Location = new System.Drawing.Point(17, 189);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(313, 33);
             this.tbxEmail.TabIndex = 2;
@@ -93,7 +102,7 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.BackColor = System.Drawing.Color.Transparent;
             this.lblLogin.Font = new System.Drawing.Font("Corbel", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.ForeColor = System.Drawing.Color.White;
+            this.lblLogin.ForeColor = System.Drawing.Color.Lime;
             this.lblLogin.Location = new System.Drawing.Point(472, 100);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(112, 42);
@@ -136,10 +145,10 @@
             // 
             this.pbxLogin.BackColor = System.Drawing.Color.Transparent;
             this.pbxLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxLogin.Image = global::FinalAmanda.Properties.Resources.Enter1;
-            this.pbxLogin.Location = new System.Drawing.Point(586, 278);
+            this.pbxLogin.Image = ((System.Drawing.Image)(resources.GetObject("pbxLogin.Image")));
+            this.pbxLogin.Location = new System.Drawing.Point(547, 278);
             this.pbxLogin.Name = "pbxLogin";
-            this.pbxLogin.Size = new System.Drawing.Size(100, 29);
+            this.pbxLogin.Size = new System.Drawing.Size(139, 41);
             this.pbxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogin.TabIndex = 9;
             this.pbxLogin.TabStop = false;
@@ -149,10 +158,10 @@
             // 
             this.pbxSend.BackColor = System.Drawing.Color.Transparent;
             this.pbxSend.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxSend.Image = global::FinalAmanda.Properties.Resources.Send;
-            this.pbxSend.Location = new System.Drawing.Point(239, 278);
+            this.pbxSend.Image = ((System.Drawing.Image)(resources.GetObject("pbxSend.Image")));
+            this.pbxSend.Location = new System.Drawing.Point(196, 278);
             this.pbxSend.Name = "pbxSend";
-            this.pbxSend.Size = new System.Drawing.Size(100, 29);
+            this.pbxSend.Size = new System.Drawing.Size(139, 40);
             this.pbxSend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxSend.TabIndex = 11;
             this.pbxSend.TabStop = false;
@@ -163,11 +172,11 @@
             this.pbxEye.BackColor = System.Drawing.SystemColors.Window;
             this.pbxEye.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxEye.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxEye.Image = global::FinalAmanda.Properties.Resources.Eye_icon;
+            this.pbxEye.Image = ((System.Drawing.Image)(resources.GetObject("pbxEye.Image")));
             this.pbxEye.Location = new System.Drawing.Point(652, 215);
             this.pbxEye.Name = "pbxEye";
             this.pbxEye.Size = new System.Drawing.Size(34, 33);
-            this.pbxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxEye.TabIndex = 12;
             this.pbxEye.TabStop = false;
             this.pbxEye.Click += new System.EventHandler(this.pbxEye_Click);
@@ -181,7 +190,7 @@
             this.lblBackLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBackLogin.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBackLogin.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblBackLogin.Location = new System.Drawing.Point(29, 283);
+            this.lblBackLogin.Location = new System.Drawing.Point(15, 278);
             this.lblBackLogin.Name = "lblBackLogin";
             this.lblBackLogin.Size = new System.Drawing.Size(124, 18);
             this.lblBackLogin.TabIndex = 13;
@@ -193,6 +202,8 @@
             // pnlLogFor
             // 
             this.pnlLogFor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlLogFor.Controls.Add(this.pnlHide);
+            this.pnlLogFor.Controls.Add(this.pbxOkay);
             this.pnlLogFor.Controls.Add(this.lblBackLogin);
             this.pnlLogFor.Controls.Add(this.pbxEye);
             this.pnlLogFor.Controls.Add(this.pbxSend);
@@ -209,24 +220,65 @@
             this.pnlLogFor.Size = new System.Drawing.Size(704, 432);
             this.pnlLogFor.TabIndex = 0;
             // 
+            // pbxOkay
+            // 
+            this.pbxOkay.BackColor = System.Drawing.Color.Transparent;
+            this.pbxOkay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxOkay.Image = ((System.Drawing.Image)(resources.GetObject("pbxOkay.Image")));
+            this.pbxOkay.Location = new System.Drawing.Point(193, 279);
+            this.pbxOkay.Name = "pbxOkay";
+            this.pbxOkay.Size = new System.Drawing.Size(139, 40);
+            this.pbxOkay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxOkay.TabIndex = 14;
+            this.pbxOkay.TabStop = false;
+            this.pbxOkay.Visible = false;
+            this.pbxOkay.Click += new System.EventHandler(this.pbxOkay_Click);
+            // 
+            // pbxLua
+            // 
+            this.pbxLua.Image = ((System.Drawing.Image)(resources.GetObject("pbxLua.Image")));
+            this.pbxLua.Location = new System.Drawing.Point(32, 76);
+            this.pbxLua.Name = "pbxLua";
+            this.pbxLua.Size = new System.Drawing.Size(287, 274);
+            this.pbxLua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxLua.TabIndex = 0;
+            this.pbxLua.TabStop = false;
+            this.pbxLua.Click += new System.EventHandler(this.pbxLua_Click);
+            // 
+            // pbxLua2
+            // 
+            this.pbxLua2.BackColor = System.Drawing.Color.Transparent;
+            this.pbxLua2.Image = ((System.Drawing.Image)(resources.GetObject("pbxLua2.Image")));
+            this.pbxLua2.Location = new System.Drawing.Point(32, 76);
+            this.pbxLua2.Name = "pbxLua2";
+            this.pbxLua2.Size = new System.Drawing.Size(287, 274);
+            this.pbxLua2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxLua2.TabIndex = 1;
+            this.pbxLua2.TabStop = false;
+            this.pbxLua2.Visible = false;
+            // 
             // LoginForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(760, 480);
-            this.Controls.Add(this.pnlHide);
             this.Controls.Add(this.pnlLogFor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm2";
+            this.pnlHide.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSend)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEye)).EndInit();
             this.pnlLogFor.ResumeLayout(false);
             this.pnlLogFor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxOkay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLua2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,5 +297,8 @@
         private System.Windows.Forms.PictureBox pbxEye;
         private System.Windows.Forms.Label lblBackLogin;
         private System.Windows.Forms.Panel pnlLogFor;
+        private System.Windows.Forms.PictureBox pbxOkay;
+        private System.Windows.Forms.PictureBox pbxLua;
+        private System.Windows.Forms.PictureBox pbxLua2;
     }
 }

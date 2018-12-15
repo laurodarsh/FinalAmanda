@@ -54,7 +54,6 @@
             // pbxAdd
             // 
             this.pbxAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxAdd.Image = global::FinalAmanda.Properties.Resources.Add;
             this.pbxAdd.Location = new System.Drawing.Point(12, 73);
             this.pbxAdd.Name = "pbxAdd";
             this.pbxAdd.Size = new System.Drawing.Size(53, 48);
@@ -66,7 +65,6 @@
             // pbxDelete
             // 
             this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxDelete.Image = global::FinalAmanda.Properties.Resources.Delete;
             this.pbxDelete.Location = new System.Drawing.Point(12, 127);
             this.pbxDelete.Name = "pbxDelete";
             this.pbxDelete.Size = new System.Drawing.Size(53, 48);
@@ -78,7 +76,6 @@
             // pbxEdit
             // 
             this.pbxEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxEdit.Image = global::FinalAmanda.Properties.Resources.Edit;
             this.pbxEdit.Location = new System.Drawing.Point(12, 19);
             this.pbxEdit.Name = "pbxEdit";
             this.pbxEdit.Size = new System.Drawing.Size(53, 48);
@@ -106,7 +103,6 @@
             // pbxClean
             // 
             this.pbxClean.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxClean.Image = global::FinalAmanda.Properties.Resources.Clean;
             this.pbxClean.Location = new System.Drawing.Point(654, 27);
             this.pbxClean.Name = "pbxClean";
             this.pbxClean.Size = new System.Drawing.Size(33, 33);
@@ -118,7 +114,6 @@
             // pbxSearch
             // 
             this.pbxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxSearch.Image = global::FinalAmanda.Properties.Resources.Search;
             this.pbxSearch.Location = new System.Drawing.Point(614, 27);
             this.pbxSearch.Name = "pbxSearch";
             this.pbxSearch.Size = new System.Drawing.Size(33, 33);
@@ -130,7 +125,6 @@
             // pbxBack
             // 
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxBack.Image = global::FinalAmanda.Properties.Resources.Back;
             this.pbxBack.Location = new System.Drawing.Point(12, 368);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(53, 48);

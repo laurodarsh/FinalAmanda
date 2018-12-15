@@ -166,18 +166,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -187,29 +187,36 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="Icons\Add.png" />
     <Content Include="Icons\Back.png" />
+    <Content Include="Icons\Category Icon.ico" />
     <Content Include="Icons\Category.png" />
-    <Content Include="Icons\Clean.png" />
+    <Content Include="Icons\Close Icon.png" />
     <Content Include="Icons\Delete.png" />
     <Content Include="Icons\Edit.png" />
-    <Content Include="Icons\Enter.png" />
-    <Content Include="Icons\Eye icon.png" />
-    <Content Include="Icons\Home.ico" />
-    <Content Include="Icons\Login.ico" />
-    <Content Include="Icons\User Grupe.ico" />
-    <Content Include="Icons\Product.ico" />
-    <Content Include="Icons\Category.ico" />
-    <Content Include="Icons\Log.ico" />
-    <Content Include="Icons\User.ico" />
-    <Content Include="Icons\Send.png" />
+    <Content Include="Icons\Eraser.png" />
+    <Content Include="Icons\Eye.png" />
+    <Content Include="Icons\Home Icon.ico" />
+    <Content Include="Icons\Log Icon.ico" />
     <Content Include="Icons\Log.png" />
+    <Content Include="Icons\Login Icon.ico" />
+    <Content Include="Icons\Login.png" />
+    <Content Include="Icons\Lua.png" />
+    <Content Include="Icons\Lua2.png" />
+    <Content Include="Icons\Maximize Icon.png" />
+    <Content Include="Icons\Minimize Icon.png" />
+    <Content Include="Icons\Okay.png" />
+    <Content Include="Icons\Plus.png" />
+    <Content Include="Icons\Product Icon.ico" />
     <Content Include="Icons\Product.png" />
     <Content Include="Icons\Save.png" />
-    <Content Include="Icons\Search.png" />
+    <Content Include="Icons\Seach.png" />
+    <Content Include="Icons\Send.png" />
+    <Content Include="Icons\User Icon.ico" />
+    <Content Include="Icons\User Profile Icon.ico" />
+    <Content Include="Icons\User Profile.png" />
     <Content Include="Icons\User.png" />
-    <Content Include="Icons\User Grupe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

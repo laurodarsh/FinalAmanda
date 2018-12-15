@@ -190,7 +190,11 @@ namespace FinalAmanda.Forms
         {
             //Hide Login things
             this.pnlHide.Location = new Point(pnlHide.Location.X + 353, pnlHide.Location.Y + 0);
-            this.pnlHide.BackColor = Color.DarkViolet;
+            this.pnlHide.BackColor = Color.Salmon;
+
+            //Logo
+            pbxLua2.Visible = true;
+            pbxLua.Visible = false;
         }
 
         #endregion
@@ -202,8 +206,31 @@ namespace FinalAmanda.Forms
             //GetData Email
             email = tbxEmail.Text;
 
+            pbxSend.Visible = false;
+            pbxOkay.Visible = true;
+            lblBackLogin.Visible = false;
             tbxEmail.Visible = false;
-            lblEmail.Text = "Um e-mail foi enviado para o endereço " + Environment.NewLine + "...." + Environment.NewLine + "  Siga as instruções para redefinir sua " + Environment.NewLine + "senha.";
+            lblEmail.Text = "Um e-mail foi enviado para o endereço " + Environment.NewLine + email + Environment.NewLine + "  Siga as instruções para redefinir sua " + Environment.NewLine + "senha.";
+        }
+
+        //Back Login
+        private void pbxOkay_Click(object sender, EventArgs e)
+        {
+            CleanData();
+
+            pbxSend.Visible = true;
+            pbxOkay.Visible = false;
+            lblBackLogin.Visible = true;
+            tbxEmail.Visible = true;
+            lblEmail.Text = "Digite seu e-mail";
+
+            //Logo
+            pbxLua2.Visible = false;
+            pbxLua.Visible = true;
+
+            //Hide Forgot Password things
+            this.pnlHide.Location = new Point(pnlHide.Location.X - 353, pnlHide.Location.Y - 0);
+            this.pnlHide.BackColor = Color.White;
         }
 
         #endregion
@@ -259,9 +286,16 @@ namespace FinalAmanda.Forms
         //Back Login Button Click
         private void lblBackLogin_Click(object sender, EventArgs e)
         {
+            //Clean tbxEmail
+            tbxEmail.Text = "";
+
             //Hide Forgot Password things
             this.pnlHide.Location = new Point(pnlHide.Location.X - 353, pnlHide.Location.Y - 0);
             this.pnlHide.BackColor = Color.White;
+
+            //Logo
+            pbxLua2.Visible = false;
+            pbxLua.Visible = true;
         }
 
         #endregion
@@ -281,9 +315,21 @@ namespace FinalAmanda.Forms
         }
 
         #endregion
+       
+        #region Idea of Genius
 
         //Hehehe :D
-        //System.Diagnostics.Process.Start("http://levelupacademy.com.br/");
+        private void pbxLua2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://levelupacademy.com.br/");
+        }
+
+        private void pbxLua_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://levelupacademy.com.br/");
+        }
+
+        #endregion
 
     }
 }

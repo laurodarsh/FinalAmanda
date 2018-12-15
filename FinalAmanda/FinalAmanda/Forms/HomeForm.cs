@@ -48,7 +48,7 @@ namespace FinalAmanda.Forms
         {
             ProductAllForm product = new ProductAllForm(aux);
             product.Show();
-            this.Hide();
+            this.Close();
         }
         #endregion
 
@@ -57,7 +57,7 @@ namespace FinalAmanda.Forms
         {
             CategoryAllForm category = new CategoryAllForm(aux);
             category.Show();
-            this.Hide();
+            this.Close();
         }
         #endregion
         //End access only, employee
@@ -68,7 +68,7 @@ namespace FinalAmanda.Forms
         {
             ProductAllForm product = new ProductAllForm(aux);
             product.Show();
-            this.Hide();
+            this.Close();
         }
         #endregion
 
@@ -77,7 +77,7 @@ namespace FinalAmanda.Forms
         {
             CategoryAllForm category = new CategoryAllForm(aux);
             category.Show();
-            this.Hide();
+            this.Close();
         }
         #endregion
 
@@ -86,7 +86,7 @@ namespace FinalAmanda.Forms
         {
             UserAllForm user = new UserAllForm(aux);
             user.Show();
-            this.Hide();
+            this.Close();
         }
         #endregion
 
@@ -95,7 +95,7 @@ namespace FinalAmanda.Forms
         {
             UserProfileAllForm profile = new UserProfileAllForm(aux);
             profile.Show();
-            this.Hide();
+            this.Close();
         }
         #endregion
 
@@ -104,7 +104,7 @@ namespace FinalAmanda.Forms
         {
             LogForm log = new LogForm(aux);
             log.Show();
-            this.Hide();
+            this.Close();
         }
         #endregion
 
@@ -113,7 +113,7 @@ namespace FinalAmanda.Forms
         {
             LoginForm2 login = new LoginForm2();
             login.Show();
-            this.Hide();
+            this.Close();
         }
         #endregion
         

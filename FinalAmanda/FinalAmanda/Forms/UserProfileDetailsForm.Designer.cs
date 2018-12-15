@@ -80,6 +80,7 @@
             // pbxDelete
             // 
             this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxDelete.Image = ((System.Drawing.Image)(resources.GetObject("pbxDelete.Image")));
             this.pbxDelete.Location = new System.Drawing.Point(539, 350);
             this.pbxDelete.Name = "pbxDelete";
             this.pbxDelete.Size = new System.Drawing.Size(72, 69);
@@ -91,6 +92,7 @@
             // pbxSave
             // 
             this.pbxSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxSave.Image = ((System.Drawing.Image)(resources.GetObject("pbxSave.Image")));
             this.pbxSave.Location = new System.Drawing.Point(617, 350);
             this.pbxSave.Name = "pbxSave";
             this.pbxSave.Size = new System.Drawing.Size(72, 69);
@@ -102,6 +104,7 @@
             // pbxBack
             // 
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxBack.Image = ((System.Drawing.Image)(resources.GetObject("pbxBack.Image")));
             this.pbxBack.Location = new System.Drawing.Point(12, 368);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(53, 48);
@@ -147,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(760, 480);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.pnlLogFor);

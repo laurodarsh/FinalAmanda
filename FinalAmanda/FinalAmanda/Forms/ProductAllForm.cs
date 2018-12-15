@@ -79,6 +79,8 @@ namespace FinalAmanda.Forms
         {
             ProductDetailsForm details = new ProductDetailsForm(aux);
             details.Show();
+
+            this.Close();
         }
         #endregion
 

@@ -137,6 +137,7 @@
             // 
             this.pbxBack.BackColor = System.Drawing.Color.Transparent;
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxBack.Image = ((System.Drawing.Image)(resources.GetObject("pbxBack.Image")));
             this.pbxBack.Location = new System.Drawing.Point(12, 368);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(53, 48);
@@ -149,6 +150,7 @@
             // 
             this.pbxUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxUser.Image = ((System.Drawing.Image)(resources.GetObject("pbxUser.Image")));
             this.pbxUser.Location = new System.Drawing.Point(323, 168);
             this.pbxUser.Name = "pbxUser";
             this.pbxUser.Size = new System.Drawing.Size(147, 109);
@@ -161,6 +163,7 @@
             // 
             this.pbxLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxLog.Image = ((System.Drawing.Image)(resources.GetObject("pbxLog.Image")));
             this.pbxLog.Location = new System.Drawing.Point(422, 288);
             this.pbxLog.Name = "pbxLog";
             this.pbxLog.Size = new System.Drawing.Size(147, 109);
@@ -173,6 +176,7 @@
             // 
             this.pbxUserProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxUserProfile.Image = ((System.Drawing.Image)(resources.GetObject("pbxUserProfile.Image")));
             this.pbxUserProfile.Location = new System.Drawing.Point(225, 288);
             this.pbxUserProfile.Name = "pbxUserProfile";
             this.pbxUserProfile.Size = new System.Drawing.Size(147, 109);
@@ -185,6 +189,7 @@
             // 
             this.pbxCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxCategory.Image = ((System.Drawing.Image)(resources.GetObject("pbxCategory.Image")));
             this.pbxCategory.Location = new System.Drawing.Point(518, 168);
             this.pbxCategory.Name = "pbxCategory";
             this.pbxCategory.Size = new System.Drawing.Size(147, 109);
@@ -197,6 +202,7 @@
             // 
             this.pbxProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxProduct.Image = ((System.Drawing.Image)(resources.GetObject("pbxProduct.Image")));
             this.pbxProduct.Location = new System.Drawing.Point(127, 168);
             this.pbxProduct.Name = "pbxProduct";
             this.pbxProduct.Size = new System.Drawing.Size(147, 109);
@@ -209,6 +215,7 @@
             // 
             this.pbxCategoryUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxCategoryUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxCategoryUser.Image = ((System.Drawing.Image)(resources.GetObject("pbxCategoryUser.Image")));
             this.pbxCategoryUser.Location = new System.Drawing.Point(434, 206);
             this.pbxCategoryUser.Name = "pbxCategoryUser";
             this.pbxCategoryUser.Size = new System.Drawing.Size(178, 132);
@@ -222,6 +229,7 @@
             // 
             this.pbxProductUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pbxProductUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxProductUser.Image = ((System.Drawing.Image)(resources.GetObject("pbxProductUser.Image")));
             this.pbxProductUser.Location = new System.Drawing.Point(170, 206);
             this.pbxProductUser.Name = "pbxProductUser";
             this.pbxProductUser.Size = new System.Drawing.Size(178, 132);
@@ -303,7 +311,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(760, 480);
             this.Controls.Add(this.pnlHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

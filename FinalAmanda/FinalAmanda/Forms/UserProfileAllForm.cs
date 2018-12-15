@@ -105,7 +105,7 @@ namespace FinalAmanda.Forms
 
                 ShowData();
                 MessageBox.Show("Perfil inativo!");
-                Log.SalvarLog("Perfil excluído", DateTime.Now, "Exclusão");
+                Log.SaveLog(sqlConnect,"Perfil excluído", DateTime.Now, "Exclusão");
             }
             catch (Exception Ex)
             {

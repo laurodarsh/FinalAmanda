@@ -105,7 +105,7 @@ namespace FinalAmanda.Forms
 
                 ShowData();
                 MessageBox.Show("Produto inativo!");
-                Log.SalvarLog("Produto excluído", DateTime.Now, "Exclusão");
+                Log.SaveLog(sqlConnect,"Produto excluído", DateTime.Now, "Exclusão");
             }
             catch (Exception Ex)
             {
@@ -126,9 +126,18 @@ namespace FinalAmanda.Forms
 
             try
             {
+                SqlCommand cmd;
                 sqlConnect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT PRODUCT.ID, PRODUCT.NAME, PRODUCT.ACTIVE, PRODUCT.PRICE, CATEGORY.NAME FROM PRODUCT INNER JOIN CATEGORY ON PRODUCT.FK_PRODUCT = CATEGORY.ID;", sqlConnect);
+                if (aux.Userprofile.Name != "Administrador")
+                {
+                    cmd = new SqlCommand("SELECT PRODUCT.ID, PRODUCT.NAME, PRODUCT.ACTIVE, PRODUCT.PRICE, CATEGORY.NAME FROM PRODUCT INNER JOIN CATEGORY ON PRODUCT.FK_PRODUCT = CATEGORY.ID; WHERE PRODUCT.ACTIVE = @active", sqlConnect);
+                    cmd.Parameters.Add(new SqlParameter("@active", true));
+                }
+                else
+                {
+                    cmd = new SqlCommand("SELECT PRODUCT.ID, PRODUCT.NAME, PRODUCT.ACTIVE, PRODUCT.PRICE, CATEGORY.NAME FROM PRODUCT INNER JOIN CATEGORY ON PRODUCT.FK_PRODUCT = CATEGORY.ID;", sqlConnect);
+                }
 
                 cmd.ExecuteNonQuery();
 

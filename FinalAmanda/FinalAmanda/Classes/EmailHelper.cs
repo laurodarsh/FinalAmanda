@@ -9,10 +9,11 @@ namespace FinalAmanda.Classes
 {
     public static class EmailHelper
     {
-        public static void SendEmail(string email)
+        public static void SendEmail(string email, int password)
         {
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
 
             mail.From = new MailAddress("lucariuzx@gmail.com");
             mail.To.Add(email);
@@ -20,7 +21,7 @@ namespace FinalAmanda.Classes
 
 
             string bodyMail = @"
-                    <p>Sua nova senha é 456. Peça ao seu gerente para atualizá-la ou atualize se você for gerente.</p>";
+                    <p>Sua nova senha é " + password +". Peça ao seu gerente para atualizá-la ou atualize se você for gerente.</p>";
 
             mail.Body = bodyMail;
             mail.IsBodyHtml = true;
@@ -32,5 +33,6 @@ namespace FinalAmanda.Classes
 
             SmtpServer.Send(mail);
         }
+        
     }
 }

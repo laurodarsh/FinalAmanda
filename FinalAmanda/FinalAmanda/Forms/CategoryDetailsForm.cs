@@ -107,7 +107,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
-                    Log.SalvarLog("Categoria inserida", DateTime.Now, "Inserção");
+                    Log.SaveLog(sqlConnect,"Categoria inserida", DateTime.Now, "Inserção");
                     CleanData();
 
                 }
@@ -139,7 +139,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Altereções salvas com sucesso!");
-                    Log.SalvarLog("Categoria editada", DateTime.Now, "Edição");
+                    Log.SaveLog(sqlConnect,"Categoria editada", DateTime.Now, "Edição");
                 }
                 catch (Exception Ex)
                 {
@@ -181,7 +181,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("categoria inativa!");
-                    Log.SalvarLog("Categoria excluída", DateTime.Now, "Exclusão");
+                    Log.SaveLog(sqlConnect,"Categoria excluída", DateTime.Now, "Exclusão");
                 }
                 catch (Exception Ex)
                 {

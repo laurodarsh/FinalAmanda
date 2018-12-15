@@ -18,7 +18,7 @@ namespace FinalAmanda.Classes
             return Convert.ToBase64String(hashBytes);
         }
 
-        public static User SelectByName(string name)
+        public static User SelectByName(string email)
         {
 
             SqlConnection sqlConnect = new SqlConnection(connectionString);
@@ -28,8 +28,8 @@ namespace FinalAmanda.Classes
             {
                 sqlConnect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM [USER] WHERE NAME = @name", sqlConnect);
-                cmd.Parameters.Add(new SqlParameter("@name", name));
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [USER] WHERE EMAIL = @email", sqlConnect);
+                cmd.Parameters.Add(new SqlParameter("@email", email));
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {

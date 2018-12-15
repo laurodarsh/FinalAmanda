@@ -100,7 +100,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
-                    Log.SalvarLog("Perfil inserido", DateTime.Now, "Inserção");
+                    Log.SaveLog(sqlConnect,"Perfil inserido", DateTime.Now, "Inserção");
                     CleanData();
 
                 }
@@ -132,7 +132,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Altereções salvas com sucesso!");
-                    Log.SalvarLog("Perfil editado", DateTime.Now, "Edição");
+                    Log.SaveLog(sqlConnect,"Perfil editado", DateTime.Now, "Edição");
                 }
                 catch (Exception Ex)
                 {
@@ -173,7 +173,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Perfil inativa!");
-                    Log.SalvarLog("Perfil excluído", DateTime.Now, "Exclusão");
+                    Log.SaveLog(sqlConnect,"Perfil excluído", DateTime.Now, "Exclusão");
                 }
                 catch (Exception Ex)
                 {

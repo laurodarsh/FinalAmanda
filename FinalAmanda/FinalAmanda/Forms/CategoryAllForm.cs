@@ -106,7 +106,7 @@ namespace FinalAmanda.Forms
 
                 ShowData();
                 MessageBox.Show("Categoria inativo!");
-                Log.SalvarLog("Categoria excluída", DateTime.Now,"Exclusão");
+                Log.SaveLog(sqlConnect,"Categoria excluída", DateTime.Now,"Exclusão");
             }
             catch (Exception Ex)
             {
@@ -127,9 +127,18 @@ namespace FinalAmanda.Forms
 
             try
             {
+                SqlCommand cmd;
                 sqlConnect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM CATEGORY", sqlConnect);
+                if (aux.Userprofile.Name != "Administrador")
+                {
+                    cmd = new SqlCommand("SELECT * FROM CATEGORY WHERE ACTIVE = @active", sqlConnect);
+                    cmd.Parameters.Add(new SqlParameter("@active", true));
+                }
+                else
+                {
+                    cmd = new SqlCommand("SELECT * FROM CATEGORY", sqlConnect);
+                }
 
                 cmd.ExecuteNonQuery();
 

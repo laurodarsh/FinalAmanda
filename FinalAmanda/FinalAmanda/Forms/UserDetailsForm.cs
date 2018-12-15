@@ -145,14 +145,14 @@ namespace FinalAmanda.Forms
                         SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
                         cmd.Parameters.Add(new SqlParameter("@name", u.Name));
-                        cmd.Parameters.Add(new SqlParameter("@password", u.Password));
+                        cmd.Parameters.Add(new SqlParameter("@password", UserHelper.Hash(u.Password)));
                         cmd.Parameters.Add(new SqlParameter("@email", u.Email));
                         cmd.Parameters.Add(new SqlParameter("@active", u.Active));
                         cmd.Parameters.Add(new SqlParameter("@userprofile", u.Userprofile.Id));
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Adicionado com sucesso!");
-                        Log.SalvarLog("Usuário inserido", DateTime.Now, "Inserção");
+                        Log.SaveLog(sqlConnect,"Usuário inserido", DateTime.Now, "Inserção");
                         CleanData();
                     }
                     else
@@ -186,7 +186,7 @@ namespace FinalAmanda.Forms
                     SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
                     cmd.Parameters.Add(new SqlParameter("@name", name));
-                    cmd.Parameters.Add(new SqlParameter("@password", password));
+                    cmd.Parameters.Add(new SqlParameter("@password", UserHelper.Hash (password)));
                     cmd.Parameters.Add(new SqlParameter("@email", email));
                     cmd.Parameters.Add(new SqlParameter("@active", active));
                     cmd.Parameters.Add(new SqlParameter("@userprofile", up.Id));
@@ -194,7 +194,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Altereções salvas com sucesso!");
-                    Log.SalvarLog("Usuário editado", DateTime.Now, "Edição");
+                    Log.SaveLog(sqlConnect,"Usuário editado", DateTime.Now, "Edição");
                 }
                 catch (Exception Ex)
                 {
@@ -235,7 +235,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Usuário inativa!");
-                    Log.SalvarLog("Usuário excluído", DateTime.Now, "Exclusão");
+                    Log.SaveLog(sqlConnect,"Usuário excluído", DateTime.Now, "Exclusão");
                 }
                 catch (Exception Ex)
                 {

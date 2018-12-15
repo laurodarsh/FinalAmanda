@@ -145,7 +145,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
-                    Log.SalvarLog("Produto inserido", DateTime.Now, "Inserção");
+                    Log.SaveLog(sqlConnect,"Produto inserido", DateTime.Now, "Inserção");
                     CleanData();
 
                 }
@@ -182,7 +182,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Altereções salvas com sucesso!");
-                    Log.SalvarLog("Produto editado", DateTime.Now, "Edição");
+                    Log.SaveLog(sqlConnect,"Produto editado", DateTime.Now, "Edição");
                 }
                 catch (Exception Ex)
                 {
@@ -224,7 +224,7 @@ namespace FinalAmanda.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Produto inativa!");
-                    Log.SalvarLog("Produto excluído", DateTime.Now, "Exclusão");
+                    Log.SaveLog(sqlConnect,"Produto excluído", DateTime.Now, "Exclusão");
                 }
                 catch (Exception Ex)
                 {

@@ -105,7 +105,7 @@ namespace FinalAmanda.Forms
 
                 ShowData();
                 MessageBox.Show("Usuário inativo!");
-                Log.SalvarLog("Usuário excluído", DateTime.Now, "Exclusão");
+                Log.SaveLog(sqlConnect,"Usuário excluído", DateTime.Now, "Exclusão");
             }
             catch (Exception Ex)
             {

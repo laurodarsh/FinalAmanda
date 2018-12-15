@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace FinalAmanda.Forms
         string login = "";
         string password = "";
         string email = "";
+        bool updated = false;
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
 
         public LoginForm2()
@@ -113,7 +115,7 @@ namespace FinalAmanda.Forms
             if (tbxEmail.Text == "E-mail")
             {
                 tbxEmail.Text = "";
-                tbxEmail.ForeColor = Color.Silver;
+                tbxEmail.ForeColor = Color.Black;
             }
         }
 
@@ -210,7 +212,15 @@ namespace FinalAmanda.Forms
             pbxOkay.Visible = true;
             lblBackLogin.Visible = false;
             tbxEmail.Visible = false;
-            lblEmail.Text = "Um e-mail foi enviado para o endereço " + Environment.NewLine + email + Environment.NewLine + "  Siga as instruções para redefinir sua " + Environment.NewLine + "senha.";
+
+            if (tbxEmail.Text.Length > 0)
+            {
+                UpdatePassword();
+                if (updated)
+                {
+                    this.Close();
+                }
+            }
         }
 
         //Back Login
@@ -232,8 +242,54 @@ namespace FinalAmanda.Forms
             this.pnlHide.Location = new Point(pnlHide.Location.X - 353, pnlHide.Location.Y - 0);
             this.pnlHide.BackColor = Color.White;
         }
+        
+        //Update Password
+        void UpdatePassword()
+        {
+            User user = UserHelper.SelectByName(tbxEmail.Text);
 
-        #endregion
+            if (user.Name == null)
+            {
+                MessageBox.Show("Email não encontrado");
+                updated = false;
+            }
+            else
+            {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
+                Random rnd = new Random();
+                int randowmPassword = rnd.Next(1, 1000);
+
+                try
+                {
+                    EmailHelper.SendEmail(user.Email, randowmPassword);
+
+                    GetData();
+                    sqlConnect.Open();
+                    string sql = "UPDATE [USER] SET PASSWORD = @password Where ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+                    cmd.Parameters.Add(new SqlParameter("@password", UserHelper.Hash(randowmPassword.ToString())));
+
+                    cmd.Parameters.Add(new SqlParameter("@id", user.Id));
+                    cmd.ExecuteNonQuery();
+
+                    lblEmail.Text = "Um e-mail foi enviado para o endereço " + Environment.NewLine + email + "." + Environment.NewLine + "  Siga as instruções para redefinir sua " + Environment.NewLine + "senha.";
+                    Log.SaveLog(sqlConnect,"Usuário Editado", DateTime.Now, "Edição");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao enviar nova senha!" + "\n\n" + Ex.Message);
+                    updated = false;
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+            }
+        }
+
+#endregion
 
         #region Eye Mouse Move
         //Mouse Enter
@@ -315,7 +371,7 @@ namespace FinalAmanda.Forms
         }
 
         #endregion
-       
+
         #region Idea of Genius
 
         //Hehehe :D
@@ -337,12 +393,13 @@ namespace FinalAmanda.Forms
         {
             this.Close();
         }
-        
+
         private void pbxMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
         #endregion
+
     }
 }
